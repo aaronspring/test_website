@@ -8,6 +8,9 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
    :suppress:
    import pandas as pd
    print('open pd.dataframe leaderboard and display')
+   leaderboard = pd.read_csv('https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/notebooks/leaderboard.csv')
+   lb_html = leaderboard.to_html()
+   display(lb_html)
 
 
 ### Markdown
