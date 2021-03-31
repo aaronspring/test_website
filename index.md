@@ -11,6 +11,10 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
    leaderboard = pd.read_csv('https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/notebooks/leaderboard.csv')
    lb_html = leaderboard.to_html()
    display(lb_html)
+   
+   text_file = open("leaderboard.html", "w")
+   text_file.write(html)
+   text_file.close()
 
 
 ### Markdown
