@@ -4,6 +4,8 @@ You can use the [editor on GitHub](https://github.com/aaronspring/test_website/e
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
+[Leaderboard](https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/notebooks/leaderboard.html)
+
 .. ipython:: python
    :suppress:
    import pandas as pd
