@@ -9,10 +9,6 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-jobs:
   keep_file_updated:
     runs-on: ubuntu-latest
     name: Keep file updated
