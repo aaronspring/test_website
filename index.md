@@ -10,6 +10,16 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 {% include_relative https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/notebooks/leaderboard.html %}
 
+<iframe src="https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/notebooks/leaderboard.html"
+    sandbox="allow-same-origin allow-scripts"
+    width="100%"
+    height="500"
+    scrolling="no"
+    seamless="seamless"
+    frameborder="0">
+</iframe>
+
+
 .. ipython:: python
    :suppress:
    import pandas as pd
