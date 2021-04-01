@@ -6,6 +6,10 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 [Leaderboard](https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/notebooks/leaderboard.html)
 
+{% include_relative leaderboard.html %}
+
+{% include_relative https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/notebooks/leaderboard.html %}
+
 .. ipython:: python
    :suppress:
    import pandas as pd
