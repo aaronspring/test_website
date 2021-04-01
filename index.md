@@ -4,9 +4,9 @@ You can use the [editor on GitHub](https://github.com/aaronspring/test_website/e
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-[Leaderboard](https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/notebooks/leaderboard.html)
+[Leaderboard](https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/leaderboard.html)
 
-{% include_relative notebooks_leaderboard.html %}
+{% include_relative leaderboard.html %}
 
 <iframe src="notebooks_leaderboard.html"
     sandbox="allow-same-origin allow-scripts"
@@ -17,18 +17,6 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
     frameborder="0">
 </iframe>
 
-
-.. ipython:: python
-   :suppress:
-   import pandas as pd
-   print('open pd.dataframe leaderboard and display')
-   leaderboard = pd.read_csv('https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/notebooks/leaderboard.csv')
-   lb_html = leaderboard.to_html()
-   display(lb_html)
-   
-   text_file = open("leaderboard.html", "w")
-   text_file.write(html)
-   text_file.close()
 
 
 ### Markdown
