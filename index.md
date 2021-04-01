@@ -6,6 +6,8 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 [Leaderboard](https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/leaderboard.html)
 
+{% include_relative notebooks_leaderboard.html %}
+
 {% include_relative leaderboard.html %}
 
 <iframe src="notebooks_leaderboard.html"
