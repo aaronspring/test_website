@@ -8,18 +8,6 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 {% include_relative notebooks_leaderboard.html %}
 
-{% include_relative leaderboard.html %}
-
-<iframe src="notebooks_leaderboard.html"
-    sandbox="allow-same-origin allow-scripts"
-    width="100%"
-    height="500"
-    scrolling="no"
-    seamless="seamless"
-    frameborder="0">
-</iframe>
-
-
 
 ### Markdown
 
