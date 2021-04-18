@@ -1,5 +1,9 @@
-[![CI](https://github.com/s2s-ai-challenge/test_website/actions/workflows/get_leaderboard.yml/badge.svg)](https://github.com/s2s-ai-challenge/test_website/actions/workflows/get_leaderboard.yml)
+[![CI](https://github.com/s2s-ai-challenge/competition/actions/workflows/get_leaderboard.yml/badge.svg)](https://github.com/s2s-ai-challenge/competition/actions/workflows/get_leaderboard.yml)
 
-# test_website
+# s2s-ai-challenge
 
-https://s2s-ai-challenge.github.io/test_website/
+- Website for leaderboard: https://s2s-ai-challenge.github.io/competition/
+- Competition runs on https://renkulab.io/
+- How to join: https://renkulab.io/projects/aaron.spring/s2s-ai-competition-bootstrap/
+- Time: not started, wait for summer 2021
+- Hosted by: organizations
