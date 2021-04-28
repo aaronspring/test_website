@@ -166,7 +166,7 @@ Answered questions from the issue tracker will be transferred to the [FAQ](https
 - Frederic Vitart, Florian Pinault, Baudouin Raoult (ECMWF)
 - Andy Robertson (IRI)
 - Rok Roskar, Tasko Olevski (SDSC)
-- Aaron Spring (main contract, WMO contractor)
+- [Aaron Spring](mailto:aaron.spring@mpimet.mpg.de) (main contract, WMO contractor)
 
 ### End
 ```markdown
