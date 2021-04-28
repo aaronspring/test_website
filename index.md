@@ -80,8 +80,9 @@ Coordinates:
 
 Such submissions need to be commited in git/renku with [`git lfs`](https://git-lfs.github.com/).
 
-After the competition, the code for training must be made public, so the competition maintainers will check the requirements of data timing use. During the competition the organizers may ask top listed participants to provide access to their training pipeline.
-Please indicate the resources used (number of CPUs/GPUs, memory, platform; see examples) in your scripts/notebooks to allow reproducibility.
+After the competition, the code for training must be made public, so the competition maintainers will check the requirements of data timing use. The prizes will be distributed for the top 3 requirements-complying contributions at the end of the competition.
+During the competition the organizers may ask top listed participants to provide access to their training pipeline.
+Please indicate the resources used (number of CPUs/GPUs, memory, platform; see examples) in your scripts/notebooks to allow reproducibility. Contributions which cannot independently reproduced cannot win prizes.
 
 ## Data
 
