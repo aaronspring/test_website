@@ -63,7 +63,7 @@ def RPSS(rps_ML, rps_benchmark):
 The `RPSS` is calculated globally, and aggregated in three regions: Northern extratropics (90N-30N), tropics (29N-29S) and Southern extratropics (30S-90S). The final score is averaged over all 2 variables, 2 steps and 3 regions.
 Please find more details in the [verification notebook](https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/notebooks/verification_RPSS.ipynb).
 
-Each submission is a netcdf file with the folloing dimension sizes:
+Each submission is a netcdf file with the folloing dimension sizes and coordinates:
 
 ```
 >>> ML_forecasts.sizes # todo: add category dim
@@ -105,12 +105,12 @@ Please indicate the resources used (number of CPUs/GPUs, memory, platform; see e
   - s2sprediction.net
 - SubX
   - [IRIDL](http://iridl.ldeo.columbia.edu/SOURCES/.Models/.SubX)
-- other sources allowed? CMIP daily?
+- other public sources allowed? e.g. CMIP daily?
 
 Main datasets for this competition are already available as [renku datasets](https://renku.readthedocs.io/en/latest/user/data.html) for both variables temperature, precipitation:
 - `tag in climetlab`: description (link in renku)
 - `forecast-benchmark`: ECMWF week 3+4 & 5+6 re-calibrated real-time 2020 forecasts
-- `observations`: CPC daily observations interpolated on 1.5 degree grid:
+- `observations`: CPC daily observations interpolated on 1.5 degree grid
 - `training-input`: daily real-time initialized on thursdays 2020 forecasts from models ECMWF, ECCC, NCEP
 - `forecast-input`: daily reforecasts initialized once per week until 2019 from models ECMWF, ECCC, NCEP
 - Observations-based tercile category_edges
