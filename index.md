@@ -10,6 +10,7 @@
 [Leaderboard on renku in html](https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/leaderboard.html)
 
 {% include_relative leaderboard.html %}
+todo: take top 5
 
 ### Markdown
 
