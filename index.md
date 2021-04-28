@@ -1,12 +1,25 @@
 ## tl;dr
 
 - Goal: Improve global temperature and precipitation subseasonal predictions with ML/AI
-- Website for leaderboard: https://s2s-ai-challenge.github.io
+- [Flyer](https://todo)
 - Competition runs on https://renkulab.io/
 - How to join: https://renkulab.io/projects/aaron.spring/s2s-ai-competition-bootstrap/
 - Time: 1st June 2021 - 31st October 2021
 - Hosted by: [WMO](https://public.wmo.int/en), [WWRP](https://community.wmo.int/activity-areas/wwrp), [WCRP](https://www.wcrp-climate.org/), [S2S](http://s2sprediction.net/), [SDSC](https://datascience.ch/renku/)
-- [Flyer](https://todo)
+- Website with leaderboard: https://s2s-ai-challenge.github.io
+
+## Table of Contents
+1. [Description](#description)
+2. [Timeline](#timeline)
+3. [Prize](#prize)
+4. [Evaluation](#evaluation)
+5. [Data](#data)
+6. [Training](#training)
+7. [Discussions](#discussion)
+8. [Leaderboard](#leaderboard)
+9. [Rules](#rules)
+10. [Organizers](#organizers)
+
 
 ## Description
 
@@ -30,13 +43,13 @@ and a continously updating leaderboard. For code examples and how to contribute,
 
 The 3rd prize is reserved for the top contribution from developing countries (see [Table C p.166](https://www.un.org/development/desa/dpad/wp-content/uploads/sites/45/WESP2020_Annex.pdf) for country list). If such a contribution is already among the top 2, any thrid contribution will get the 3rd prize.
 
-The organizers thank WWRP for providing the money of the prize.
+The organizers thank WWRP for providing the money of the prize. missing some org here?
 
 ## Evaluation
 
 The objective of the competition is to improve week 3+4 and 5+6 subseasonal global probabilistic temperature and precipitation predictions issued in the year 2020 by using Machine Learning/Artificial Intelligence.
 
-The evaluation will be performed by a `scorer` bot on renkulab.io, following [verification notebook](https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/notebooks/verification_RPSS.ipynb)
+The evaluation will be continuously performed by a `scorer` bot on renkulab.io, following [verification notebook](https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/notebooks/verification_RPSS.ipynb).
 Submissions are evaluated on the Ranked Probability Score (`RPS`) between the ML-based forecasts and ground truth CPC observations based on pre-computed observations-based terciles. This `RPS` is compared to the re-calibrated real-time 2020 ECMWF forecasts into the Ranked Probability Skill Score (`RPSS`).
 
 `RPS` is calculated with the open-source package [xskillscore](https://xskillscore.readthedocs.io/en/latest) over all 2020 `forecast_reference_time`s:
@@ -56,7 +69,7 @@ Each submission is a netcdf file with the folloing dimension sizes:
 >>> ML_forecasts.sizes # todo: add category dim
 Frozen(SortedKeysDict({'forecast_reference_time': 53, 'latitude': 121, 'longitude': 240, 'step': 2}))
 
->>> ML_forecasts.coords  # time is optional # todo: add category_coord
+>>> ML_forecasts.coords  # time is optional # todo: add category coord
 Coordinates:
   * latitude                 (latitude) float64 90.0 88.5 87.0 ... -88.5 -90.0
   * longitude                (longitude) float64 0.0 1.5 3.0 ... 357.0 358.5
@@ -67,7 +80,7 @@ Coordinates:
 
 Such submissions need to be commited in git/renku with [`git lfs`](https://git-lfs.github.com/).
 
-After the competition, the code for training must be made public, so the competition maintainers will check the requirements of data timing use.
+After the competition, the code for training must be made public, so the competition maintainers will check the requirements of data timing use. During the competition the organizers may ask top listed participants to provide access to their training pipeline.
 Please indicate the resources used (number of CPUs/GPUs, memory, platform; see examples) in your scripts/notebooks to allow reproducibility.
 
 ## Data
@@ -92,6 +105,7 @@ Please indicate the resources used (number of CPUs/GPUs, memory, platform; see e
   - s2sprediction.net
 - SubX
   - [IRIDL](http://iridl.ldeo.columbia.edu/SOURCES/.Models/.SubX)
+- other sources allowed? CMIP daily?
 
 Main datasets for this competition are already available as [renku datasets](https://renku.readthedocs.io/en/latest/user/data.html) for both variables temperature, precipitation:
 - `tag in climetlab`: description (link in renku)
@@ -107,11 +121,17 @@ Not all available yet, also not yet cleaned.
 
 [verification notebook CHANGE LINK](https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/notebooks/verification_RPSS.ipynb).
 
-## Compute resources
+## Training
+
+Where to train?
 
 - renkulab.io provides free but limited compute resources. You may use upto 2 CPUs, 8 GB memory and 10 GB disk space.
 - as renku projects are git repositories under the hood, you can `renku clone` or `git clone` your project onto your own laptop or supercomputer account for the heavy lifting
-- ECMWF will provide limited compute nodes on the European Weather Cloud `EWC` (where large parts of the data is stored) upon request. This opportunity is specifically targeted for participants from developing countries and/or without institutional computing resources.
+- ECMWF will provide limited compute nodes on the European Weather Cloud `EWC` (where large parts of the data is stored) upon request. This opportunity is specifically targeted for participants from developing countries and/or without institutional computing resources. Please get in touch with [Aaron](mailto:aaron.spring@mpimet.mpg.de) for access.
+
+How to train?
+
+We are looking for smart solutions here. Find a quick start [here](https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/notebooks/ML_forecast.ipynb).
 
 ## Discussion
 
@@ -136,6 +156,7 @@ Answered questions from the issue tracker will be transferred to the [FAQ](https
 - By joining the competition (see steps https://renkulab.io/projects/aaron.spring/s2s-ai-competition-bootstrap), participants agree that they will make their private repositories on renkulab.io public after the competition ends (31st October 2021) regardless whether their contributions are among the top 3 for prizes. All repositories must be made availbale under the xyz-tbd licence.
 - warranty?
 - law?
+- some WMO liability statement?
 
 ## Organizers
 
