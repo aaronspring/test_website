@@ -24,7 +24,7 @@
 ## Description
 
 This is the landing page of the competition presenting static information about the competition
-and a continously updating leaderboard. For code examples and how to contribute, please visit [renkulab.io](https://renkulab.io/projects/aaron.spring/s2s-ai-competition-bootstrap/).
+and a continously updating leaderboard. For code examples and how to contribute, please visit the contribution template repository [renkulab.io](https://renkulab.io/projects/aaron.spring/s2s-ai-challenge-template/).
 
 ## Timeline
 
@@ -119,7 +119,8 @@ Not all available yet, also not yet cleaned.
 
 ### Examples
 
-[verification notebook CHANGE LINK](https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/notebooks/verification_RPSS.ipynb).
+[Train ML model](https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/notebooks).
+[Score RPSS ML model vs ECMWF](https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/notebooks).
 
 ## Training
 
@@ -138,7 +139,7 @@ We are looking for smart solutions here. Find a quick start [here](https://renku
 Please use the issue tracker in the renkulab gitlab repository
 [to be added](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/issues) for discussions.
 
-Answered questions from the issue tracker will be transferred to the [FAQ](https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/wikis/Frequently-Asked-Questions-(FAQ)).
+Answered questions from the issue tracker will be transferred to the [FAQ](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/wikis/Frequently-Asked-Questions-(FAQ)).
 
 ## Leaderboard
 [Leaderboard on renku in html](https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/leaderboard.html)
@@ -153,7 +154,7 @@ Answered questions from the issue tracker will be transferred to the [FAQ](https
 - One Person can only join on team.
 - Model training is not allowed use ground truth/observations data after forecast was issued, see Data Timings.
 - All taxes imposed on prizes are the sole responsibility of the winners.
-- By joining the competition (see steps https://renkulab.io/projects/aaron.spring/s2s-ai-competition-bootstrap), participants agree that they will make their private repositories on renkulab.io public after the competition ends (31st October 2021) regardless whether their contributions are among the top 3 for prizes. All repositories must be made availbale under the xyz-tbd licence.
+- By joining the competition (see steps https://renkulab.io/projects/aaron.spring/s2s-ai-challenge-template), participants agree that they will make their private repositories on renkulab.io public after the competition ends (31st October 2021) regardless whether their contributions are among the top 3 for prizes. All repositories must be made availbale under the xyz-tbd licence.
 - warranty?
 - law?
 - some WMO liability statement?
