@@ -10,8 +10,8 @@
 
 ## Description
 
-This is the landing page of the competition stating static information about the competition
-and a continously updating leaderboard.
+This is the landing page of the competition presenting static information about the competition
+and a continously updating leaderboard. For code examples and how to contribute, please visit [renkulab.io](https://renkulab.io/projects/aaron.spring/s2s-ai-competition-bootstrap/).
 
 ## Timeline
 
@@ -30,15 +30,17 @@ and a continously updating leaderboard.
 
 The 3rd prize is reserved for the top contribution from developing countries (see [Table C p.166](https://www.un.org/development/desa/dpad/wp-content/uploads/sites/45/WESP2020_Annex.pdf) for country list). If such a contribution is already among the top 2, any thrid contribution will get the 3rd prize.
 
+The organizers thank WWRP for providing the money of the prize.
 
 ## Evaluation
 
 The objective of the competition is to improve week 3+4 and 5+6 subseasonal global probabilistic temperature and precipitation predictions issued in the year 2020 by using Machine Learning/Artificial Intelligence.
 
-The evaluation will be performed by a `scorer` bot on renkulab.io. 
+The evaluation will be performed by a `scorer` bot on renkulab.io, following [verification notebook](https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/notebooks/verification_RPSS.ipynb)
 Submissions are evaluated on the Ranked Probability Score (`RPS`) between the ML-based forecasts and ground truth CPC observations based on pre-computed observations-based terciles. This `RPS` is compared to the re-calibrated real-time 2020 ECMWF forecasts into the Ranked Probability Skill Score (`RPSS`).
 
-`RPS` is calculated with the open-source package xskillscore over all 2020 `forecast_reference_time`s: [xs.rps(observations, forecasts, terciles, dim='forecast_reference_time')](https://xskillscore.readthedocs.io/en/latest/api/xskillscore.rps.html)
+`RPS` is calculated with the open-source package [xskillscore](https://xskillscore.readthedocs.io/en/latest) over all 2020 `forecast_reference_time`s:
+[xs.rps(observations, forecasts, terciles, dim='forecast_reference_time')](https://xskillscore.readthedocs.io/en/latest/api/xskillscore.rps.html)
 
 ```python
 def RPSS(rps_ML, rps_benchmark):
@@ -46,7 +48,7 @@ def RPSS(rps_ML, rps_benchmark):
 ```
 
 The `RPSS` is calculated globally, and aggregated in three regions: Northern extratropics (90N-30N), tropics (29N-29S) and Southern extratropics (30S-90S). The final score is averaged over all 2 variables, 2 steps and 3 regions.
-Please find more details in the [verification notebook CHANGE LINK](https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/notebooks/verification_RPSS.ipynb).
+Please find more details in the [verification notebook](https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/notebooks/verification_RPSS.ipynb).
 
 Each submission is a netcdf file with the folloing dimension sizes:
 
@@ -85,18 +87,38 @@ Please indicate the resources used (number of CPUs/GPUs, memory, platform; see e
 ### Data Sources
 
 - S2S
-  - [European Weather Cloud via climetlab]()
+  - [European Weather Cloud via climetlab](https://github.com/ecmwf-lab/climetlab-s2s-ai-challenge)
   - [IRIDL](https://iridl.ldeo.columbia.edu/SOURCES/.ECMWF/.S2S)
   - s2sprediction.net
 - SubX
   - [IRIDL](http://iridl.ldeo.columbia.edu/SOURCES/.Models/.SubX)
 
+Main datasets for this competition are already available as [renku datasets](https://renku.readthedocs.io/en/latest/user/data.html) for both variables temperature, precipitation:
+- `tag in climetlab`: description (link in renku)
+- `forecast-benchmark`: ECMWF week 3+4 & 5+6 re-calibrated real-time 2020 forecasts
+- `observations`: CPC daily observations interpolated on 1.5 degree grid:
+- `training-input`: daily real-time initialized on thursdays 2020 forecasts from models ECMWF, ECCC, NCEP
+- `forecast-input`: daily reforecasts initialized once per week until 2019 from models ECMWF, ECCC, NCEP
+- Observations-based tercile category_edges
+
+Not all available yet, also not yet cleaned.
+
+### Examples
+
+[verification notebook CHANGE LINK](https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/notebooks/verification_RPSS.ipynb).
+
+## Compute resources
+
+- renkulab.io provides free but limited compute resources. You may use upto 2 CPUs, 8 GB memory and 10 GB disk space.
+- as renku projects are git repositories under the hood, you can `renku clone` or `git clone` your project onto your own laptop or supercomputer account for the heavy lifting
+- ECMWF will provide limited compute nodes on the European Weather Cloud `EWC` (where large parts of the data is stored) upon request. This opportunity is specifically targeted for participants from developing countries and/or without institutional computing resources.
 
 ## Discussion
 
 Please use the issue tracker in the renkulab gitlab repository
 [to be added](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/issues) for discussions.
 
+Answered questions from the issue tracker will be transferred to the [FAQ](https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/wikis/Frequently-Asked-Questions-(FAQ)).
 
 ## Leaderboard
 [Leaderboard on renku in html](https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/leaderboard.html)
@@ -106,14 +128,27 @@ Please use the issue tracker in the renkulab gitlab repository
 
 ## Rules
 
-- These rules may change until the start of the competition.
+- These rules may be modified by the organizers until the start of the competition. Under which circumstances are organizers allowed to change these?
 - One team can only get one prize.
 - One Person can only join on team.
-- Forecasts are not allowed to be trained on ground truth data after forecast was issued.
+- Model training is not allowed use ground truth/observations data after forecast was issued, see Data Timings.
+- All taxes imposed on prizes are the sole responsibility of the winners.
+- By joining the competition (see steps https://renkulab.io/projects/aaron.spring/s2s-ai-competition-bootstrap), participants agree that they will make their private repositories on renkulab.io public after the competition ends (31st October 2021) regardless whether their contributions are among the top 3 for prizes. All repositories must be made availbale under the xyz-tbd licence.
+- warranty?
+- law?
 
+## Organizers
 
-### Todo
+- Estelle De Coning, Michel Rixen, Wenchao Cao (WMO)
+- Frederic Vitart, Florian Pinault, Baudouin Raoult (ECMWF)
+- Andy Robertson (IRI)
+- Rok Roskar, Tasko Olevski (SDSC)
+- Aaron Spring (main contract, WMO contractor)
+
+### End
 ```markdown
+Todo:
+
 - take top 5 of leaderboard only, should we have sub-leaderboards for different variables?
 - implement discussion forum? github discussions?
 - add link to flyer
