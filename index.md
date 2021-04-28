@@ -42,7 +42,7 @@ and a continously updating leaderboard. For code examples and how to contribute,
 2. 10K CHF
 3. 5K CHF
 
-The 3rd prize is reserved for the top contribution from developing countries (see [Table C p.166](https://www.un.org/development/desa/dpad/wp-content/uploads/sites/45/WESP2020_Annex.pdf) for country list). If such a contribution is already among the top 2, any thrid contribution will get the 3rd prize.
+The 3rd prize is reserved for the top contribution from developing countries (see [Table C p.166](https://www.un.org/development/desa/dpad/wp-content/uploads/sites/45/WESP2020_Annex.pdf) for country list). If such a contribution is already among the Top 2, any thrid contribution will get the 3rd prize.
 
 The organizers thank WWRP for providing the money of the prize. missing some org here?
 
@@ -144,7 +144,7 @@ Please use the issue tracker in the renkulab gitlab repository
 Answered questions from the issue tracker will be transferred to the [FAQ](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/wikis/Frequently-Asked-Questions-(FAQ)).
 
 ## Leaderboard
-[Leaderboard on renku in html](https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/leaderboard.html)
+[Leaderboard from repository](https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/leaderboard.html)
 
 {% include_relative leaderboard.html %}
 
@@ -155,11 +155,11 @@ Answered questions from the issue tracker will be transferred to the [FAQ](https
 - One team can only get one prize.
 - One Person can only join on team.
 - Model training is not allowed use ground truth/observations data after forecast was issued, see Data Timings.
-- All taxes imposed on prizes are the sole responsibility of the winners.
-- By joining the competition (see steps https://renkulab.io/projects/aaron.spring/s2s-ai-challenge-template), participants agree that they will make their private repositories on renkulab.io public after the competition ends (31st October 2021) regardless whether their contributions are among the top 3 for prizes. All repositories must be made availbale under the xyz-tbd licence.
-- warranty?
-- law?
-- some WMO liability statement?
+- All taxes imposed on prizes are the sole responsibility of the winners. 
+- By joining the competition (see steps https://renkulab.io/projects/aaron.spring/s2s-ai-challenge-template), participants agree that they will make their private repositories on renkulab.io public after the competition ends (31st October 2021) regardless whether their contributions are among the top 3 for prizes. All repositories must be made availbale under the xyz-tbd licence. 
+- warranty? 
+- law? 
+- some WMO liability statement? 
 
 ## Organizers
 
