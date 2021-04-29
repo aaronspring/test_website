@@ -24,7 +24,7 @@
 
 ## Description
 
-The   World   Meteorological   Organisation   (WMO)   Science andInnovation   Department,   in collaboration with the Services and Infrastructure Departments, plans to hold an open competition to explore new services based on AI methods and applied to the WWRP/WCRP subseasonal to seasonal  (S2S)  project  database.  Moreover, as  the  newly  formed  Research  Board  of  WMO identified Artificial Intelligence (AI) as a key research topic in weather and climate science for the upcoming years, this competition will foster this approach by specifically encouraging the use of AI tools to extract valuable information from the S2S database. The innovation coming out of this competition supports the goals and action areas of the S2S and WWRP implementation plan as well as the WCRP Strategic Plan.The  winning  entry  will  push  the  frontiers  of  weather  and  climate  science  within  the  WMO framework and as such supports theUnited Nations Sustainable Development Goals (UN SDGs)
+The   World   Meteorological   Organisation   (WMO)   Science andInnovation   Department,   in collaboration with the Services and Infrastructure Departments, plans to hold an open competition to explore new services based on AI methods and applied to the WWRP/WCRP subseasonal to seasonal  (S2S)  project  database.  Moreover, as  the  newly  formed  Research  Board  of  WMO identified Artificial Intelligence (AI) as a key research topic in weather and climate science for the upcoming years, this competition will foster this approach by specifically encouraging the use of AI tools to extract valuable information from the S2S database. The innovation coming out of this competition supports the goals and action areas of the S2S and WWRP implementation plan as well as the WCRP Strategic Plan. The  winning  entry  will  push  the  frontiers  of  weather  and  climate  science  within  the  WMO framework and as such supports theUnited Nations Sustainable Development Goals (UN SDGs)
 
 This is the landing page of the competition presenting static information about the competition
 and a continously updating leaderboard. For code examples and how to contribute, please visit the contribution template repository [renkulab.io](https://renkulab.io/projects/aaron.spring/s2s-ai-challenge-template/).
@@ -46,7 +46,7 @@ and a continously updating leaderboard. For code examples and how to contribute,
 
 The 3rd prize is reserved for the top contribution from developing countries (see [Table C p.166](https://www.un.org/development/desa/dpad/wp-content/uploads/sites/45/WESP2020_Annex.pdf) for country list). If such a contribution is already among the Top 2, any thrid contribution will get the 3rd prize.
 
-The organizers thank WWRP for providing the money of the prize. missing some org here?
+The organizers thank WWRP for providing the money of the prize.
 
 ## Evaluation
 
