@@ -24,7 +24,7 @@
 
 ## Description
 
-The   World   Meteorological   Organisation   (WMO)   Science andInnovation   Department,   in collaboration with the Services and Infrastructure Departments, plans to hold an open competition to explore new services based on AI methods and applied to the WWRP/WCRP subseasonal to seasonal  (S2S)  project  database.  Moreover, as  the  newly  formed  Research  Board  of  WMO identified Artificial Intelligence (AI) as a key research topic in weather and climate science for the upcoming years, this competition will foster this approach by specifically encouraging the use of AI tools to extract valuable information from the S2S database. The innovation coming out of this competition supports the goals and action areas of the S2S and WWRP implementation plan as well as the WCRP Strategic Plan. The  winning  entry  will  push  the  frontiers  of  weather  and  climate  science  within  the  WMO framework and as such supports theUnited Nations Sustainable Development Goals (UN SDGs)
+The   World   Meteorological   Organisation   (WMO)   Science andInnovation   Department,   in collaboration with the Services and Infrastructure Departments, plans to hold an open competition to explore new services based on AI methods and applied to the WWRP/WCRP subseasonal to seasonal  (S2S)  project  database.  Moreover, as  the  newly  formed  Research  Board  of  WMO identified Artificial Intelligence (AI) as a key research topic in weather and climate science for the upcoming years, this competition will foster this approach by specifically encouraging the use of AI tools to extract valuable information from the S2S database. The innovation coming out of this competition supports the goals and action areas of the S2S and WWRP implementation plan as well as the WCRP Strategic Plan. The  winning entries will push the frontiers of weather and climate science within the WMO framework and as such support the United Nations Sustainable Development Goals (UN SDGs).
 
 This is the landing page of the competition presenting static information about the competition
 and a continously updating leaderboard. For code examples and how to contribute, please visit the contribution template repository [renkulab.io](https://renkulab.io/projects/aaron.spring/s2s-ai-challenge-template/).
@@ -156,9 +156,29 @@ Please use the issue tracker in the renkulab gitlab repository
 Answered questions from the issue tracker will be transferred to the [FAQ](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/wikis/Frequently-Asked-Questions-(FAQ)).
 
 ## Leaderboard
+
+### RPSS averaged over all variables, regions and lead times
 [Leaderboard from repository](https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/leaderboard.html)
 
 {% include_relative leaderboard.html %}
+
+
+### RPSS temperature
+
+#### RPSS temperature Northern Extratropics
+
+#### RPSS temperature Tropics
+
+#### RPSS temperature Southern Extratropics
+
+
+### RPSS temperature
+
+#### RPSS precipitation Northern Extratropics
+
+#### RPSS precipitation Tropics
+
+#### RPSS precipitation Southern Extratropics
 
 
 ## Rules
