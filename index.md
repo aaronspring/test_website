@@ -181,13 +181,11 @@ Answered questions from the issue tracker will be transferred to the [FAQ](https
 - Rok Roskar, Tasko Olevski (SDSC)
 - [Aaron Spring](mailto:aaron.spring@mpimet.mpg.de) (main contract, WMO contractor)
 
-### End
-```markdown
+<!---
 Todo:
-
-- take top 5 of leaderboard only, should we have sub-leaderboards for different variables?
+- take top 5 of leaderboard only, should we have sub-leaderboards for different variables, regions?
 - implement discussion forum? github discussions?
 - add link to flyer
 - define which countries are developing countries? link above is just a suggestion
 - `category` dimension
-```
+-->
