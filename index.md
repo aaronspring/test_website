@@ -8,6 +8,7 @@
 - Hosted by: [WMO](https://public.wmo.int/en), [WWRP](https://community.wmo.int/activity-areas/wwrp), [WCRP](https://www.wcrp-climate.org/), [S2S](http://s2sprediction.net/), [SDSC](https://datascience.ch/renku/)
 - Website with leaderboard: https://s2s-ai-challenge.github.io
 
+
 ## Table of Contents
 1. [Description](#description)
 2. [Timeline](#timeline)
@@ -23,6 +24,8 @@
 
 ## Description
 
+The World Meteorological Organisation (WMO) Science and Innovation Department, in collaboration with the Services and Infrastructure Departments, plans to hold an open competition to explore new services based on AI methods and applied to the WWRP/WCRP subseasonal to seasonal (S2S) project database. Moreover, as the  newly formed Research Board of WMO identified Artificial Intelligence (AI) as a key research topic in weather and climate science for the upcoming years, this competition will foster this approach by specifically encouraging the use of AI tools to extract valuable information from the S2S database. The innovation coming out of this competition supports the goals and action areas of the S2S and WWRP implementation plan as well as the WCRP Strategic Plan. The winning entries will push the frontiers of weather and climate science within the WMO framework and as such support the United Nations Sustainable Development Goals (UN SDGs).
+
 This is the landing page of the competition presenting static information about the competition
 and a continously updating leaderboard. For code examples and how to contribute, please visit the contribution template repository [renkulab.io](https://renkulab.io/projects/aaron.spring/s2s-ai-challenge-template/).
 
@@ -31,7 +34,7 @@ and a continously updating leaderboard. For code examples and how to contribute,
 - 29th April 2021: Announcement of the competition
 - 1st June 2021: Start of the competition (First contributions are accepted)
 - 31st October 2021: End of the competition (Last date for contributions)
-- November 2021: every participant makes code public
+- November 2021: every participant makes repository public
 - early December 2021: Announcement of the winners
 
 
@@ -41,9 +44,9 @@ and a continously updating leaderboard. For code examples and how to contribute,
 2. 10K CHF
 3. 5K CHF
 
-The 3rd prize is reserved for the top contribution from developing countries (see [Table C p.166](https://www.un.org/development/desa/dpad/wp-content/uploads/sites/45/WESP2020_Annex.pdf) for country list). If such a contribution is already among the top 2, any thrid contribution will get the 3rd prize.
+The 3rd prize is reserved for the top contribution from developing countries (see [Table C p.166](https://www.un.org/development/desa/dpad/wp-content/uploads/sites/45/WESP2020_Annex.pdf) for country list). If such a contribution is already among the Top 2, any thrid contribution will get the 3rd prize.
 
-The organizers thank WWRP for providing the money of the prize. missing some org here?
+The organizers thank WWRP for providing the money of the prize.
 
 ## Evaluation
 
@@ -63,6 +66,10 @@ def RPSS(rps_ML, rps_benchmark):
 The `RPSS` is calculated globally, and aggregated in three regions: Northern extratropics (90N-30N), tropics (29N-29S) and Southern extratropics (30S-90S). The final score is averaged over all 2 variables, 2 steps and 3 regions.
 Please find more details in the [verification notebook](https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/notebooks/verification_RPSS.ipynb).
 
+## Submissions
+
+We expect submissions to cover all bi-weekly week 3-4 and week 5-6 forecasts issued in 2020, see [timings](#timings). Submission have to be gridded on a global 1.5 degree grid.
+
 Each submission is a netcdf file with the folloing dimension sizes and coordinates:
 
 ```
@@ -77,6 +84,7 @@ Coordinates:
   * step                     (step) timedelta64[ns] 21 days 35 days
     time                     (step, forecast_reference_time) datetime64[ns] 2...
 ```
+A template file for submissions can be found [here](http://to.do).
 
 Such submissions need to be commited in git/renku with [`git lfs`](https://git-lfs.github.com/).
 
@@ -100,14 +108,6 @@ Please indicate the resources used (number of CPUs/GPUs, memory, platform; see e
 
 ### Data Sources
 
-- S2S
-  - [European Weather Cloud via climetlab](https://github.com/ecmwf-lab/climetlab-s2s-ai-challenge)
-  - [IRIDL](https://iridl.ldeo.columbia.edu/SOURCES/.ECMWF/.S2S)
-  - s2sprediction.net
-- SubX
-  - [IRIDL](http://iridl.ldeo.columbia.edu/SOURCES/.Models/.SubX)
-- other public sources allowed? e.g. CMIP daily?
-
 Main datasets for this competition are already available as [renku datasets](https://renku.readthedocs.io/en/latest/user/data.html) for both variables temperature, precipitation:
 - `tag in climetlab`: description (link in renku)
 - `forecast-benchmark`: ECMWF week 3+4 & 5+6 re-calibrated real-time 2020 forecasts
@@ -117,6 +117,19 @@ Main datasets for this competition are already available as [renku datasets](htt
 - Observations-based tercile category_edges
 
 Not all available yet, also not yet cleaned.
+
+We encourage to use subseasonal forecasts from the S2S and SubX projects.
+
+- S2S
+  - [European Weather Cloud via climetlab](https://github.com/ecmwf-lab/climetlab-s2s-ai-challenge)
+  - [IRIDL](https://iridl.ldeo.columbia.edu/SOURCES/.ECMWF/.S2S)
+  - s2sprediction.net
+- SubX
+  - [IRIDL](http://iridl.ldeo.columbia.edu/SOURCES/.Models/.SubX)
+
+However, any other publicly available data sources (like CMIP, NMME, etc.) of dates prior the forecast_reference_time can be used for `training-input` and `forecast-input`.
+Also purely empirical methods like persistence or climatology could be used. The only strong data requirement concerns time, see [timings](#timings)
+
 
 ### Examples
 
@@ -129,7 +142,7 @@ Where to train?
 
 - renkulab.io provides free but limited compute resources. You may use upto 2 CPUs, 8 GB memory and 10 GB disk space.
 - as renku projects are git repositories under the hood, you can `renku clone` or `git clone` your project onto your own laptop or supercomputer account for the heavy lifting
-- ECMWF will provide limited compute nodes on the European Weather Cloud `EWC` (where large parts of the data is stored) upon request. This opportunity is specifically targeted for participants from developing countries and/or without institutional computing resources. Please get in touch with [Aaron](mailto:aaron.spring@mpimet.mpg.de) for access.
+- ECMWF will provide limited compute nodes on the European Weather Cloud `EWC` (where large parts of the data is stored) upon request. This opportunity is specifically targeted for participants from developing countries and/or without institutional computing resources. Please get in touch with [Aaron](mailto:aaron.spring@mpimet.mpg.de) for access. Please note that we cannot make promises about these resources given the unknown demand.
 
 How to train?
 
@@ -143,9 +156,29 @@ Please use the issue tracker in the renkulab gitlab repository
 Answered questions from the issue tracker will be transferred to the [FAQ](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/wikis/Frequently-Asked-Questions-(FAQ)).
 
 ## Leaderboard
-[Leaderboard on renku in html](https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/leaderboard.html)
+
+### RPSS averaged over all variables, regions and lead times
+[Leaderboard from repository](https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/leaderboard.html)
 
 {% include_relative leaderboard.html %}
+
+
+### RPSS temperature
+
+#### RPSS temperature Northern Extratropics
+
+#### RPSS temperature Tropics
+
+#### RPSS temperature Southern Extratropics
+
+
+### RPSS temperature
+
+#### RPSS precipitation Northern Extratropics
+
+#### RPSS precipitation Tropics
+
+#### RPSS precipitation Southern Extratropics
 
 
 ## Rules
@@ -154,11 +187,11 @@ Answered questions from the issue tracker will be transferred to the [FAQ](https
 - One team can only get one prize.
 - One Person can only join on team.
 - Model training is not allowed use ground truth/observations data after forecast was issued, see Data Timings.
-- All taxes imposed on prizes are the sole responsibility of the winners.
-- By joining the competition (see steps https://renkulab.io/projects/aaron.spring/s2s-ai-challenge-template), participants agree that they will make their private repositories on renkulab.io public after the competition ends (31st October 2021) regardless whether their contributions are among the top 3 for prizes. All repositories must be made availbale under the xyz-tbd licence.
-- warranty?
-- law?
-- some WMO liability statement?
+- All taxes imposed on prizes are the sole responsibility of the winners. 
+- By joining the competition (see steps https://renkulab.io/projects/aaron.spring/s2s-ai-challenge-template), participants agree that they will make their private repositories on renkulab.io public after the competition ends (31st October 2021) regardless whether their contributions are among the top 3 for prizes. All repositories must be made availbale under the xyz-tbd licence. 
+- warranty? 
+- law? 
+- some WMO liability statement? 
 
 ## Organizers
 
@@ -168,13 +201,11 @@ Answered questions from the issue tracker will be transferred to the [FAQ](https
 - Rok Roskar, Tasko Olevski (SDSC)
 - [Aaron Spring](mailto:aaron.spring@mpimet.mpg.de) (main contract, WMO contractor)
 
-### End
-```markdown
+<!---
 Todo:
-
-- take top 5 of leaderboard only, should we have sub-leaderboards for different variables?
+- take top 5 of leaderboard only, should we have sub-leaderboards for different variables, regions?
 - implement discussion forum? github discussions?
 - add link to flyer
 - define which countries are developing countries? link above is just a suggestion
 - `category` dimension
-```
+-->
