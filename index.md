@@ -66,9 +66,11 @@ def RPSS(rps_ML, rps_benchmark):
 ```
 
 The final `RPSS` relevant for the prizes is calculated globally with spatial weighting and averaged over the two variables and two steps. For diagnostics, we host leaderboards for the two variables in three regions:
+
 - Northern extratropics (90N-30N)
 - Tropics (29N-29S)
 - Southern extratropics (30S-60S)
+
 Please find more details in the [verification notebook](https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/notebooks/verification_RPSS.ipynb).
 
 ## Submissions
@@ -138,10 +140,10 @@ Also purely empirical methods like persistence or climatology could be used. The
 
 
 ### Examples
-
-[Train ML model](https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/notebooks).
-[Score RPSS ML model vs ECMWF](https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/notebooks).
-
+<!--
+- [Train ML model](https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/notebooks).
+- [Score RPSS ML model vs ECMWF](https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/notebooks).
+-->
 ## Training
 
 Where to train?
@@ -152,14 +154,13 @@ Where to train?
 
 How to train?
 
-We are looking for smart solutions here. Find a quick start [here](https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/notebooks/ML_forecast.ipynb).
+We are looking for smart solutions here. Find a quick start [here]<!--(https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/notebooks/ML_forecast.ipynb)-->.
 
 ## Discussion
 
-Please use the issue tracker in the renkulab gitlab repository
-[to be added](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/issues) for discussions.
+Please use the issue tracker in the renkulab [`s2s-ai-challenge` gitlab repository](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/issues) for discussions.
 
-Answered questions from the issue tracker will be transferred to the [FAQ](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/wikis/Frequently-Asked-Questions-(FAQ)).
+Answered questions from the issue tracker will be transferred to the [FAQ](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/wikis/Frequently-Asked-Questions-(FAQ)).
 
 ## Leaderboard
 
@@ -205,7 +206,7 @@ Answered questions from the issue tracker will be transferred to the [FAQ](https
 - Frederic Vitart, Florian Pinault, Baudouin Raoult (ECMWF)
 - Andy Robertson (IRI)
 - Rok Roskar, Tasko Olevski (SDSC)
-- [Aaron Spring](mailto:aaron.spring@mpimet.mpg.de) (main contract, WMO contractor)
+- [Aaron Spring](mailto:aaron.spring@mpimet.mpg.de) [@aaronspring](https://github.com/aaronspring/) (main contact, WMO contractor)
 
 <!---
 Todo:
