@@ -1,4 +1,5 @@
-# `s2s-ai-challenge` <!-- nice banner instead of just url: subseasonal-to-seasonal prediction AI challenge -->
+<!-- `s2s-ai-challenge` -->
+<!-- nice banner instead of just url: subseasonal-to-seasonal prediction AI challenge -->
 
 ## Overview <!-- tl;dr -->
 
