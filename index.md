@@ -105,7 +105,7 @@ Please indicate the resources used (number of CPUs/GPUs, memory, platform; see e
 ### Timings
 
 1) Which forecast starts/target periods (weeks 3-4 & 5-6) to require to be submitted?
-- It may make sense to take all Thursday starts in 2020 since there are available from all S2S models, including our ECMWF benchmark
+- 53 forecasts issued on Thursdays in 2020 (since there are available from all S2S models, including our ECMWF benchmark)
 - In that case, the first forecast is issued S=2 Jan 2020, for the week 3-4 target 16-29 Jan.
 
 Please find a list of the dates when forecasts are issued `forecast_reference_time` and corresponding start and end in `valid_time` for week 3-4 and week 5-6.
@@ -113,20 +113,20 @@ Please find a list of the dates when forecasts are issued `forecast_reference_ti
 {% include_relative timings_2020.html %}
  
 2) Which data to “allow” to be used to make a specific ML forecast?
-- for the first forecast issued S=2 Jan 2020, any observational data up to the day of the the forecast start, ie 2 Jan 2020 
+- for the first forecast issued S=2 Jan 2020, any observational data up to the day of the the forecast start, ie 2 Jan 2020
 - any S2S forecasts up to and including S=2 Jan 2020
 
 ### Data Sources
 
 Main datasets for this competition are already available as [renku datasets](https://renku.readthedocs.io/en/latest/user/data.html) for both variables temperature, precipitation:
 - `tag in climetlab`: description (link in renku)
-- `forecast-benchmark`: ECMWF week 3+4 & 5+6 re-calibrated real-time 2020 forecasts
-- `observations`: CPC daily observations interpolated on 1.5 degree grid
-- `training-input`: daily real-time initialized on thursdays 2020 forecasts from models ECMWF, ECCC, NCEP
-- `forecast-input`: daily reforecasts initialized once per week until 2019 from models ECMWF, ECCC, NCEP
-- Observations-based tercile category_edges
+- `forecast-benchmark`: ECMWF week 3+4 & 5+6 re-calibrated real-time 2020 forecasts (missing)
+- `observations`: CPC daily observations interpolated on 1.5 degree grid (missing)
+- `training-input`: daily real-time initialized on thursdays 2020 forecasts from models ECMWF, ECCC, NCEP (missing)
+- `forecast-input`: daily reforecasts initialized once per week until 2019 from models ECMWF, ECCC, NCEP (missing)
+- `terciles` Observations-based tercile category_edges (missing)
 
-Not all available yet, also not yet cleaned.
+<!--Not all available yet, also not yet cleaned.-->
 
 We encourage to use subseasonal forecasts from the S2S and SubX projects.
 
@@ -156,7 +156,7 @@ Where to train?
 
 How to train?
 
-We are looking for smart solutions here. Find a quick start [here](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_forecast.ipynb)-->.
+We are looking for smart solutions here. Find a quick start [here](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_forecast.ipynb).
 
 ## Discussion
 
