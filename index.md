@@ -1,7 +1,7 @@
 <!-- `s2s-ai-challenge` -->
 <!-- nice banner instead of just url: subseasonal-to-seasonal prediction AI challenge -->
 
-## Overview <!-- tl;dr -->
+## Competition Overview <!-- tl;dr -->
 
 - Goal: Improve global temperature and total precipitation subseasonal forecasts with ML/AI <!-- adapt -->
 - [Flyer](https://todo)
