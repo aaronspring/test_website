@@ -1,3 +1,5 @@
+# `s2s-ai-challenge`
+
 ## tl;dr
 
 - Goal: Improve global temperature and total precipitation subseasonal forecasts with ML/AI
@@ -32,7 +34,7 @@ and a continously updating leaderboard. For code examples and how to contribute,
 ## Timeline
 
 - 29th April 2021: Announcement of the competition
-- 1st June 2021: Start of the competition (First contributions are accepted)
+- 1st June 2021: Start of the competition (First contributions are accepted) <!-- registration: https://docs.google.com/forms/d/e/1FAIpQLSe49IleTxqEBFKzLdtkHvFQH0rPR16o6gfOFQ_L6cPzglAc2Q/viewform form available -->
 - 31st October 2021: End of the competition (Last date for contributions)
 - November 2021: every participant makes repository public
 - early December 2021: Announcement of the winners
@@ -42,9 +44,9 @@ and a continously updating leaderboard. For code examples and how to contribute,
 
 Prizes are issued for the top three contributions beating the re-calibrated ECMWF benchmark:
 
-1. 15K CHF
-2. 10K CHF
-3. 5K CHF
+1. 15000 CHF
+2. 10000 CHF
+3.  5000 CHF
 
 The 3rd prize is reserved for the top contribution from developing or least developed country or small island states as per the [UN list (see table C, F, H p.166ff)](https://www.un.org/development/desa/dpad/wp-content/uploads/sites/45/WESP2020_Annex.pdf). If such a contribution is already among the top 2, any third contribution will get the 3rd prize.
 
@@ -142,10 +144,16 @@ Also purely empirical methods like persistence or climatology could be used. The
 
 
 ### Examples
-<!--
-- [Train ML model](https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/notebooks).
-- [Score RPSS ML model vs ECMWF](https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/notebooks).
--->
+
+coming soon
+
+- [Train ML model](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/blob/master/notebooks).
+- [Score RPSS ML model vs ECMWF](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/blob/master/notebooks).
+
+## Join
+
+Follow the steps [in the template renku project](https://renkulab.io/projects/aaron.spring/s2s-ai-challenge-template).
+
 ## Training
 
 Where to train?
