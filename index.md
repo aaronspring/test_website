@@ -63,16 +63,20 @@ def RPSS(rps_ML, rps_benchmark):
   return 1 - rps_ML / rps_benchmark  # positive means ML better than ECMWF benchmark
 ```
 
-The `RPSS` is calculated globally, and aggregated in three regions: Northern extratropics (90N-30N), tropics (29N-29S) and Southern extratropics (30S-90S). The final score is averaged over all 2 variables, 2 steps and 3 regions.
+The final `RPSS` relevant for the prizes is calculated globally with spatial weighting and averaged over the two variables and two steps. For diagnostics, we host leaderboards for the two variables in three regions:
+- Northern extratropics (90N-30N)
+- Tropics (29N-29S)
+- Southern extratropics (30S-90S)
 Please find more details in the [verification notebook](https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/blob/master/notebooks/verification_RPSS.ipynb).
 
 ## Submissions
 
-We expect submissions to cover all bi-weekly week 3-4 and week 5-6 forecasts issued in 2020, see [timings](#timings). Submission have to be gridded on a global 1.5 degree grid.
+We expect submissions to cover all bi-weekly week 3-4 and week 5-6 forecasts issued in 2020, see [timings](#timings). We expect one submission netcdf file for all 53 weekly forecasts issued in 2020. Submission have to be gridded on a global 1.5 degree grid.
 
 Each submission is a netcdf file with the folloing dimension sizes and coordinates:
 
 ```
+>>> # in xarray
 >>> ML_forecasts.sizes # todo: add category dim
 Frozen(SortedKeysDict({'forecast_reference_time': 53, 'latitude': 121, 'longitude': 240, 'step': 2}))
 
