@@ -107,7 +107,8 @@ Please indicate the resources used (number of CPUs/GPUs, memory, platform; see e
 1) Which forecast starts/target periods (weeks 3-4 & 5-6) to require to be submitted?
 - It may make sense to take all Thursday starts in 2020 since there are available from all S2S models, including our ECMWF benchmark
 - In that case, the first forecast will start S=2 Jan 2020, for the week 3-4 target 16-29 Jan.
-- The list of 52 forecasts and targets could be tabulated for clarity
+
+{% include_relative timings_2020.html %}
  
 2) Which data to “allow” to be used to make a specific ML forecast?
 - for the first forecast S=2 Jan 2020, any observational data up to the day before (or of?) the forecast start, ie 1 Jan 2020 
