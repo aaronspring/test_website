@@ -40,11 +40,13 @@ and a continously updating leaderboard. For code examples and how to contribute,
 
 ## Prize
 
+Prizes are issued for the top three contributions beating the re-calibrated ECMWF benchmark:
+
 1. 15K CHF
 2. 10K CHF
 3. 5K CHF
 
-The 3rd prize is reserved for the top contribution from developing countries (see [Table C p.166](https://www.un.org/development/desa/dpad/wp-content/uploads/sites/45/WESP2020_Annex.pdf) for country list). If such a contribution is already among the Top 2, any thrid contribution will get the 3rd prize.
+The 3rd prize is reserved for the top contribution from developing countries (see [Table C p.166](https://www.un.org/development/desa/dpad/wp-content/uploads/sites/45/WESP2020_Annex.pdf) for country list). If such a contribution is already among the top 2, any thrid contribution will get the 3rd prize.
 
 The organizers thank WWRP for providing the money of the prize.
 
@@ -169,33 +171,33 @@ Answered questions from the issue tracker will be transferred to the [FAQ](https
 
 ### RPSS temperature
 
-#### RPSS temperature Northern Extratropics
+#### RPSS temperature Northern Extratropics [90N-30N)
 
-#### RPSS temperature Tropics
+#### RPSS temperature Tropics [30N-30S]
 
-#### RPSS temperature Southern Extratropics
+#### RPSS temperature Southern Extratropics (30S-60S]
 
 
 ### RPSS temperature
 
-#### RPSS precipitation Northern Extratropics
+#### RPSS precipitation Northern Extratropics [90N-30N)
 
-#### RPSS precipitation Tropics
+#### RPSS precipitation Tropics [30N-30S]
 
-#### RPSS precipitation Southern Extratropics
+#### RPSS precipitation Southern Extratropics (30S-60S]
 
 
 ## Rules
 
-- These rules may be modified by the organizers until the start of the competition. Under which circumstances are organizers allowed to change these?
+- These rules may be modified by the organizers until the start of the competition. <!-- Under which circumstances are organizers allowed to change rules later on? -->
 - One team can only get one prize.
-- One Person can only join on team.
+- One Person can only join one team.
 - Model training is not allowed use ground truth/observations data after forecast was issued, see Data Timings.
 - All taxes imposed on prizes are the sole responsibility of the winners. 
-- By joining the competition (see steps https://renkulab.io/projects/aaron.spring/s2s-ai-challenge-template), participants agree that they will make their private repositories on renkulab.io public after the competition ends (31st October 2021) regardless whether their contributions are among the top 3 for prizes. All repositories must be made availbale under the xyz-tbd licence. 
-- warranty? 
+- By joining the competition (see steps https://renkulab.io/projects/aaron.spring/s2s-ai-challenge-template), participants agree that they will make their private repositories on renkulab.io public after the competition ends (31st October 2021) regardless whether their contributions are among the top 3 for prizes. All repositories must be made availbale under the tbd licence. 
+<!--- warranty? 
 - law? 
-- some WMO liability statement? 
+- some WMO liability statement? -->
 
 ## Organizers
 
