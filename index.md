@@ -48,7 +48,7 @@ Prizes are issued for the top three contributions beating the re-calibrated ECMW
 
 The 3rd prize is reserved for the top contribution from developing or least developed country or small island states as per the [UN list (see table C, F, H p.166ff)](https://www.un.org/development/desa/dpad/wp-content/uploads/sites/45/WESP2020_Annex.pdf). If such a contribution is already among the top 2, any thrid contribution will get the 3rd prize.
 
-The organizers thank WWRP for providing the money of the prize.
+The organizers thank [WWRP](https://community.wmo.int/activity-areas/wwrp) and the S2S Trust Fund for providing the money of the prize.
 
 ## Evaluation
 
