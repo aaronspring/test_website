@@ -7,7 +7,7 @@
 - Competition runs on platform [https://renkulab.io/](https://renkulab.io/)
 - How to join: [https://renkulab.io/projects/aaron.spring/s2s-ai-challenge-template/](https://renkulab.io/projects/aaron.spring/s2s-ai-challenge-template/)
 - Timeline: 1st June 2021 - 31st October 2021
-- Organized by: [WWRP](https://community.wmo.int/activity-areas/wwrp)/[WCRP](https://www.wcrp-climate.org/), [S2S Project](http://s2sprediction.net/) in collaboration with [SDSC](https://datascience.ch/renku/) and [ECMWF](https://www.ecmwf.int/)  <!-- add logos maybe -->
+- Organized by: [WMO](https://public.wmo.int/en)/[WWRP](https://community.wmo.int/activity-areas/wwrp), [WCRP](https://www.wcrp-climate.org/), [S2S Project](http://s2sprediction.net/) in collaboration with [SDSC](https://datascience.ch/renku/) and [ECMWF](https://www.ecmwf.int/)  <!-- add logos maybe -->
 - Website with leaderboard: [https://s2s-ai-challenge.github.io](https://s2s-ai-challenge.github.io)
 
 
