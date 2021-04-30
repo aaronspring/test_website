@@ -10,7 +10,6 @@
 - Hosted by: [WMO](https://public.wmo.int/en), [WWRP](https://community.wmo.int/activity-areas/wwrp), [WCRP](https://www.wcrp-climate.org/), [S2S](http://s2sprediction.net/), [SDSC](https://datascience.ch/renku/)
 - Website with leaderboard: [https://s2s-ai-challenge.github.io](https://s2s-ai-challenge.github.io)
 
-
 ## Table of Contents
 1. [Description](#description)
 2. [Timeline](#timeline)
