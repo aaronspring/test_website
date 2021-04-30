@@ -3,7 +3,7 @@
 
 ## Competition Overview <!-- tl;dr -->
 
-- Goal: Improve global temperature and total precipitation subseasonal forecasts with ML/AI <!-- adapt -->
+- Goal: Improve global temperature and total precipitation subseasonal-to-seasonal predictions with Machine Learning/Artificial Intelligence
 - [Flyer](https://todo)
 - Competition runs on platform [https://renkulab.io/](https://renkulab.io/)
 - How to join: [https://renkulab.io/projects/aaron.spring/s2s-ai-challenge-template/](https://renkulab.io/projects/aaron.spring/s2s-ai-challenge-template/)
