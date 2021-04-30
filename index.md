@@ -197,21 +197,21 @@ spatially weighted averaged over all variables and lead times
 
 
 
-### RPSS temperature
+### RPSS total precipitation
 
-#### RPSS precipitation Northern Extratropics [90N-30N)
-
-
-#### RPSS precipitation Tropics [30N-30S]
+#### RPSS total precipitation Northern Extratropics [90N-30N)
 
 
-#### RPSS precipitation Southern Extratropics (30S-60S]
+#### RPSS total precipitation Tropics [30N-30S]
+
+
+#### RPSS total precipitation Southern Extratropics (30S-60S]
 
 
 ## Rules
 
-- One team can only get one prize.
-- One Person can only join one team.
+- One team can only get one prize. One Person can only join one team.
+- To be eligible for the third prize reserved for submissions from developing or least developed country or small island states, all team members must be resident in such countries. 
 - Model training is not allowed to use ground truth/observations data after forecast was issued, see [Data Timings](#timings).
 - By joining the competition (see steps https://renkulab.io/projects/aaron.spring/s2s-ai-challenge-template), participants agree that they will make their private repositories on renkulab.io public after the competition ends (31st October 2021) regardless whether their contributions are among the top 3 for prizes. <!-- All repositories must be made available under the tbd licence. -->
 - These rules may be changed by the organizers. <!-- Under which circumstances are organizers allowed to change rules later on? -->
