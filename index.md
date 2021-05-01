@@ -67,7 +67,13 @@ Submissions are evaluated on the Ranked Probability Score (`RPS`) between the ML
 
 ```python
 def RPSS(rps_ML, rps_benchmark):
-"""Ranked Probability Skill Score in units [1]. Max 1: Min: -inf Perfect: 1"""
+"""Ranked Probability Skill Score. Compares two RPS.
+
+  1: max
+  (0,1]: positive means ML better than benchmark
+  0: Equal performance
+  (0, -inf): positive means ML worse than benchmark
+  """
   return 1 - rps_ML / rps_benchmark  # positive means ML better than ECMWF benchmark
 ```
 
