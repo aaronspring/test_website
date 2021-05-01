@@ -11,6 +11,7 @@
 - Organized by: [WMO](https://public.wmo.int/en)/[WWRP](https://community.wmo.int/activity-areas/wwrp), [WCRP](https://www.wcrp-climate.org/), [S2S Project](http://s2sprediction.net/) in collaboration with [SDSC](https://datascience.ch/renku/) and [ECMWF](https://www.ecmwf.int/)  <!-- add logos maybe -->
 - Website with leaderboard: [https://s2s-ai-challenge.github.io](https://s2s-ai-challenge.github.io)
 
+<!-- once competition starts move leaderboards to the top and add announcements below, like a blog -->
 
 ## Table of Contents
 1. [Description](#description)
@@ -220,11 +221,11 @@ spatially weighted averaged over all variables and lead times
 
 ## Organizers
 
-- WMO/WWRP: Estelle De Coning, Wenchao Cao
-- WCRP: Michel Rixen
-- S2S Project: Frederic Vitart, Andy Robertson
-- ECMWF: Florian Pinault, Baudouin Raoult
-- SDSC: Rok Roskar
+- [WMO](https://public.wmo.int/en)/[WWRP](https://community.wmo.int/activity-areas/wwrp): Estelle De Coning, Wenchao Cao
+- [WCRP](https://www.wcrp-climate.org/): Michel Rixen
+- [S2S Project](http://s2sprediction.net/): Frederic Vitart, Andy Robertson
+- [ECMWF](https://www.ecmwf.int/): Florian Pinault, Baudouin Raoult
+- [SDSC](https://datascience.ch/renku/): Rok Roskar
 - WMO contractor/main contact: [Aaron Spring](mailto:aaron.spring@mpimet.mpg.de) [@aaronspring](https://github.com/aaronspring/) [@realaaronspring](https://twitter.com/realaaronspring/)
 
 <!---
