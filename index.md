@@ -57,7 +57,7 @@ The 3rd prize is reserved for the top submission from developing or least develo
 
 ## Evaluation
 
-The objective of the competition is to improve week 3+4 and 5+6 subseasonal global probabilistic 2m temperature and total precipitation forecasts issued in the year 2020 by using Machine Learning/Artificial Intelligence.
+The objective of the competition is to improve week 3+4 and 5+6 subseasonal global probabilistic [2m temperature](https://confluence.ecmwf.int/plugins/servlet/mobile?contentId=27394104#content/view/27394104) and [total precipitation](https://confluence.ecmwf.int/plugins/servlet/mobile?contentId=27399606#content/view/27399606) forecasts issued in the year 2020 by using Machine Learning/Artificial Intelligence.
 
 The evaluation will be continuously performed by a `scorer` bot on renkulab.io, following [verification notebook](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/). <!-- verification_RPSS.ipynb -->
 Submissions are evaluated on the Ranked Probability Score (`RPS`) between the ML-based forecasts and ground truth CPC [temperature](http://iridl.ldeo.columbia.edu/SOURCES/.NOAA/.NCEP/.CPC/.temperature/.daily/) and accumulated [precipitation](http://iridl.ldeo.columbia.edu/SOURCES/.NOAA/.NCEP/.CPC/.UNIFIED_PRCP/.GAUGE_BASED/.GLOBAL/.v1p0/.extREALTIME/.rain) observations based on pre-computed observations-based terciles. This `RPS` is compared to the re-calibrated real-time 2020 ECMWF forecasts into the Ranked Probability Skill Score (`RPSS`).
@@ -93,18 +93,19 @@ Each submission is a netcdf file with the folloing dimension sizes and coordinat
 
 ```
 >>> # in xarray
->>> ML_forecasts.sizes # todo: add category dim
-Frozen(SortedKeysDict({'forecast_reference_time': 53, 'latitude': 121, 'longitude': 240, 'step': 2}))
+>>> ML_forecasts.sizes
+Frozen(SortedKeysDict({'forecast_reference_time': 53, 'latitude': 121, 'longitude': 240, 'lead_time': 2, 'category': 3}))
 
->>> ML_forecasts.coords  # coordinates; time(step, forecast_reference_time) is optional # todo: add category coord
+>>> ML_forecasts.coords  # coordinates; time(lead_time, forecast_reference_time) is optional
 Coordinates:
   * latitude                 (latitude) float64 90.0 88.5 87.0 ... -88.5 -90.0
   * longitude                (longitude) float64 0.0 1.5 3.0 ... 357.0 358.5
   * forecast_reference_time  (forecast_reference_time) datetime64[ns] 2020-01...
-  * step                     (step) timedelta64[ns] 14 days 28 days
-    time                     (step, forecast_reference_time) datetime64[ns] 2...
+  * lead_time                (lead_time) timedelta64[ns] 14 days 28 days
+  * category                 (category) <U11 '[0., 0.33)' '[0.33, 0.66)' '[0.66, 1.]'
+    time                     (lead_time, forecast_reference_time) datetime64[ns] 2...
 ```
-A template file for submissions can be found [here](http://to.do). <!-- TODO -->
+A template file for submissions can soon be found [here](http://to.do). <!-- TODO -->
 
 Such submissions need to be commited in git with [`git lfs`](https://git-lfs.github.com/).
 
