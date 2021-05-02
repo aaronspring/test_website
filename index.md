@@ -11,6 +11,7 @@
 - Organized by: [WMO](https://public.wmo.int/en)/[WWRP](https://community.wmo.int/activity-areas/wwrp), [WCRP](https://www.wcrp-climate.org/), [S2S Project](http://s2sprediction.net/) in collaboration with [SDSC](https://datascience.ch/renku/) and [ECMWF](https://www.ecmwf.int/)  <!-- add logos maybe -->
 - Website with leaderboard: [https://s2s-ai-challenge.github.io](https://s2s-ai-challenge.github.io)
 
+<!-- once competition starts move leaderboards to the top and add announcements below, like a blog -->
 
 ## Table of Contents
 1. [Description](#description)
@@ -56,7 +57,7 @@ The 3rd prize is reserved for the top submission from developing or least develo
 
 ## Evaluation
 
-The objective of the competition is to improve week 3+4 and 5+6 subseasonal global probabilistic 2m temperature and total precipitation forecasts issued in the year 2020 by using Machine Learning/Artificial Intelligence.
+The objective of the competition is to improve week 3+4 and 5+6 subseasonal global probabilistic [2m temperature](https://confluence.ecmwf.int/plugins/servlet/mobile?contentId=27394104#content/view/27394104) and [total precipitation](https://confluence.ecmwf.int/plugins/servlet/mobile?contentId=27399606#content/view/27399606) forecasts issued in the year 2020 by using Machine Learning/Artificial Intelligence.
 
 The evaluation will be continuously performed by a `scorer` bot on renkulab.io, following [verification notebook](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/). <!-- verification_RPSS.ipynb -->
 Submissions are evaluated on the Ranked Probability Score (`RPS`) between the ML-based forecasts and ground truth CPC [temperature](http://iridl.ldeo.columbia.edu/SOURCES/.NOAA/.NCEP/.CPC/.temperature/.daily/) and accumulated [precipitation](http://iridl.ldeo.columbia.edu/SOURCES/.NOAA/.NCEP/.CPC/.UNIFIED_PRCP/.GAUGE_BASED/.GLOBAL/.v1p0/.extREALTIME/.rain) observations based on pre-computed observations-based terciles. This `RPS` is compared to the re-calibrated real-time 2020 ECMWF forecasts into the Ranked Probability Skill Score (`RPSS`).
@@ -66,7 +67,13 @@ Submissions are evaluated on the Ranked Probability Score (`RPS`) between the ML
 
 ```python
 def RPSS(rps_ML, rps_benchmark):
-"""Ranked Probability Skill Score in units [1]. Max 1: Min: -inf Perfect: 1"""
+"""Ranked Probability Skill Score. Compares two RPS.
+
+  1: max
+  (0,1]: positive means ML better than benchmark
+  0: Equal performance
+  (0, -inf): positive means ML worse than benchmark
+  """
   return 1 - rps_ML / rps_benchmark  # positive means ML better than ECMWF benchmark
 ```
 
@@ -86,18 +93,19 @@ Each submission is a netcdf file with the folloing dimension sizes and coordinat
 
 ```
 >>> # in xarray
->>> ML_forecasts.sizes # todo: add category dim
-Frozen(SortedKeysDict({'forecast_reference_time': 53, 'latitude': 121, 'longitude': 240, 'step': 2}))
+>>> ML_forecasts.sizes
+Frozen(SortedKeysDict({'forecast_reference_time': 53, 'latitude': 121, 'longitude': 240, 'lead_time': 2, 'category': 3}))
 
->>> ML_forecasts.coords  # coordinates; time(step, forecast_reference_time) is optional # todo: add category coord
+>>> ML_forecasts.coords  # coordinates; time(lead_time, forecast_reference_time) is optional
 Coordinates:
   * latitude                 (latitude) float64 90.0 88.5 87.0 ... -88.5 -90.0
   * longitude                (longitude) float64 0.0 1.5 3.0 ... 357.0 358.5
   * forecast_reference_time  (forecast_reference_time) datetime64[ns] 2020-01...
-  * step                     (step) timedelta64[ns] 14 days 28 days
-    time                     (step, forecast_reference_time) datetime64[ns] 2...
+  * lead_time                (lead_time) timedelta64[ns] 14 days 28 days
+  * category                 (category) <U11 '[0., 0.33)' '[0.33, 0.66)' '[0.66, 1.]'
+    time                     (lead_time, forecast_reference_time) datetime64[ns] 2...
 ```
-A template file for submissions can be found [here](http://to.do). <!-- TODO -->
+A template file for submissions can soon be found [here](http://to.do). <!-- TODO -->
 
 Such submissions need to be commited in git with [`git lfs`](https://git-lfs.github.com/).
 
@@ -148,7 +156,7 @@ Also purely empirical methods like persistence or climatology could be used. The
 
 ### Examples
 
-coming soon
+In progress...
 
 - [Train ML model](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/blob/master/notebooks).
 - [Score RPSS ML model vs ECMWF](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/blob/master/notebooks).
@@ -220,11 +228,11 @@ spatially weighted averaged over all variables and lead times
 
 ## Organizers
 
-- WMO/WWRP: Estelle De Coning, Wenchao Cao
-- WCRP: Michel Rixen
-- S2S Project: Frederic Vitart, Andy Robertson
-- ECMWF: Florian Pinault, Baudouin Raoult
-- SDSC: Rok Roskar
+- [WMO](https://public.wmo.int/en)/[WWRP](https://community.wmo.int/activity-areas/wwrp): Estelle De Coning, Wenchao Cao
+- [WCRP](https://www.wcrp-climate.org/): Michel Rixen
+- [S2S Project](http://s2sprediction.net/): Frederic Vitart, Andy Robertson
+- [ECMWF](https://www.ecmwf.int/): Florian Pinault, Baudouin Raoult
+- [SDSC](https://datascience.ch/renku/): Rok Roskar
 - WMO contractor/main contact: [Aaron Spring](mailto:aaron.spring@mpimet.mpg.de) [@aaronspring](https://github.com/aaronspring/) [@realaaronspring](https://twitter.com/realaaronspring/)
 
 <!---
