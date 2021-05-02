@@ -156,7 +156,7 @@ Also purely empirical methods like persistence or climatology could be used. The
 
 ### Examples
 
-coming soon
+In progress...
 
 - [Train ML model](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/blob/master/notebooks).
 - [Score RPSS ML model vs ECMWF](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/blob/master/notebooks).
