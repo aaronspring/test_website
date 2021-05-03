@@ -7,9 +7,9 @@ on:
   workflow_dispatch:
 
 jobs:
-  keep_file_updated:
+  keep_leaderboard_updated:
     runs-on: ubuntu-latest
-    name: Keep file updated
+    name: Keep leaderboard updated
     steps:
     - name: Checkout repo
       id: checkout
@@ -20,6 +20,13 @@ jobs:
       with:
         url: https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/raw/master/leaderboards/leaderboard.html
         file_in_repo: leaderboard.html
+  keep_subleaderboard_updated:
+    runs-on: ubuntu-latest
+    name: Keep subleaderboard updated
+    steps:
+    - name: Checkout repo
+      id: checkout
+      uses: actions/checkout@v2
     - name: Update subleaderboard
       id: update_file
       uses: TheLastProject/keep-remote-file-locally-up-to-date-action@v1
