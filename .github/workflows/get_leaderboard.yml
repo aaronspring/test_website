@@ -14,9 +14,15 @@ jobs:
     - name: Checkout repo
       id: checkout
       uses: actions/checkout@v2
-    - name: Update file
+    - name: Update leaderboard
       id: update_file
       uses: TheLastProject/keep-remote-file-locally-up-to-date-action@v1
       with:
         url: https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/raw/master/leaderboards/leaderboard.html
         file_in_repo: leaderboard.html
+    - name: Update subleaderboard
+      id: update_file
+      uses: TheLastProject/keep-remote-file-locally-up-to-date-action@v1
+      with:
+        url: https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/raw/master/leaderboards/2t_northern_extratropics.html
+        file_in_repo: 2t_northern_extratropics.html
