@@ -63,7 +63,7 @@ jobs:
         url: https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/raw/master/leaderboards/subleaderboard_tp_southern_extratropics.html
         file_in_repo: subleaderboard_tp_southern_extratropics.html
 
- keep_subleaderboard_2t_NH updated:
+  keep_subleaderboard_2t_NH updated:
     runs-on: ubuntu-latest
     name: Keep subleaderboard 2t NH updated
     steps:
