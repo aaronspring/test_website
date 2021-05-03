@@ -165,6 +165,9 @@ We encourage to use subseasonal forecasts from the S2S and SubX projects:
 However, any other publicly available data sources (like CMIP, NMME, etc.) of dates prior the forecast_reference_time can be used for `training-input` and `forecast-input`.
 Also purely empirical methods like persistence or climatology could be used. The only strong data requirement concerns time, see [timings](#timings)
 
+Ground truth sources are CPC temperature and accumulated precipitation from [IRIDL](http://iridl.ldeo.columbia.edu/):
+- `pr`: [precipitation rate](http://iridl.ldeo.columbia.edu/SOURCES/.NOAA/.NCEP/.CPC/.UNIFIED_PRCP/.GAUGE_BASED/.GLOBAL/.v1p0/.extREALTIME/.rain) to accumulate
+- `t2m`: [2m temperature](http://iridl.ldeo.columbia.edu/SOURCES/.NOAA/.NCEP/.CPC/.temperature/.daily/)
 
 ### Examples
 
