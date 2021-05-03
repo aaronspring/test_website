@@ -211,26 +211,26 @@ spatially weighted averaged over all variables and lead times
 
 ### RPSS temperature
 
-#### RPSS temperature Northern Extratropics [90N-30N)
+#### RPSS temperature Northern Extratropics [90N-30N]
 {% include_relative subleaderboard_2t_northern_extratropics.html %}
 
-#### RPSS temperature Tropics [30N-30S]
+#### RPSS temperature Tropics (30N-30S)
+{% include_relative subleaderboard_2t_tropics.html %}
 
-
-#### RPSS temperature Southern Extratropics (30S-60S]
-
+#### RPSS temperature Southern Extratropics [30S-60S]
+{% include_relative subleaderboard_2t_southern_extratropics.html %}
 
 
 ### RPSS total precipitation
 
-#### RPSS total precipitation Northern Extratropics [90N-30N)
+#### RPSS total precipitation Northern Extratropics [90N-30N]
+{% include_relative subleaderboard_tp_northern_extratropics.html %}
 
+#### RPSS total precipitation Tropics (30N-30S)
+{% include_relative subleaderboard_tp_tropics.html %}
 
-#### RPSS total precipitation Tropics [30N-30S]
-
-
-#### RPSS total precipitation Southern Extratropics (30S-60S]
-
+#### RPSS total precipitation Southern Extratropics [30S-60S]
+{% include_relative subleaderboard_tp_southern_extratropics.html %}
 
 ## Rules
 
