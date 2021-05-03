@@ -62,8 +62,18 @@ The objective of the competition is to improve week 3+4 and 5+6 subseasonal glob
 The evaluation will be continuously performed by a `scorer` bot on renkulab.io, following [verification notebook](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/). <!-- verification_RPSS.ipynb -->
 Submissions are evaluated on the Ranked Probability Score (`RPS`) between the ML-based forecasts and ground truth CPC [temperature](http://iridl.ldeo.columbia.edu/SOURCES/.NOAA/.NCEP/.CPC/.temperature/.daily/) and accumulated [precipitation](http://iridl.ldeo.columbia.edu/SOURCES/.NOAA/.NCEP/.CPC/.UNIFIED_PRCP/.GAUGE_BASED/.GLOBAL/.v1p0/.extREALTIME/.rain) observations based on pre-computed observations-based terciles. This `RPS` is compared to the re-calibrated real-time 2020 ECMWF forecasts into the Ranked Probability Skill Score (`RPSS`).
 
-`RPS` is calculated with the open-source package [xskillscore](https://xskillscore.readthedocs.io/en/latest) over all 2020 `forecast_reference_time`s:
-[xs.rps(observations, forecasts, terciles, dim='forecast_reference_time')](https://xskillscore.readthedocs.io/en/latest/api/xskillscore.rps.html)
+`RPS` is calculated with the open-source package [xskillscore](https://xskillscore.readthedocs.io/en/latest) over all 2020 `forecast_reference_time`s.
+For deterministic forecasts:
+```python
+xs.rps(observations, deterministic_forecasts, category_edges=precomputed_tercile_edges, dim='forecast_reference_time')
+```
+
+For probabilistic forecasts:
+```python
+xs.rps(observations, probabilistic_forecasts, category_edges=None, input_distributions='p', dim='forecast_reference_time')
+```
+
+See the [`xskillscore.rps` API](https://xskillscore.readthedocs.io/en/latest/api/xskillscore.rps.html) for details.
 
 ```python
 def RPSS(rps_ML, rps_benchmark):
@@ -132,12 +142,14 @@ Please find a list of the dates when forecasts are issued `forecast_reference_ti
 ### Data Sources
 
 Main datasets for this competition are already available as [renku datasets](https://renku.readthedocs.io/en/latest/user/data.html) for both variables temperature and precipitation:
-- `tag in climetlab`: description (link in renku dataset)
-- `forecast-benchmark`: ECMWF week 3+4 & 5+6 re-calibrated real-time 2020 forecasts (missing)
-- `observations`: CPC daily observations interpolated on 1.5 degree grid (missing)
-- `training-input`: daily real-time initialized on thursdays 2020 forecasts from models ECMWF, ECCC, NCEP (missing)
-- `forecast-input`: daily reforecasts initialized once per week until 2019 from models ECMWF, ECCC, NCEP (missing)
-- `terciles` Observations-based tercile category_edges (missing)
+
+| `tag in climetlab` | Description | renku dataset |
+| ------ | ------ | ----- |
+| `forecast-benchmark` | ECMWF week 3+4 & 5+6 re-calibrated real-time 2020 forecasts | missing |
+| `observations` | CPC daily observations interpolated on 1.5 degree grid | missing |
+| `training-input` | daily real-time initialized on thursdays 2020 forecasts from models ECMWF, ECCC, NCEP| missing |
+| `forecast-input` | daily reforecasts initialized once per week until 2019 from models ECMWF, ECCC, NCEP| missing |
+| `tercile_edges` | Observations-based tercile category_edges | missing |
 
 <!--Not all available yet, also not yet cleaned.-->
 
