@@ -209,7 +209,7 @@ spatially weighted averaged over all variables and lead times
 ### RPSS temperature
 
 #### RPSS temperature Northern Extratropics [90N-30N)
-
+{% include_relative subleaderboard_2t_northern_extratropics.html %}
 
 #### RPSS temperature Tropics [30N-30S]
 
