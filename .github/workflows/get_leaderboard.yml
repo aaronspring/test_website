@@ -31,5 +31,5 @@ jobs:
       id: update_file
       uses: TheLastProject/keep-remote-file-locally-up-to-date-action@v1
       with:
-        url: https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/raw/master/leaderboards/2t_northern_extratropics.html
-        file_in_repo: 2t_northern_extratropics.html
+        url: https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/raw/master/leaderboards/subleaderboard_2t_northern_extratropics.html
+        file_in_repo: subleaderboard_2t_northern_extratropics.html
