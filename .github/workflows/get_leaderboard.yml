@@ -21,7 +21,7 @@ jobs:
         url: https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/raw/master/leaderboards/leaderboard.html
         file_in_repo: leaderboard.html
 
-  keep_subleaderboard_tp_NH updated:
+  keep_subleaderboard_tp_NH_updated:
     runs-on: ubuntu-latest
     name: Keep subleaderboard tp NH updated
     steps:
@@ -63,7 +63,7 @@ jobs:
         url: https://renkulab.io/gitlab/aaron.spring/s2s-ai-competition-bootstrap/-/raw/master/leaderboards/subleaderboard_tp_southern_extratropics.html
         file_in_repo: subleaderboard_tp_southern_extratropics.html
 
-  keep_subleaderboard_2t_NH updated:
+  keep_subleaderboard_2t_NH_updated:
     runs-on: ubuntu-latest
     name: Keep subleaderboard 2t NH updated
     steps:
