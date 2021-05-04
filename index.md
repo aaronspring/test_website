@@ -194,7 +194,7 @@ We are looking for smart solutions here. Find a quick start [here](https://renku
 
 ## Discussion
 
-Please use the issue tracker in the renkulab [`s2s-ai-challenge` gitlab repository](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/issues) for discussions.
+Please use the issue tracker in the renkulab [`s2s-ai-challenge` gitlab repository](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/issues) for discussions and questions to the [organizers](#organizers).
 
 Answered questions from the issue tracker will be transferred to the [FAQ](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/wikis/Frequently-Asked-Questions-(FAQ)).
 
@@ -202,12 +202,13 @@ Answered questions from the issue tracker will be transferred to the [FAQ](https
 
 ### Final RPSS
 
-spatially weighted averaged over all variables and lead times
+The prizes will be awarded to the top three submission beating ECMWF re-calibrated benchmark and following the rules. The final score is the spatially weighted averaged [90N-60S] RPSS over both variables and both lead times.
 
 <!-- [Leaderboard from repository](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/blob/master/leaderboard.html) -->
 
 {% include_relative leaderboard.html %}
 
+The following subleaderboards are purely diagnostic and show RPSS for two variables, two lead times and three subregions.
 
 ### RPSS temperature
 
@@ -252,7 +253,5 @@ spatially weighted averaged over all variables and lead times
 
 <!---
 Todo:
-- take top 5 of leaderboard only, should we have sub-leaderboards for different variables, regions?
-- add link to flyer
-- `category` dimension
+- make leaderboard dynamic with bokeh: https://p-mckenzie.github.io/2017/12/01/embedding-bokeh-with-github-pages/ https://github.com/bokeh/bokeh/tree/branch-2.4/examples/app/export_csv
 -->
