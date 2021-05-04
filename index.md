@@ -4,7 +4,7 @@
 ## Competition Overview <!-- tl;dr -->
 
 - Goal: Improve global temperature and total precipitation subseasonal-to-seasonal predictions with Machine Learning/Artificial Intelligence
-- [Flyer](https://todo)
+- [Flyer](https://wmoomm-my.sharepoint.com/personal/wcao_wmo_int/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fwcao%5Fwmo%5Fint%2FDocuments%2FDocuments%2FSharedFiles%2FWWRP%2FWebsite%2FS2S%20AI%20Challenge%2FS2S%5FAI%5FChallenge%5FFlyer%5Ffinal%2Epdf&parent=%2Fpersonal%2Fwcao%5Fwmo%5Fint%2FDocuments%2FDocuments%2FSharedFiles%2FWWRP%2FWebsite%2FS2S%20AI%20Challenge&originalPath=aHR0cHM6Ly93bW9vbW0tbXkuc2hhcmVwb2ludC5jb20vOmI6L2cvcGVyc29uYWwvd2Nhb193bW9faW50L0VmNVdIZzNfemRaRHJGY0RMUnNOeE9RQlAycXE3UXhBWGNEQ2Q4U3VEWjlfYkE%5FcnRpbWU9N2k1VjFORU8yVWc)
 - Competition runs on platform [https://renkulab.io/](https://renkulab.io/)
 - How to join: [https://renkulab.io/projects/aaron.spring/s2s-ai-challenge-template/](https://renkulab.io/projects/aaron.spring/s2s-ai-challenge-template/)
 - Timeline: 1st June 2021 - 31st October 2021
@@ -38,7 +38,7 @@ and a continously updating leaderboard. For code examples and how to contribute,
 
 ## Timeline
 
-- 3rd May 2021: Announcement of the competition
+- 4th May 2021: Announcement of the competition
 - 1st June 2021: Start of the competition (First date for submissions) <!-- registration: https://docs.google.com/forms/d/e/1FAIpQLSe49IleTxqEBFKzLdtkHvFQH0rPR16o6gfOFQ_L6cPzglAc2Q/viewform form available -->
 - 31st October 2021: End of the competition (Final date for submissions)
 - 15th December 2021: Announcement of the winners
