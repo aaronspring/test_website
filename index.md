@@ -38,7 +38,7 @@ and a continously updating leaderboard. For code examples and how to contribute,
 
 ## Timeline
 
-- 3rd May 2021: Announcement of the competition
+- 4th May 2021: Announcement of the competition
 - 1st June 2021: Start of the competition (First date for submissions) <!-- registration: https://docs.google.com/forms/d/e/1FAIpQLSe49IleTxqEBFKzLdtkHvFQH0rPR16o6gfOFQ_L6cPzglAc2Q/viewform form available -->
 - 31st October 2021: End of the competition (Final date for submissions)
 - 15th December 2021: Announcement of the winners
