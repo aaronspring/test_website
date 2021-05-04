@@ -77,12 +77,20 @@ See the [`xskillscore.rps` API](https://xskillscore.readthedocs.io/en/latest/api
 
 ```python
 def RPSS(rps_ML, rps_benchmark):
-"""Ranked Probability Skill Score. Compares two RPS.
+    """Ranked Probability Skill Score. Compares two RPS.
+  
+    +---------+-----------------------------------------+
+    |  Score  | Description                             |
+    +---------+-----------------------------------------+
+    |    1    | maximum, perfect improvement            |
+    +---------+-----------------------------------------+
+    |  (0,1]  | positive means ML better than benchmark |
+    +---------+-----------------------------------------+
+    |    0    | equal performance                       |
+    +---------+-----------------------------------------+
+    | (0, -∞) | negative means ML worse than benchmark  |
+    +---------+-----------------------------------------+
 
-  1: max
-  (0,1]: positive means ML better than benchmark
-  0: Equal performance
-  (0, -inf): positive means ML worse than benchmark
   """
   return 1 - rps_ML / rps_benchmark  # positive means ML better than ECMWF benchmark
 ```
