@@ -129,7 +129,7 @@ Such submissions need to be commited in git with [`git lfs`](https://git-lfs.git
 
 After the competition, the code for training must be made public, so the competition maintainers will check the requirements of data timing use. The prizes will be distributed for the top 3 requirements-complying contributions at the end of the competition.
 During the competition the organizers may ask top listed participants to provide access to their training pipeline.
-Please indicate the resources used (number of CPUs/GPUs, memory, platform; see [examples](#examples)) in your scripts/notebooks to allow reproducibility. Submissions which cannot independently reproduced cannot win prizes.
+Please indicate the resources used (number of CPUs/GPUs, memory, platform; see [examples](#examples)) in your scripts/notebooks to allow reproducibility. Submissions, which cannot be independently reproduced by the organizers after the competition ends, cannot win prizes.
 
 ## Data
 
@@ -192,9 +192,9 @@ Follow the steps [in the template renku project](https://renkulab.io/projects/aa
 
 Where to train?
 
-- renkulab.io provides free but limited compute resources. You may use upto 2 CPUs, 8 GB memory and 10 GB disk space.
-- as renku projects are git repositories under the hood, you can `renku clone` or `git clone` your project onto your own laptop or supercomputer account for the heavy lifting
-- ECMWF will provide limited compute nodes on the European Weather Cloud `EWC` (where large parts of the data is stored) upon request. This opportunity is specifically targeted for participants from developing or least developed country or small island states and/or without institutional computing resources. Please get in touch with [Aaron](mailto:aaron.spring@mpimet.mpg.de) for access. Please note that we cannot make promises about these resources given the unknown demand.
+- [renkulab.io](https://renkulab.io) provides free but limited compute resources. You may use upto 2 CPUs, 8 GB memory and 10 GB disk space.
+- As renku projects are `git` repositories under the hood, you can `renku clone` or `git clone` your project onto your own laptop or supercomputer account for the heavy lifting.
+- ECMWF will provide limited compute nodes on the European Weather Cloud `EWC` (where large parts of the data is stored) upon request. This opportunity is specifically targeted for participants from developing or least developed country or small island states and/or without institutional computing resources. Please indicate your need in the registration form and get in touch with [Aaron](mailto:aaron.spring@mpimet.mpg.de) for access. Please note that we cannot make promises about these resources given the unknown demand.
 
 How to train?
 
@@ -202,7 +202,10 @@ We are looking for smart solutions here. Find a quick start [here](https://renku
 
 ## Discussion
 
-Please use the issue tracker in the renkulab [`s2s-ai-challenge` gitlab repository](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/issues) for discussions and questions to the [organizers](#organizers).
+Please use the issue tracker in the renkulab [`s2s-ai-challenge` gitlab repository](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/issues) for 
+[discussions](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/issues/new?issuable_template=discussion),
+[bug reports](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/issues/new?issuable_template=bug) and questions to the [organizers](#organizers).
+We set up a [![Gitter chat room](https://badges.gitter.im/pangeo-data/s2s-ai-challenge.svg)](https://gitter.im/pangeo-data/s2s-ai-challenge?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) for informal communication.
 
 Answered questions from the issue tracker will be transferred to the [FAQ](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/wikis/Frequently-Asked-Questions-(FAQ)).
 
