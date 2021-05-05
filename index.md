@@ -101,7 +101,9 @@ The final `RPSS` relevant for the prizes is calculated globally with spatial wei
 - Tropics (29N-29S)
 - Southern extratropics (30S-60S)
 
-Please find more details in the [verification notebook](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/). <!-- verification_RPSS.ipynb -->
+Please find more details in the [verification notebook](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/) (coming soon...). <!-- verification_RPSS.ipynb -->
+
+Note: We are currently discussing how to avoid overfitting in this [tweet and the comments below](https://twitter.com/fpappenberger/status/1389501396043669511?s=21).
 
 ## Submissions
 
