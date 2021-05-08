@@ -8,6 +8,7 @@
 - Competition runs on platform [https://renkulab.io/](https://renkulab.io/)
 - How to join: [https://renkulab.io/projects/aaron.spring/s2s-ai-challenge-template/](https://renkulab.io/projects/aaron.spring/s2s-ai-challenge-template/)
 - Timeline: 1st June 2021 - 31st October 2021
+- Data: via (climetlab](https://github.com/ecmwf-lab/climetlab-s2s-ai-challenge), see [Data](#data)
 - Organized by: [WMO](https://public.wmo.int/en)/[WWRP](https://community.wmo.int/activity-areas/wwrp), [WCRP](https://www.wcrp-climate.org/), [S2S Project](http://s2sprediction.net/) in collaboration with [SDSC](https://datascience.ch/renku/) and [ECMWF](https://www.ecmwf.int/)  <!-- add logos maybe -->
 - Website with leaderboard: [https://s2s-ai-challenge.github.io](https://s2s-ai-challenge.github.io)
 
@@ -136,6 +137,8 @@ Please indicate the resources used (number of CPUs/GPUs, memory, platform; see [
 ## Data
 
 ### Timings
+
+The organizers explicitly choose to run this competition on past 2020 observations. We are aware of the dangers of overfitting (see [rules](#rules)), if the ground truth data is accessible. We decided against a real-time competition to shorten the project length and keep momentum high. Please find here an explicit list of the forecast dates required.
 
 1) Which forecast starts/target periods (weeks 3-4 & 5-6) to require to be submitted?
 - 53 forecasts issued on Thursdays in 2020 (since there are available from all S2S models, including our ECMWF benchmark)
