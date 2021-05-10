@@ -34,7 +34,7 @@
 #### 2021-05-10: Rules adapted endiscouraging overfitting
 
 The organizers modified the [rules](#rules):
-- The codes used must be fully documented, with details of the safeguards enacted to prevent overfitting, see [template](to.do).
+- The codes used must be fully documented, with details of the safeguards enacted to prevent overfitting, see checked safeguards in [template](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/tree/master/notebooks/ML_prediction.ipynb).
 - Code to reproduce submissions must be made available after the competition ends to enable open peer-review.
 - The leaderboard will be hidden until no more submissions are allowed.
 - Methods to create the 2020 forecasts must perform similar on new, unseen data. Therefore do not overfit.
@@ -264,6 +264,7 @@ We will also publish subleaderboards, that are purely diagnostic and show RPSS f
 - Model training is not allowed to use ground truth/observations data after forecast was issued, see [Data Timings](#timings).
 - [Data leakage](https://en.wikipedia.org/wiki/Leakage_(machine_learning)?wprov=sfti1) is not allowed, i.e. do not use `lead_time=0 days` as predictor.
 - Do not [overfit](https://en.wikipedia.org/wiki/Overfitting?wprov=sfti1), a creditble model continues to perform similar on new unseen data.
+- The codes used must be fully documented, with details of the safeguards enacted to prevent overfitting, see checked safeguards in [template](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/tree/master/notebooks/ML_prediction.ipynb).
 - The codes to all submissions must be made public on November 1st 2021 to be readable for open peer review.
 - The leaderboard will be made public on November 1st 2021.
 - The organizers reserve the right to disqualify submissions if overfitting is suspected.
