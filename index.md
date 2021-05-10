@@ -38,10 +38,11 @@ The organizers modified the [rules](#rules):
 - Code to reproduce submissions must be made available after the competition ends to enable open peer-review.
 - The leaderboard will be hidden until November 2021, once all participants made their code public.
 - The final leaderboard will be ranked based on the RPSS and a grade from peer-review.
+- To have more time for this review we shift the annoucement of prizes into February 2022.
 - Methods to create the 2020 forecasts must perform similar on new, unseen data. Therefore do not overfit.
 - The organizers reserve the right to disqualify submissions if overfitting is suspected.
 
-The organizers are aware that overfitting is an issue when the ground truth is accessible. A more robust verification would be about predicting future states with weekly submissions over a year. Therefore, we decided against a real-time competition to shorten the project length and keep momentum high.
+The organizers are aware that overfitting is an issue if the ground truth is accessible. A more robust verification would be about predicting future states with weekly submissions over a year, which would take much more time until one year of new observations is available. Therefore, we decided against a real-time competition to shorten the project length and keep momentum high. Over time we will all see which methods genuinely have skill and which overfitted their available data. 
 
 
 ## Description
@@ -125,7 +126,7 @@ def RPSS(rps_ML, rps_benchmark):
   return 1 - rps_ML / rps_benchmark  # positive means ML better than ECMWF benchmark
 ```
 
-The final `RPSS` relevant for the prizes is calculated globally with spatial weighting and averaged over the two variables and two steps. For diagnostics, we host leaderboards for the two variables in three regions:
+The `RPSS` relevant for the prizes is first calculated globally on a 1.5 degree grid. The final `RPSS` is then spatially weighted by latitude and averaged over the two variables and two steps. For diagnostics, we host leaderboards for the two variables in three regions:
 
 - Northern extratropics (90N-30N)
 - Tropics (29N-29S)
@@ -160,9 +161,8 @@ A template file for submissions can soon be found [here](http://to.do). <!-- TOD
 
 Such submissions need to be commited in git with [`git lfs`](https://git-lfs.github.com/).
 
-After the competition, the code for training must be made public, so the competition maintainers will check the requirements of data timing use. The prizes will be distributed for the top 3 requirements-complying contributions at the end of the competition.
-During the competition the organizers may ask top listed participants to provide access to their training pipeline.
-Please indicate the resources used (number of CPUs/GPUs, memory, platform; see [examples](#examples)) in your scripts/notebooks to allow reproducibility. Submissions, which cannot be independently reproduced by the organizers after the competition ends, cannot win prizes, see [rules](#rules)
+After the competition, the code for training must be made public, so the organizers and peer review can check the [rules](#rules).
+Please indicate the resources used (number of CPUs/GPUs, memory, platform; see [examples](#examples)) in your scripts/notebooks to allow reproducibility. Submissions, which cannot be independently reproduced by the organizers after the competition ends, cannot win prizes, see [rules](#rules).
 
 
 ## Data
@@ -268,6 +268,7 @@ From November 2021 to January 2022, there will be peer-reviews for the top ranke
 - the originality of the method
 - whether the safeguards against overfitting and reproducibility have been followed
 - whether overfitting has been avoided
+- tbd
 
 (Still under discussion) Based on these criteria, there will be a peer-review grade from bad (-1) towards brilliant (+1)
 
