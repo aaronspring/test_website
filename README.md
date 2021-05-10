@@ -2,7 +2,7 @@
 
 # s2s-ai-challenge
 
-- Goal: Improve global temperature and precipitation subseasonal predictions with ML/AI
+- Goal: Improve global temperature and total precipitation subseasonal predictions with ML/AI
 - [Flyer](https://todo)
 - Competition runs on https://renkulab.io/
 - How to join: https://renkulab.io/projects/aaron.spring/s2s-ai-competition-bootstrap/
