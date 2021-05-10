@@ -18,13 +18,14 @@
 1. [Description](#description)
 2. [Timeline](#timeline)
 3. [Prize](#prize)
-4. [Evaluation](#evaluation)
-5. [Data](#data)
-6. [Training](#training)
-7. [Discussions](#discussion)
-8. [Leaderboard](#leaderboard)
-9. [Rules](#rules)
-10. [Organizers](#organizers)
+4. [Predictions](#predictions)
+5. [Evaluation](#evaluation)
+6. [Data](#data)
+7. [Training](#training)
+8. [Discussions](#discussion)
+9. [Leaderboard](#leaderboard)
+10. [Rules](#rules)
+11. [Organizers](#organizers)
 
 
 ## Description
@@ -51,9 +52,21 @@ Prizes are issued for the top three submissions beating the re-calibrated ECMWF 
 
 - Winner team: 15000 CHF
 - 2nd team: 10000 CHF
-- 3rd team:  5000 CHF
+- 3rd team: 5000 CHF
 
 The 3rd prize is reserved for the top submission from developing or least developed country or small island states as per the [UN list (see table C, F, H p.166ff)](https://www.un.org/development/desa/dpad/wp-content/uploads/sites/45/WESP2020_Annex.pdf). If such a submissions is already among the top 2, any third submission will get the 3rd prize.
+
+
+## Predictions
+
+The organizers see two different approaches for Machine Learning-based predictions. Predict the week 3-4 & 5-6 state based on:
+
+I. the initial conditions (observations at `forecast_reference_time`)
+II. the week 3-4 & 5-6 S2S forecasts
+
+![ML-based predictions schematic](ML_model_schematic.jpeg?raw=true "ML-based predictions")
+
+For the exact `valid_time`s to predict, see [timings](#timings). For the data to use us for training, see [data sources](#sources). Comply to the [rules](#rules).
 
 
 ## Evaluation
@@ -104,27 +117,28 @@ The final `RPSS` relevant for the prizes is calculated globally with spatial wei
 
 Please find more details in the [verification notebook](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/) (coming soon...). <!-- verification_RPSS.ipynb -->
 
-Note: We are currently discussing how to avoid overfitting in this [tweet and the comments below](https://twitter.com/fpappenberger/status/1389501396043669511?s=21).
+<!-- Note: We are currently discussing how to avoid overfitting in this [tweet and the comments below](https://twitter.com/fpappenberger/status/1389501396043669511?s=21). -->
+
 
 ## Submissions
 
-We expect submissions to cover all bi-weekly week 3-4 and week 5-6 forecasts issued in 2020, see [timings](#timings). We expect one submission netcdf file for all 53 weekly forecasts issued in 2020. Submission have to be gridded on a global 1.5 degree grid.
+We expect submissions to cover all bi-weekly week 3-4 and week 5-6 forecasts issued in 2020, see [timings](#timings). We expect one submission `netcdf` file for all 53 weekly forecasts issued in 2020. Submission have to be gridded on a global 1.5 degree grid.
 
 Each submission is a netcdf file with the folloing dimension sizes and coordinates:
 
 ```
 >>> # in xarray
 >>> ML_forecasts.sizes
-Frozen(SortedKeysDict({'forecast_reference_time': 53, 'latitude': 121, 'longitude': 240, 'lead_time': 2, 'category': 3}))
+Frozen(SortedKeysDict({'forecast_time': 53, 'latitude': 121, 'longitude': 240, 'lead_time': 2, 'category': 3}))
 
->>> ML_forecasts.coords  # coordinates; time(lead_time, forecast_reference_time) is optional
+>>> ML_forecasts.coords
 Coordinates:
   * latitude                 (latitude) float64 90.0 88.5 87.0 ... -88.5 -90.0
   * longitude                (longitude) float64 0.0 1.5 3.0 ... 357.0 358.5
-  * forecast_reference_time  (forecast_reference_time) datetime64[ns] 2020-01...
+  * forecast_reference_time  (forecast_time) datetime64[ns] 2020-01...
   * lead_time                (lead_time) timedelta64[ns] 14 days 28 days
   * category                 (category) <U11 '[0., 0.33)' '[0.33, 0.66)' '[0.66, 1.]'
-    time                     (lead_time, forecast_reference_time) datetime64[ns] 2...
+    valid_time               (lead_time, forecast_time) datetime64[ns] 2...
 ```
 A template file for submissions can soon be found [here](http://to.do). <!-- TODO -->
 
@@ -132,7 +146,8 @@ Such submissions need to be commited in git with [`git lfs`](https://git-lfs.git
 
 After the competition, the code for training must be made public, so the competition maintainers will check the requirements of data timing use. The prizes will be distributed for the top 3 requirements-complying contributions at the end of the competition.
 During the competition the organizers may ask top listed participants to provide access to their training pipeline.
-Please indicate the resources used (number of CPUs/GPUs, memory, platform; see [examples](#examples)) in your scripts/notebooks to allow reproducibility. Submissions, which cannot be independently reproduced by the organizers after the competition ends, cannot win prizes.
+Please indicate the resources used (number of CPUs/GPUs, memory, platform; see [examples](#examples)) in your scripts/notebooks to allow reproducibility. Submissions, which cannot be independently reproduced by the organizers after the competition ends, cannot win prizes, see [rules](#rules)
+
 
 ## Data
 
@@ -152,14 +167,14 @@ Please find a list of the dates when forecasts are issued `forecast_reference_ti
 - for the first forecast issued S=2 Jan 2020, any observational data up to the day of the the forecast start, ie 2 Jan 2020
 - any S2S forecasts up to and including S=2 Jan 2020
 
-### Data Sources
+### Sources
 
 Main datasets for this competition are already available as [renku datasets](https://renku.readthedocs.io/en/latest/user/data.html) for both variables temperature and precipitation:
 
 | `tag in climetlab` | Description | renku dataset |
 | ------ | ------ | ----- |
 | `forecast-benchmark` | ECMWF week 3+4 & 5+6 re-calibrated real-time 2020 forecasts | missing |
-| `observations` | CPC daily observations interpolated on 1.5 degree grid | missing |
+| `observations` | CPC daily observations interpolated on a 1.5 degree grid | missing |
 | `training-input` | daily real-time initialized on thursdays 2020 forecasts from models ECMWF, ECCC, NCEP| missing |
 | `forecast-input` | daily reforecasts initialized once per week until 2019 from models ECMWF, ECCC, NCEP| missing |
 | `tercile_edges` | Observations-based tercile category_edges | missing |
@@ -203,7 +218,7 @@ Where to train?
 
 How to train?
 
-We are looking for smart solutions here. Find a quick start [here](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_forecast.ipynb).
+We are looking for your smart solutions here. Find a quick start [here](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_forecast.ipynb).
 
 ## Discussion
 
@@ -221,6 +236,8 @@ Answered questions from the issue tracker will be transferred to the [FAQ](https
 The prizes will be awarded to the top three submission beating ECMWF re-calibrated benchmark and following the rules. The final score is the spatially weighted averaged [90N-60S] RPSS over both variables and both lead times.
 
 <!-- [Leaderboard from repository](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/blob/master/leaderboard.html) -->
+
+The leaderboard will be made available after the competition end. The prizes will be announced after the submissions have been reviewed on the compliance of the [rules](#rules)
 
 {% include_relative leaderboard.html %}
 
