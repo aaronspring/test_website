@@ -15,6 +15,7 @@
 <!-- once competition starts move leaderboards to the top and add announcements below, like a blog -->
 
 ## Table of Contents
+0. [Announcements](#announcements)
 1. [Description](#description)
 2. [Timeline](#timeline)
 3. [Prize](#prize)
@@ -26,6 +27,20 @@
 9. [Leaderboard](#leaderboard)
 10. [Rules](#rules)
 11. [Organizers](#organizers)
+
+
+## Announcements
+
+#### 2021-05-10: Rules adapted endiscouraging overfitting
+
+The organizers modified the [rules](#rules):
+- The codes used must be fully documented, with details of the safeguards enacted to prevent overfitting, see [template](to.do).
+- Code to reproduce submissions must be made available after the competition ends to enable open peer-review.
+- The leaderboard will be hidden until no more submissions are allowed.
+- Methods to create the 2020 forecasts must perform similar on new, unseen data. Therefore do not overfit.
+- The organizers reserve the right to disqualify submissions if overfitting is suspected.
+
+The organizers are aware that overfitting is an issue when the ground truth is accessible. A more robust verification would be about predicting future states with weekly submissions over a year. Therefore, we decided against a real-time competition to shorten the project length and keep momentum high.
 
 
 ## Description
@@ -153,7 +168,9 @@ Please indicate the resources used (number of CPUs/GPUs, memory, platform; see [
 
 ### Timings
 
-The organizers explicitly choose to run this competition on past 2020 observations. We are aware of the dangers of overfitting (see [rules](#rules)), if the ground truth data is accessible. We decided against a real-time competition to shorten the project length and keep momentum high. Please find here an explicit list of the forecast dates required.
+The organizers explicitly choose to run this competition on past 2020 observations. We are aware of the dangers of overfitting (see [rules](#rules)), if the ground truth data is accessible. We decided against a real-time competition to shorten the project length and keep momentum high.
+
+Please find here an explicit list of the forecast dates required.
 
 1) Which forecast starts/target periods (weeks 3-4 & 5-6) to require to be submitted?
 - 53 forecasts issued on Thursdays in 2020 (since there are available from all S2S models, including our ECMWF benchmark)
@@ -245,9 +262,12 @@ We will also publish subleaderboards, that are purely diagnostic and show RPSS f
 - One team can only get one prize. One Person can only join one team.
 - To be eligible for the third prize reserved for submissions from developing or least developed country or small island states, all team members must be resident in such countries. 
 - Model training is not allowed to use ground truth/observations data after forecast was issued, see [Data Timings](#timings).
-- [Data leakage](https://en.wikipedia.org/wiki/Leakage_(machine_learning)?wprov=sfti1) is not allowed.
+- [Data leakage](https://en.wikipedia.org/wiki/Leakage_(machine_learning)?wprov=sfti1) is not allowed, i.e. do not use `lead_time=0 days` as predictor.
 - Do not [overfit](https://en.wikipedia.org/wiki/Overfitting?wprov=sfti1), a creditble model continues to perform similar on new unseen data.
-- By joining the competition (see steps https://renkulab.io/projects/aaron.spring/s2s-ai-challenge-template), participants agree that they will make their private repositories on renkulab.io public after the competition ends (31st October 2021) regardless whether their contributions are among the top 3 for prizes. <!-- All repositories must be made available under the tbd licence. -->
+- The codes to all submissions must be made public on November 1st 2021 to be readable for open peer review.
+- The leaderboard will be made public on November 1st 2021.
+- The organizers reserve the right to disqualify submissions if overfitting is suspected.
+- Prizes are issued on December 15th 2021.
 - These rules may be changed by the organizers until 1st July 2021. <!-- Under which circumstances are organizers allowed to change rules later on? -->
 
 
