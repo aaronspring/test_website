@@ -91,15 +91,15 @@ The objective of the competition is to improve week 3+4 and 5+6 subseasonal glob
 The evaluation will be continuously performed by a `scorer` bot on renkulab.io, following [verification notebook](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/). <!-- verification_RPSS.ipynb -->
 Submissions are evaluated on the Ranked Probability Score (`RPS`) between the ML-based forecasts and ground truth CPC [temperature](http://iridl.ldeo.columbia.edu/SOURCES/.NOAA/.NCEP/.CPC/.temperature/.daily/) and accumulated [precipitation](http://iridl.ldeo.columbia.edu/SOURCES/.NOAA/.NCEP/.CPC/.UNIFIED_PRCP/.GAUGE_BASED/.GLOBAL/.v1p0/.extREALTIME/.rain) observations based on pre-computed observations-based terciles. This `RPS` is compared to the re-calibrated real-time 2020 ECMWF forecasts into the Ranked Probability Skill Score (`RPSS`).
 
-`RPS` is calculated with the open-source package [xskillscore](https://xskillscore.readthedocs.io/en/latest) over all 2020 `forecast_reference_time`s.
+`RPS` is calculated with the open-source package [xskillscore](https://xskillscore.readthedocs.io/en/latest) over all 2020 `forecast_time`s.
 For deterministic forecasts:
 ```python
-xs.rps(observations, deterministic_forecasts, category_edges=precomputed_tercile_edges, dim='forecast_reference_time')
+xs.rps(observations, deterministic_forecasts, category_edges=precomputed_tercile_edges, dim='forecast_time')
 ```
 
 For probabilistic forecasts:
 ```python
-xs.rps(observations, probabilistic_forecasts, category_edges=None, input_distributions='p', dim='forecast_reference_time')
+xs.rps(observations, probabilistic_forecasts, category_edges=None, input_distributions='p', dim='forecast_time')
 ```
 
 See the [`xskillscore.rps` API](https://xskillscore.readthedocs.io/en/latest/api/xskillscore.rps.html) for details.
@@ -150,7 +150,7 @@ Frozen(SortedKeysDict({'forecast_time': 53, 'latitude': 121, 'longitude': 240, '
 Coordinates:
   * latitude                 (latitude) float64 90.0 88.5 87.0 ... -88.5 -90.0
   * longitude                (longitude) float64 0.0 1.5 3.0 ... 357.0 358.5
-  * forecast_reference_time  (forecast_time) datetime64[ns] 2020-01...
+  * forecast_time  (forecast_time) datetime64[ns] 2020-01...
   * lead_time                (lead_time) timedelta64[ns] 14 days 28 days
   * category                 (category) <U11 '[0., 0.33)' '[0.33, 0.66)' '[0.66, 1.]'
     valid_time               (lead_time, forecast_time) datetime64[ns] 2...
@@ -218,7 +218,7 @@ Ground truth sources are CPC temperature and accumulated precipitation from [IRI
 
 In progress...
 
-- [Train ML model](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/blob/master/notebooks).
+- [Train ML model](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_forecast.ipynb).
 - [Score RPSS ML model vs ECMWF](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/blob/master/notebooks).
 
 ## Join
@@ -235,7 +235,7 @@ Where to train?
 
 How to train?
 
-We are looking for your smart solutions here. Find a quick start [here](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_forecast.ipynb).
+We are looking for your smart solutions here. Find a quick start template [here](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_forecast.ipynb).
 
 ## Discussion
 
@@ -266,7 +266,7 @@ We will also publish subleaderboards, that are purely diagnostic and show RPSS f
 - Model training is not allowed to use ground truth/observations data after forecast was issued, see [Data Timings](#timings).
 - [Data leakage](https://en.wikipedia.org/wiki/Leakage_(machine_learning)?wprov=sfti1) is not allowed, i.e. do not use `lead_time=0 days` as predictor.
 - Do not [overfit](https://en.wikipedia.org/wiki/Overfitting?wprov=sfti1), a creditble model continues to perform similar on new unseen data.
-- The codes used must be fully documented, with details of the safeguards enacted to prevent overfitting, see checked safeguards in [template](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/tree/master/notebooks/ML_prediction.ipynb).
+- The codes used must be fully documented, with details of the safeguards enacted to prevent overfitting, see checked safeguards in [template](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_forecast.ipynb).
 - The codes to all submissions must be made public on November 1st 2021 to be readable for open peer review.
 - The leaderboard will be made public on November 1st 2021.
 - The organizers reserve the right to disqualify submissions if overfitting is suspected.
