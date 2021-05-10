@@ -36,7 +36,8 @@
 The organizers modified the [rules](#rules):
 - The codes used must be fully documented, with details of the safeguards enacted to prevent overfitting, see checked safeguards in [template](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/tree/master/notebooks/ML_prediction.ipynb).
 - Code to reproduce submissions must be made available after the competition ends to enable open peer-review.
-- The leaderboard will be hidden until no more submissions are allowed.
+- The leaderboard will be hidden until November 2021, once all participants made their code public.
+- The final leaderboard will be ranked based on the RPSS and a grade from peer-review.
 - Methods to create the 2020 forecasts must perform similar on new, unseen data. Therefore do not overfit.
 - The organizers reserve the right to disqualify submissions if overfitting is suspected.
 
@@ -250,27 +251,44 @@ Answered questions from the issue tracker are regularly transferred to the [FAQ]
 
 ## Leaderboard
 
-### Final RPSS
+### RPSS
 
-The prizes will be awarded to the top three submission beating ECMWF re-calibrated benchmark and following the rules. The final score is the spatially weighted averaged [90N-60S] RPSS over both variables and both lead times.
+The prizes will be awarded to the top submissions beating the ECMWF re-calibrated benchmark and following the rules. The RPSS is the spatially weighted averaged [90N-60S] gridded RPSS over both variables and both lead times.
 
 The leaderboard will be made available after the submission period ends, i.e. November 1st 2021. The prizes will be announced after the submissions have been reviewed on the compliance of the [rules](#rules), i.e. December 15th 2021.
 
 We will also publish subleaderboards, that are purely diagnostic and show RPSS for two variables (`t2m`, `tp`), two `lead_time`s (weeks 3-4 & 5&6) and three subregions ([90N-30N], (30N-30S), [30S-60S]).
 
+### Peer-review
+
+From November 2021 to January 2022, there will be peer-reviews for the top ranked submission. Peer review will evaluate:
+
+- whether the code is written in a clean and understandable way
+- whether the code is reproducible by an independent person
+- the originality of the method
+- whether the safeguards against overfitting and reproducibility have been followed
+- whether overfitting has been avoided
+
+(Still under discussion) Based on these criteria, there will be a peer-review grade from bad (-1) towards brilliant (+1)
+
+### Final
+
+The top submissions on the combined RPSS and Peer-review score will determine the prizes.
+(Still under discussion whether the scores are averaged or ranked and the two ranks averaged.)
 
 ## Rules
 
 - One team can only get one prize. One Person can only join one team.
+- Prizes are only issued if the method beats the re-calibrated ECMWF benchmark.
 - To be eligible for the third prize reserved for submissions from developing or least developed country or small island states, all team members must be resident in such countries. 
 - Model training is not allowed to use ground truth/observations data after forecast was issued, see [Data Timings](#timings).
 - [Data leakage](https://en.wikipedia.org/wiki/Leakage_(machine_learning)?wprov=sfti1) is not allowed, i.e. do not use `lead_time=0 days` as predictor.
 - Do not [overfit](https://en.wikipedia.org/wiki/Overfitting?wprov=sfti1), a creditble model continues to perform similar on new unseen data.
 - The codes used must be fully documented, with details of the safeguards enacted to prevent overfitting, see checked safeguards in [template](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_forecast.ipynb).
-- The codes to all submissions must be made public on November 1st 2021 to be readable for open peer review.
-- The leaderboard will be made public on November 1st 2021.
+- The codes to all submissions must be made public on November 1st 2021 to be readable for open peer review. Submissions, which are not made public on November 1st 2021, will be removed from the leaderboard. 
+- The leaderboard will be made public in early November 2021, once all submissions are public.
 - The organizers reserve the right to disqualify submissions if overfitting is suspected.
-- Prizes are issued on December 15th 2021.
+- Prizes will be issued on February 10th 2022.
 - These rules may be changed by the organizers until 1st July 2021. <!-- Under which circumstances are organizers allowed to change rules later on? -->
 
 
