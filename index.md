@@ -79,8 +79,8 @@ The 3rd prize is reserved for the top submission from developing or least develo
 
 The organizers see two different approaches for Machine Learning-based predictions, which may be combined. Predict the week 3-4 & 5-6 state based on:
 
-I. the initial conditions (observations at `forecast_reference_time`)
-II. the week 3-4 & 5-6 S2S forecasts
+- I. the initial conditions (observations at `forecast_time`)
+- II. the week 3-4 & 5-6 S2S forecasts
 
 ![ML-based predictions schematic](ML_model_schematic.jpeg?raw=true "ML-based predictions")
 
