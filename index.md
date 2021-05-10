@@ -127,7 +127,10 @@ def RPSS(rps_ML, rps_benchmark):
   return 1 - rps_ML / rps_benchmark  # positive means ML better than ECMWF benchmark
 ```
 
-The `RPSS` relevant for the prizes is first calculated globally on a 1.5 degree grid. The final `RPSS` is then spatially weighted by latitude and averaged over the two variables and two steps. For diagnostics, we host leaderboards for the two variables in three regions:
+The `RPSS` relevant for the prizes is first calculated on each grid cell globally on a 1.5 degree grid.
+This gridded RPSS is spatially averaged (weighted `(np.cos(np.deg2rad(ds.latitude)))`) over [90N-60S] land points and futher averaged over both variables and both `lead_time`s.
+
+For diagnostics, we will further host leaderboards for the two variables in three regions:
 
 - Northern extratropics (90N-30N)
 - Tropics (29N-29S)
@@ -254,7 +257,7 @@ Answered questions from the issue tracker are regularly transferred to the [FAQ]
 
 ### RPSS
 
-The prizes will be awarded to the top submissions beating the ECMWF re-calibrated benchmark and following the rules. The RPSS is the spatially weighted averaged [90N-60S] gridded RPSS over both variables and both lead times.
+Submissions have to beat the ECMWF re-calibrated benchmark and following the [rules](#rules) to qualify for prizes.
 
 The leaderboard will be made available after the submission period ends, i.e. November 1st 2021. The prizes will be announced after the submissions have been reviewed on the compliance of the [rules](#rules), i.e. December 15th 2021.
 
