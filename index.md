@@ -235,36 +235,10 @@ Answered questions from the issue tracker will be transferred to the [FAQ](https
 
 The prizes will be awarded to the top three submission beating ECMWF re-calibrated benchmark and following the rules. The final score is the spatially weighted averaged [90N-60S] RPSS over both variables and both lead times.
 
-<!-- [Leaderboard from repository](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/blob/master/leaderboard.html) -->
+The leaderboard will be made available after the submission period ends, i.e. November 1st 2021. The prizes will be announced after the submissions have been reviewed on the compliance of the [rules](#rules), i.e. December 15th 2021.
 
-The leaderboard will be made available after the competition end. The prizes will be announced after the submissions have been reviewed on the compliance of the [rules](#rules)
+We will also publish subleaderboards, that are purely diagnostic and show RPSS for two variables (`t2m`, `tp`), two `lead_time`s (weeks 3-4 & 5&6) and three subregions ([90N-30N], (30N-30S), [30S-60S]).
 
-{% include_relative leaderboard.html %}
-
-The following subleaderboards are purely diagnostic and show RPSS for two variables, two lead times and three subregions.
-
-### RPSS temperature
-
-#### RPSS temperature Northern Extratropics [90N-30N]
-{% include_relative subleaderboard_2t_northern_extratropics.html %}
-
-#### RPSS temperature Tropics (30N-30S)
-{% include_relative subleaderboard_2t_tropics.html %}
-
-#### RPSS temperature Southern Extratropics [30S-60S]
-{% include_relative subleaderboard_2t_southern_extratropics.html %}
-
-
-### RPSS total precipitation
-
-#### RPSS total precipitation Northern Extratropics [90N-30N]
-{% include_relative subleaderboard_tp_northern_extratropics.html %}
-
-#### RPSS total precipitation Tropics (30N-30S)
-{% include_relative subleaderboard_tp_tropics.html %}
-
-#### RPSS total precipitation Southern Extratropics [30S-60S]
-{% include_relative subleaderboard_tp_southern_extratropics.html %}
 
 ## Rules
 
