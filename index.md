@@ -60,7 +60,7 @@ and a continously updating leaderboard. For code examples and how to contribute,
 
 - 4th May 2021: Announcement of the competition
 - 1st June 2021: Start of the competition (First date for submissions) <!-- registration: https://docs.google.com/forms/d/e/1FAIpQLSe49IleTxqEBFKzLdtkHvFQH0rPR16o6gfOFQ_L6cPzglAc2Q/viewform form available -->
-- June: 2 Town hall for Q&A meetings for different time zones
+- June/July: 2 Town hall for Q&A meetings for different time zones
 - 1st July 2021: Freeze the rules for the competition
 - 31st October 2021: End of the competition (Final date for submissions)
 - 1st November 2021: participants make their submission codes public
