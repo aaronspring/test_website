@@ -36,7 +36,7 @@
 The organizers modified the [rules](#rules):
 - The codes used must be fully documented, with details of the safeguards enacted to prevent overfitting, see checked safeguards in [template](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/tree/master/notebooks/ML_prediction.ipynb).
 - Code to reproduce submissions must be made available after the competition ends to enable open peer-review.
-- The leaderboard will be hidden until November 2021, once all participants made their code public.
+- The leaderboard will be hidden until November 2021 and made public once all participants made their code public.
 - The final leaderboard will be ranked based on the RPSS and a grade from peer-review.
 - To have more time for this review we shift the annoucement of prizes into February 2022.
 - Methods to create the 2020 forecasts must perform similar on new, unseen data. Therefore do not overfit.
