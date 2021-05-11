@@ -37,7 +37,7 @@ The organizers modified the [rules](#rules):
 - The codes used must be fully documented, with details of the safeguards enacted to prevent overfitting, see checked safeguards in [template](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/tree/master/notebooks/ML_prediction.ipynb).
 - Code to reproduce submissions must be made available after the competition ends to enable open peer-review.
 - The leaderboard will be hidden until November 2021 and made public once all participants made their code public.
-- The final leaderboard will be ranked based on the numerical RPSS and a grade from expert peer-review.
+- The final leaderboard will be ranked based on the numerical RPSS and a grade from expert peer-review for the top submissions.
 - To have more time for this review, we shift the annoucement of prizes into February 2022.
 - Methods to create the 2020 forecasts must perform similar on new, unseen data. Therefore do not overfit.
 - The organizers reserve the right to disqualify submissions if overfitting is suspected.
@@ -65,7 +65,7 @@ and a continously updating leaderboard. For code examples and how to contribute,
 - 31st October 2021: End of the competition (Final date for submissions)
 - 1st November 2021: Participants make their repositories public
 - 10th November 2021: Organizers make RPSS leaderboard public
-- 1st November 2021 - January 2022: open peer review and expert peer review
+- 1st November 2021 - January 2022: open peer review and expert peer review for top submissions
 - February 2022: Release final leaderboard (based on RPSS and review grades); Announcement of the prizes
 
 
@@ -296,7 +296,7 @@ The top three submissions based on the combined RPSS and expert peer-review scor
 - [Data leakage](https://en.wikipedia.org/wiki/Leakage_(machine_learning)?wprov=sfti1) is not allowed, i.e. do not use `lead_time=0 days` as predictor.
 - Do not [overfit](https://en.wikipedia.org/wiki/Overfitting?wprov=sfti1), a creditble model continues to perform similar on new unseen data.
 - The codes used must be fully documented, with details of the safeguards enacted to prevent overfitting, see checked safeguards in [template](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_forecast.ipynb).
-- The codes to all submissions must be made public on November 1st 2021 to be readable for open peer review and expert peer review, which will last until January 2022. Submissions, which are not made public on November 1st 2021, will be removed from the leaderboard. 
+- The codes to all submissions must be made public on November 1st 2021 to be readable for open peer review and expert peer review for the top submissions, which will last until January 2022. Submissions, which are not made public on November 1st 2021, will be removed from the leaderboard. 
 - The leaderboard will be made public in early November 2021, once all submissions are public.
 - The organizers reserve the right to disqualify submissions if overfitting is suspected.
 - Prizes will be issued on in early February 2022.
