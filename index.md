@@ -37,13 +37,13 @@ The organizers modified the [rules](#rules):
 - The codes used must be fully documented, with details of the safeguards enacted to prevent overfitting, see checked safeguards in [template](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/tree/master/notebooks/ML_prediction.ipynb).
 - Code to reproduce submissions must be made available after the competition ends to enable open peer-review.
 - The leaderboard will be hidden until November 2021 and made public once all participants made their code public.
-- The final leaderboard will be ranked based on the RPSS and a grade from peer-review.
-- To have more time for this review we shift the annoucement of prizes into February 2022.
+- The final leaderboard will be ranked based on the numerical RPSS and a grade from expert peer-review.
+- To have more time for this review, we shift the annoucement of prizes into February 2022.
 - Methods to create the 2020 forecasts must perform similar on new, unseen data. Therefore do not overfit.
 - The organizers reserve the right to disqualify submissions if overfitting is suspected.
 - To be considered for computational resources at EWC, you need to register until June 1st 2021 and explain why you cannot train your ML model elsewhere.
 
-The organizers are aware that overfitting is an issue if the ground truth is accessible. A more robust verification would be about predicting future states with weekly submissions over a year, which would take much more time until one year of new observations is available. Therefore, we decided against a real-time competition to shorten the project length and keep momentum high. Over time we will all see which methods genuinely have skill and which overfitted their available data. 
+The organizers are aware that overfitting is an issue if the ground truth is accessible. A more robust verification would require predicting future states with weekly submissions over a year, which would take much more time until one year of new observations is available. Therefore, we decided against a real-time competition to shorten the project length and keep momentum high. Over time we will all see which methods genuinely have skill and which overfitted their available data. 
 
 
 ## Description
@@ -63,21 +63,21 @@ and a continously updating leaderboard. For code examples and how to contribute,
 - June/July: 2 Town hall for Q&A meetings for different time zones
 - 1st July 2021: Freeze the rules for the competition
 - 31st October 2021: End of the competition (Final date for submissions)
-- 1st November 2021: participants make their submission codes public
-- 10th November 2021: make leaderboard public
-- 1st November 2021 - January 2022: open peer review and expert peer review, everyone can comment on submissions/codes
-- February 2022: Announcement of the winners
+- 1st November 2021: Participants make their repositories public
+- 10th November 2021: Organizers make RPSS leaderboard public
+- 1st November 2021 - January 2022: open peer review and expert peer review
+- February 2022: Release final leaderboard (based on RPSS and review grades); Announcement of the prizes
 
 
 ## Prize
 
-Prizes are issued for the top three submissions beating the re-calibrated ECMWF benchmark:
+Prizes are issued for the top three submissions evaluated by RPSS and peer-review score and must beat the re-calibrated ECMWF benchmark:
 
 - Winner team: 15000 CHF
 - 2nd team: 10000 CHF
 - 3rd team: 5000 CHF
 
-The 3rd prize is reserved for the top submission from developing or least developed country or small island states as per the [UN list (see table C, F, H p.166ff)](https://www.un.org/development/desa/dpad/wp-content/uploads/sites/45/WESP2020_Annex.pdf). If such a submissions is already among the top 2, any third submission will get the 3rd prize.
+The 3rd prize is reserved for the top submission from developing or least developed country or small island states as per the [UN list (see table C, F, H p.166ff)](https://www.un.org/development/desa/dpad/wp-content/uploads/sites/45/WESP2020_Annex.pdf). If such a submissions is already among the top 2, the third submission will get the 3rd prize.
 
 
 ## Predictions
@@ -161,7 +161,7 @@ Frozen(SortedKeysDict({'forecast_time': 53, 'latitude': 121, 'longitude': 240, '
 Coordinates:
   * latitude                 (latitude) float64 90.0 88.5 87.0 ... -88.5 -90.0
   * longitude                (longitude) float64 0.0 1.5 3.0 ... 357.0 358.5
-  * forecast_time  (forecast_time) datetime64[ns] 2020-01...
+  * forecast_time            (forecast_time) datetime64[ns] 2020-01...
   * lead_time                (lead_time) timedelta64[ns] 14 days 28 days
   * category                 (category) <U11 '[0., 0.33)' '[0.33, 0.66)' '[0.66, 1.]'
     valid_time               (lead_time, forecast_time) datetime64[ns] 2...
@@ -196,15 +196,16 @@ Please find a list of the dates when forecasts are issued `forecast_reference_ti
 
 ### Sources
 
-Main datasets for this competition are already available as [renku datasets](https://renku.readthedocs.io/en/latest/user/data.html) for both variables temperature and precipitation:
+Main datasets for this competition are already available as [renku datasets](https://renku.readthedocs.io/en/latest/user/data.html) and in [climetlab](https://github.com/ecmwf-lab/climetlab-s2s-ai-challenge) for both variables temperature and total precipitation. In [climetlab](https://github.com/ecmwf-lab/climetlab-s2s-ai-challenge), we have one dataset lab for the Machine Learning community and S2S forecasting community, which both lead to the same datasets:
 
-| `tag in climetlab` | Description | renku dataset |
+| `tag in climetlab (ML community)` | `tag in climetlab (S2S community)` | Description | renku dataset |
 | ------ | ------ | ----- |
-| `forecast-benchmark` | ECMWF week 3+4 & 5+6 re-calibrated real-time 2020 forecasts | missing |
-| `observations` | CPC daily observations interpolated on a 1.5 degree grid | missing |
-| `training-input` | daily real-time initialized on thursdays 2020 forecasts from models ECMWF, ECCC, NCEP| missing |
-| `forecast-input` | daily reforecasts initialized once per week until 2019 from models ECMWF, ECCC, NCEP| missing |
-| `tercile_edges` | Observations-based tercile category_edges | missing |
+| `training-output-reference`| `observations-like-reforecasts` | CPC daily observations formatted as 2000-2019 reforecasts with `forecast_time` and `lead_time` | missing |
+| `test-output-reference`| `observations-like-forecasts` | CPC daily observations formatted as 2020 forecasts with `forecast_time` and `lead_time` | missing |
+| `training-input` | `hindcast-input` | daily real-time initialized on thursdays 2020 forecasts from models ECMWF, ECCC, NCEP| missing |
+| `test-input` | `forecast-input` | daily reforecasts initialized once per week until 2019 from models ECMWF, ECCC, NCEP| missing |
+| `forecast-benchmark` | `forecast-benchmark` | ECMWF week 3+4 & 5+6 re-calibrated real-time 2020 forecasts | missing |
+| `tercile_edges`| `tercile_edges` | Observations-based tercile category_edges | missing |
 
 <!--Not all available yet, also not yet cleaned.-->
 
@@ -279,11 +280,11 @@ From November 2021 to January 2022, there will be peer-reviews for the top ranke
 - whether overfitting has been avoided
 - tbd
 
-(Still under discussion) Based on these criteria, there will be a peer-review grade from bad (-1) towards brilliant (+1)
+(Still under discussion) Based on these criteria, there will be a peer-review grade from bad (-1) towards brilliant (+1).
 
 ### Final
 
-The top submissions on the combined RPSS and Peer-review score will determine the prizes.
+The top three submissions based on the combined RPSS and expert peer-review score will receive prizes.
 (Still under discussion whether the scores are averaged or ranked and the two ranks averaged.)
 
 ## Rules
@@ -295,10 +296,10 @@ The top submissions on the combined RPSS and Peer-review score will determine th
 - [Data leakage](https://en.wikipedia.org/wiki/Leakage_(machine_learning)?wprov=sfti1) is not allowed, i.e. do not use `lead_time=0 days` as predictor.
 - Do not [overfit](https://en.wikipedia.org/wiki/Overfitting?wprov=sfti1), a creditble model continues to perform similar on new unseen data.
 - The codes used must be fully documented, with details of the safeguards enacted to prevent overfitting, see checked safeguards in [template](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_forecast.ipynb).
-- The codes to all submissions must be made public on November 1st 2021 to be readable for open peer review. Submissions, which are not made public on November 1st 2021, will be removed from the leaderboard. 
+- The codes to all submissions must be made public on November 1st 2021 to be readable for open peer review and expert peer review, which will last until January 2022. Submissions, which are not made public on November 1st 2021, will be removed from the leaderboard. 
 - The leaderboard will be made public in early November 2021, once all submissions are public.
 - The organizers reserve the right to disqualify submissions if overfitting is suspected.
-- Prizes will be issued on February 10th 2022.
+- Prizes will be issued on in early February 2022.
 - These rules may be changed by the organizers until 1st July 2021. <!-- Under which circumstances are organizers allowed to change rules later on? -->
 
 
