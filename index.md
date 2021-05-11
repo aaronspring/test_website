@@ -49,7 +49,7 @@ The organizers are aware that overfitting is an issue if the ground truth is acc
 ## Description
 The World Meteorological Organization (WMO) is launching an open prize challenge to improve current forecasts of precipitation and temperature from today’s best computational fluid dynamical models 3 to 6 weeks  into the future using Artificial Intelligence and/or Machine Learning techniques. The challenge is organised by the World Weather Research Programme ([WWRP](https://community.wmo.int/activity-areas/wwrp))/World Climate Research Programme ([WCRP](https://www.wcrp-climate.org/)) Subseasonal-to-Seasonal Prediction Project ([S2S Project](http://s2sprediction.net/)), in collaboration with Swiss Data Science Center ([SDSC](https://datascience.ch/renku/)) and European Centre for Medium-Range Weather Forecasts ([ECMWF](https://www.ecmwf.int/)).
 
-Improved sub-seasonal to seasonal (S2S) forecast skill would benefit multiple user sectors immensely, including water, energy, health, agriculture and disaster risk reduction. The creation of an extensive database of S2S model forecasts has provided a new opportunity to apply the latest developments in machine learning to improve S2S prediction of temperature and precipitation forecasts up to 6 weeks ahead, with focus on biweekly averaged conditions around the globe. 
+Improved sub-seasonal to seasonal (S2S) forecast skill would benefit multiple user sectors immensely, including water, energy, health, agriculture and disaster risk reduction. The creation of an extensive database of S2S model forecasts has provided a new opportunity to apply the latest developments in machine learning to improve S2S prediction of temperature and total precipitation forecasts up to 6 weeks ahead, with focus on biweekly averaged conditions around the globe. 
 
 The competition will be implemented on the platform of Renkulab which hosts all the codes and scripts. The training and verification data will be easily accessible from the [European Weather Cloud](https://github.com/ecmwf-lab/climetlab-s2s-ai-challenge) and relevant access scripts will be provided to the participants. All the codes and forecasts of the challenge will be made open access after the end of the competition.
 
@@ -60,8 +60,13 @@ and a continously updating leaderboard. For code examples and how to contribute,
 
 - 4th May 2021: Announcement of the competition
 - 1st June 2021: Start of the competition (First date for submissions) <!-- registration: https://docs.google.com/forms/d/e/1FAIpQLSe49IleTxqEBFKzLdtkHvFQH0rPR16o6gfOFQ_L6cPzglAc2Q/viewform form available -->
+- June: 2 Town hall for Q&A meetings for different time zones
+- 1st July 2021: Freeze the rules for the competition
 - 31st October 2021: End of the competition (Final date for submissions)
-- 15th December 2021: Announcement of the winners
+- 1st November 2021: participants make their submission codes public
+- 10th November 2021: make leaderboard public
+- 1st November 2021 - January 2022: open peer review and expert peer review, everyone can comment on submissions/codes
+- February 2022: Announcement of the winners
 
 
 ## Prize
