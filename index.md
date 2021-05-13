@@ -198,7 +198,7 @@ Please find a list of the dates when forecasts are issued `forecast_reference_ti
 Main datasets for this competition are already available as [renku datasets](https://renku.readthedocs.io/en/latest/user/data.html) and in [climetlab](https://github.com/ecmwf-lab/climetlab-s2s-ai-challenge) for both variables temperature and total precipitation. In [climetlab](https://github.com/ecmwf-lab/climetlab-s2s-ai-challenge), we have one dataset lab for the Machine Learning community and S2S forecasting community, which both lead to the same datasets:
 
 | `tag in climetlab (ML community)` | `tag in climetlab (S2S community)` | Description | renku dataset |
-| ------ | ------ | ----- |
+| ------ | ------ | ----- | --- |
 | `training-output-reference`| `observations-like-reforecasts` | CPC daily observations formatted as 2000-2019 reforecasts with `forecast_time` and `lead_time` | missing |
 | `test-output-reference`| `observations-like-forecasts` | CPC daily observations formatted as 2020 forecasts with `forecast_time` and `lead_time` | missing |
 | `training-input` | `hindcast-input` | daily real-time initialized on thursdays 2020 forecasts from models ECMWF, ECCC, NCEP| missing |
@@ -217,8 +217,8 @@ We encourage to use subseasonal forecasts from the S2S and SubX projects:
 - SubX
   - [IRIDL](http://iridl.ldeo.columbia.edu/SOURCES/.Models/.SubX) all SubX models via [opendap](https://en.wikipedia.org/wiki/OPeNDAP) 
 
-However, any other publicly available data sources (like CMIP, NMME, etc.) of dates prior to the forecast_reference_time can be used for `training-input` and `forecast-input`.
-Also purely empirical methods like persistence or climatology could be used. The only essential data requirement concerns forecast times and dates, see [timings](#timings)
+However, any other publicly available data sources (like CMIP, NMME, etc.) of dates prior to the `forecast_time` can be used for `training-input` and `forecast-input`.
+Also purely empirical methods like persistence or climatology could be used. The only essential data requirement concerns forecast times and dates, see [timings](#timings).
 
 Ground truth sources are [NOAA CPC](https://www.cpc.ncep.noaa.gov/) temperature and total precipitation from [IRIDL](http://iridl.ldeo.columbia.edu/):
 - `pr`: [precipitation rate](http://iridl.ldeo.columbia.edu/SOURCES/.NOAA/.NCEP/.CPC/.UNIFIED_PRCP/.GAUGE_BASED/.GLOBAL/.v1p0/.extREALTIME/.rain) to accumulate
