@@ -64,7 +64,7 @@ This is the landing page of the competition presenting static information about 
 - 31st October 2021: End of the competition (Final date for submissions)
 - 1st November 2021: Participants make their code public
 - 10th November 2021: Organizers make RPSS leaderboard public
-- 1st November 2021 - January 2022: open peer review and expert peer review the top submissions
+- 1st November 2021 - January 2022: open peer review and experts peer review the top submissions
 - February 2022: Release final leaderboard (based on RPSS and review grades); Announcement of the prizes
 
 
@@ -136,9 +136,9 @@ This gridded RPSS is spatially averaged (weighted `(np.cos(np.deg2rad(ds.latitud
 
 For diagnostics, we will further host leaderboards for the two variables in three regions:
 
-- Northern extratropics (90N-30N)
+- Northern extratropics [90N-30N]
 - Tropics (29N-29S)
-- Southern extratropics (30S-60S)
+- Southern extratropics [30S-60S]
 
 Please find more details in the [verification notebook](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/) (coming soon...). <!-- verification_RPSS.ipynb -->
 
