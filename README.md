@@ -1,5 +1,3 @@
-[![CI](https://github.com/s2s-ai-challenge/s2s-ai-challenge.github.io/actions/workflows/get_leaderboard.yml/badge.svg)](https://github.com/s2s-ai-challenge/s2s-ai-challenge.github.io/actions/workflows/get_leaderboard.yml)
-
 # s2s-ai-challenge
 
 - Goal: Improve sub-seasonal to seasonal (S2S) temperature and total precipitation subseasonal forecasts with Machine Learning/Artificial Intelligence
