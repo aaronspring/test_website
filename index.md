@@ -41,7 +41,7 @@ The organizers modified the [rules](#rules):
 - To have more time for this review, we shift the annoucement of prizes into February 2022.
 - Methods to create the 2020 forecasts must perform similar on new, unseen data. Therefore do not overfit.
 - The organizers reserve the right to disqualify submissions if overfitting is suspected.
-- To be considered for computational resources at EWC, you need to register until June 1st 2021 and explain why you cannot train your ML model elsewhere.
+- To be considered for computational resources at EWC, you need to register until July 1st 2021 and explain why you cannot train your ML model elsewhere.
 
 The organizers are aware that overfitting is an issue if the ground truth is accessible. A more robust verification would require predicting future states with weekly submissions over a year, which would take much more time until one year of new observations is available. Therefore, we decided against a real-time competition to shorten the project length and keep momentum high. Over time we will all see which methods genuinely have skill and which overfitted their available data. 
 
