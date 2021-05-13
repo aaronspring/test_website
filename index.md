@@ -190,7 +190,7 @@ Please find a list of the dates when forecasts are issued (`forecast_time` with 
 {% include_relative timings_2020.html %}
  
 2) Which data to “allow” to be used to make a specific ML forecast?
-- for the first forecast issued S=2 Jan 2020, any observational data up to the day of the the forecast start, ie 2 Jan 2020
+- for the first forecast issued S=2 Jan 2020, any observational data up to the day of the forecast start (`forecast_time`), i.e. 2 Jan 2020
 - any S2S forecast initialized up to and including S=2 Jan 2020
 
 ### Sources
@@ -242,7 +242,7 @@ Where to train?
 
 - [renkulab.io](https://renkulab.io) provides free but limited compute resources. You may use upto 2 CPUs, 8 GB memory and 10 GB disk space.
 - As renku projects are `git` repositories under the hood, you can `renku clone` or `git clone` your project onto your own laptop or supercomputer account for the heavy lifting.
-- ECMWF will provide limited compute nodes on the European Weather Cloud `EWC` (where large parts of the data is stored) upon request. This opportunity is specifically targeted for participants from developing or least developed country or small island states and/or without institutional computing resources. Please indicate **why** you need compute access and cannot train your model elsewhere in the registration form. To be considered for such computational resources at EWC, you need to register by July 1st 2021. *Please note that we cannot make promises about these resources given the unknown demand.*
+- ECMWF may provide limited compute nodes on the European Weather Cloud `EWC` (where large parts of the data is stored) upon request. This opportunity is specifically targeted for participants from developing or least developed country or small island states and/or without institutional computing resources. Please indicate **why** you need compute access and cannot train your model elsewhere in the registration form. To be considered for such computational resources at EWC, you need to register by July 1st 2021. *Please note that we cannot make promises about these resources given the unknown demand.*
 
 How to train?
 
