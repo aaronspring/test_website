@@ -204,17 +204,18 @@ Main datasets for this competition are already available as [renku datasets](htt
 | `training-input` | `hindcast-input` | daily real-time initialized on thursdays 2020 forecasts from models ECMWF, ECCC, NCEP| missing |
 | `test-input` | `forecast-input` | daily reforecasts initialized once per week until 2019 from models ECMWF, ECCC, NCEP| missing |
 | `forecast-benchmark` | `forecast-benchmark` | ECMWF week 3+4 & 5+6 re-calibrated real-time 2020 forecasts | missing |
-| `tercile_edges`| `tercile_edges` | Observations-based tercile category_edges | missing |
+| `tercile_edges` | `tercile_edges` | Observations-based tercile category_edges | missing |
 
+Note that `tercile_edges` separating observations into the `category` below normal [0.-0.33), normal [0.33-0.67) or above normal [0.67-1.] depend on `longitude` (240), `latitude` (121), `lead_time` (46 days or 2 bi-weekly), `forecast_time.weekofyear` (53) and `category_edge` (2), but are not yet available via `climetlab` yet.
 <!--Not all available yet, also not yet cleaned.-->
 
-We encourage to use subseasonal forecasts from the S2S and SubX projects:
+We encourage to use subseasonal forecasts from the [`S2S`](https://doi.org/10.1175/BAMS-D-16-0017.1) and [`SubX`](http://journals.ametsoc.org/doi/full/10.1175/BAMS-D-18-0270.1) projects:
 
-- S2S
+- S2S Project
   - [climetlab](https://github.com/ecmwf-lab/climetlab-s2s-ai-challenge) for models ECMWF, ECCC and NCEP from the European Weather Cloud
   - IRI Data Library ([IRIDL](https://iridl.ldeo.columbia.edu/SOURCES/.ECMWF/.S2S)) for all S2S models via [opendap](https://en.wikipedia.org/wiki/OPeNDAP) 
   - [s2sprediction.net](http://s2sprediction.net) for data access from ECMWF and CMA
-- SubX
+- SubX Project
   - [IRIDL](http://iridl.ldeo.columbia.edu/SOURCES/.Models/.SubX) all SubX models via [opendap](https://en.wikipedia.org/wiki/OPeNDAP) 
 
 However, any other publicly available data sources (like CMIP, NMME, etc.) of dates prior to the `forecast_time` can be used for `training-input` and `forecast-input`.
