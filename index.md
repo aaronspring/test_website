@@ -3,7 +3,7 @@
 
 ## Competition Overview <!-- tl;dr -->
 
-- Goal: Improve subseasonal-to-seasonal temperature and total precipitation forecasts with Machine Learning/Artificial Intelligence
+- Goal: Improve subseasonal-to-seasonal precipitation and temperature forecasts with Machine Learning/Artificial Intelligence
 - [Flyer](https://www.wcrp-climate.org/documents/news-highlights/S2S_AI_Challenge_Flyer_final.pdf)
 - Competition runs on platform [https://renkulab.io/](https://renkulab.io/)
 - How to join: [https://renkulab.io/projects/aaron.spring/s2s-ai-challenge-template/](https://renkulab.io/projects/aaron.spring/s2s-ai-challenge-template/)
@@ -31,14 +31,14 @@
 
 ## Announcements
 
-#### 2021-05-10: Rules adapted endiscouraging overfitting
+#### 2021-05-10: Rules adapted to discourage overfitting
 
 The organizers modified the [rules](#rules):
 - The codes used must be fully documented, with details of the safeguards enacted to prevent overfitting, see checked safeguards in [template](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/tree/master/notebooks/ML_forecast.ipynb).
 - Code to reproduce submissions must be made available between November 1st and November 5th 2021 to enable open peer-review.
 - The RPSS leaderboard will be hidden until early November 2021 once all participants made their code public.
 - The final leaderboard will be ranked based on the numerical RPSS and a grade from expert peer-review for the top submissions.
-- To have more time for this review, we shift the annoucement of prizes into February 2022.
+- To have more time for this review, we shift the announcement of prizes into February 2022.
 - Methods to create the 2020 forecasts must perform similar on new, unseen data. Therefore do not overfit.
 - The organizers reserve the right to disqualify submissions if overfitting is suspected.
 - To be considered for computational resources at EWC, you need to register until July 1st 2021 and explain why you cannot train your ML model elsewhere.
