@@ -266,7 +266,7 @@ Submissions have to beat the ECMWF re-calibrated benchmark and following the [ru
 
 The leaderboard will be made public after the submission period ends and submission codes have been made public, i.e. early November 2021.
 
-We will also publish RPSS subleaderboards, that are purely diagnostic and show RPSS for two variables (`t2m`, `tp`), two `lead_time`s (weeks 3-4 & 5&6) and three subregions ([90N-30N], (30N-30S), [30S-60S]).
+We will also publish RPSS subleaderboards, that are purely diagnostic and show RPSS for two variables (`t2m`, `tp`), two `lead_time`s (weeks 3-4 & 5-6) and three subregions ([90N-30N], (30N-30S), [30S-60S]).
 
 ### Peer-review
 
