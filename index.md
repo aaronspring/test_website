@@ -34,7 +34,7 @@
 #### 2021-05-10: Rules adapted endiscouraging overfitting
 
 The organizers modified the [rules](#rules):
-- The codes used must be fully documented, with details of the safeguards enacted to prevent overfitting, see checked safeguards in [template](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/tree/master/notebooks/ML_prediction.ipynb).
+- The codes used must be fully documented, with details of the safeguards enacted to prevent overfitting, see checked safeguards in [template](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/tree/master/notebooks/ML_forecast.ipynb).
 - Code to reproduce submissions must be made available between November 1st and November 5th 2021 to enable open peer-review.
 - The RPSS leaderboard will be hidden until early November 2021 once all participants made their code public.
 - The final leaderboard will be ranked based on the numerical RPSS and a grade from expert peer-review for the top submissions.
@@ -245,7 +245,7 @@ Where to train?
 
 How to train?
 
-We are looking for your smart solutions here. Find a quick start template [here](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_forecast.ipynb).
+We are looking for your smart solutions here. Find a quick start template [here soon](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_forecast.ipynb).
 
 ## Discussion
 
