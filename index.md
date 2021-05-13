@@ -177,7 +177,7 @@ Please indicate the resources used (number of CPUs/GPUs, memory, platform; see [
 
 ### Timings
 
-The organizers explicitly choose to run this competition on past 2020 observations, instead of a real-time competition to enable a much shorter competition period and to keep momentum high. We are aware of the dangers of [overfitting](https://en.wikipedia.org/wiki/Overfitting?wprov=sfti1) (see [rules](#rules)), if the ground truth data is accessible.
+The organizers explicitly choose to run this competition on past 2020 data, instead of a real-time competition to enable a much shorter competition period and to keep momentum high. We are aware of the dangers of [overfitting](https://en.wikipedia.org/wiki/Overfitting?wprov=sfti1) (see [rules](#rules)), if the ground truth data is accessible.
 
 Please find here an explicit list of the forecast dates required.
 
@@ -185,7 +185,7 @@ Please find here an explicit list of the forecast dates required.
 - 53 forecasts issued on Thursdays in 2020 (since there are available from all S2S models, including our ECMWF benchmark)
 - In that case, the first forecast is issued S=2 Jan 2020, for the week 3-4 target 16-29 Jan.
 
-Please find a list of the dates when forecasts are issued `forecast_reference_time` and corresponding start and end in `valid_time` for week 3-4 and week 5-6.
+Please find a list of the dates when forecasts are issued (`forecast_time` with CF standard_name `forecast_reference_time`) and corresponding start and end in `valid_time` for week 3-4 and week 5-6.
 
 {% include_relative timings_2020.html %}
  
