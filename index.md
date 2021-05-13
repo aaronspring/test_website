@@ -31,7 +31,7 @@
 
 ## Announcements
 
-#### 2021-05-10: Rules adapted endiscouraging overfitting
+#### 2021-05-10: Rules adapted to discourage overfitting
 
 The organizers modified the [rules](#rules):
 - The codes used must be fully documented, with details of the safeguards enacted to prevent overfitting, see checked safeguards in [template](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/tree/master/notebooks/ML_forecast.ipynb).
