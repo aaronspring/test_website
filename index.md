@@ -294,6 +294,7 @@ The top three submissions based on the combined RPSS and expert peer-review scor
 - Model training is not allowed to use the ground truth/observations data after forecast was issued, see [Data Timings](#timings).
 <!-- - [Data leakage](https://en.wikipedia.org/wiki/Leakage_(machine_learning)?wprov=sfti1) is not allowed, i.e. do not use `lead_time=0 days` as predictor. -->
 - Do not [overfit](https://en.wikipedia.org/wiki/Overfitting?wprov=sfti1), a credible model is one that continues to perform similarly on new unseen data.
+- Also the RPS score (gridded not required) over the training period 2000-2019 must be provided in the submissions.
 - The codes used must be fully documented, with details of the safeguards enacted to prevent overfitting, see checked safeguards in [template](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_forecast.ipynb).
 - The RPSS leaderboard will be made public in early November 2021, once all submissions are public.
 - The submitted codes and gridded results to all submissions must be made public on November 5th 2021 to be accessible for open peer review, and for expert peer review of the top submissions, which will last until January 2022. Submissions, which are not made public on November 1st 2021, will be removed from the leaderboard. 
