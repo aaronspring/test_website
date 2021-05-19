@@ -4,7 +4,7 @@
 ## Competition Overview <!-- tl;dr -->
 
 - Goal: Improve subseasonal-to-seasonal precipitation and temperature forecasts with Machine Learning/Artificial Intelligence
-- [Flyer](https://www.wcrp-climate.org/documents/news-highlights/S2S_AI_Challenge_Flyer_final.pdf)
+- [Flyer](https://www.wcrp-climate.org/documents/news-highlights/AI%20Prize%20Challenge_17%20May%202021_1740.pdf)
 - Competition runs on platform [https://renkulab.io/](https://renkulab.io/)
 - How to join: [https://renkulab.io/projects/aaron.spring/s2s-ai-challenge-template/](https://renkulab.io/projects/aaron.spring/s2s-ai-challenge-template/)
 - Contributions accepted: 1st June 2021 - 31st October 2021
