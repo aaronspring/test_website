@@ -201,7 +201,7 @@ Main datasets for this competition are already available as [renku datasets](htt
 | ------ | ------ | ----- | --- |
 | `training-output-reference`| `observations-like-reforecasts` | CPC daily observations formatted as 2000-2019 reforecasts with `forecast_time` and `lead_time` | missing |
 | `test-output-reference`| `observations-like-forecasts` | CPC daily observations formatted as 2020 forecasts with `forecast_time` and `lead_time` | missing |
-| `training-input` | `hindcast-input` | daily reforecasts initialized once per week 2000 to 2019 on dates of 2020 thursdays from models ECMWF, ECCC, NCEP| missing |
+| `training-input` | `hindcast-input` | daily reforecasts initialized once per week 2000 to 2019 on dates of 2020 thursdays forecasts from models ECMWF, ECCC, NCEP| missing |
 | `test-input` | `forecast-input` | daily real-time forecasts initialized on thursdays 2020 from models ECMWF, ECCC, NCEP| missing |
 | `forecast-benchmark` | `forecast-benchmark` | ECMWF week 3+4 & 5+6 re-calibrated real-time 2020 forecasts | missing |
 | `tercile_edges` | `tercile_edges` | Observations-based tercile category_edges | missing |
