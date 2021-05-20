@@ -31,6 +31,13 @@
 
 ## Announcements
 
+#### 2021-05-2x:
+
+The organizers slightly adapted the [rules](#rules):
+- The numerical RPSS scores of the training period (2000-2019) must be made available in the training notebook, see [example](to.do).
+- The safeguards for reproducibility in the [training and prediction template](to.do) have been adapted:
+  - Reproducing the training and 2020 prediction workflow must be within one week of runtime. ~~Code to reproduce runs within a day~~ 
+
 #### 2021-05-10: Rules adapted to discourage overfitting
 
 The organizers modified the [rules](#rules):
@@ -59,7 +66,9 @@ This is the landing page of the competition presenting static information about 
 
 - 4th May 2021: Announcement of the competition
 - 1st June 2021: Start of the competition (First date for submissions) <!-- registration: https://docs.google.com/forms/d/e/1FAIpQLSe49IleTxqEBFKzLdtkHvFQH0rPR16o6gfOFQ_L6cPzglAc2Q/viewform form available -->
-- June/July: Two Town hall meeting for Q&A for different time zones
+- Town hall meetings for Q&A:
+  - Wednesday 2 June 2021 at 14:00 UTC link: 
+  - Thursday 10 June 2021 at  7:00 UTC link: 
 - 1st July 2021: Freeze the rules of the competition
 - 31st October 2021: End of the competition (Final date for submissions)
 - 1st November 2021: Participants make their code public
