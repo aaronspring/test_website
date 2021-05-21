@@ -38,6 +38,11 @@ The organizers slightly adapted the [rules](#rules):
 - The safeguards for reproducibility in the [training and prediction template](to.do) have been adapted:
   - Reproducing the training and 2020 prediction workflow must be within one week of runtime. ~~Code to reproduce runs within a day~~ 
 
+The organizers invite everyone to join two town hall meetings:
+- Wednesday 2 June 2021 at 14:00 UTC [link](https://apcc.webex.com/apcc/j.php?MTID=m1e19150b271170bffa5d9ef307e96605) Meeting number: 184 987 2121 Password: 1234
+- Thursday 10 June 2021 at  7:00 UTC [link](https://apcc.webex.com/apcc/j.php?MTID=m05c8900fd832be40b3d36a4b2df441c9) Meeting number: 184 416 1520 Password: 1234 
+The meetings will include a 15-minutes presentation on the competition rules and technical aspects, followed by a 45-minutes discussion for Q&A.
+
 #### 2021-05-10: Rules adapted to discourage overfitting
 
 The organizers modified the [rules](#rules):
@@ -67,8 +72,8 @@ This is the landing page of the competition presenting static information about 
 - 4th May 2021: Announcement of the competition
 - 1st June 2021: Start of the competition (First date for submissions) <!-- registration: https://docs.google.com/forms/d/e/1FAIpQLSe49IleTxqEBFKzLdtkHvFQH0rPR16o6gfOFQ_L6cPzglAc2Q/viewform form available -->
 - Town hall meetings for Q&A:
-  - Wednesday 2 June 2021 at 14:00 UTC link: 
-  - Thursday 10 June 2021 at  7:00 UTC link: 
+  - Wednesday 2 June 2021 at 14:00 UTC [link](https://apcc.webex.com/apcc/j.php?MTID=m1e19150b271170bffa5d9ef307e96605) Meeting number: 184 987 2121 Password: 1234
+  - Thursday 10 June 2021 at  7:00 UTC [link](https://apcc.webex.com/apcc/j.php?MTID=m05c8900fd832be40b3d36a4b2df441c9) Meeting number: 184 416 1520 Password: 1234 
 - 1st July 2021: Freeze the rules of the competition
 - 31st October 2021: End of the competition (Final date for submissions)
 - 1st November 2021: Participants make their code public
