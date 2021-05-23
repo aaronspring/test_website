@@ -43,6 +43,8 @@ The organizers invite everyone to join two town hall meetings:
 - Thursday 10 June 2021 at  7:00 UTC [link](https://apcc.webex.com/apcc/j.php?MTID=m05c8900fd832be40b3d36a4b2df441c9) Meeting number: 184 416 1520 Password: 1234 
 The meetings will include a 15-minutes presentation on the competition rules and technical aspects, followed by a 45-minutes discussion for Q&A.
 
+A first version of the `s2s-ai-challenge-template` [repository](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template) is released. Please fork again or rebase. <!-- check if works -->
+
 #### 2021-05-10: Rules adapted to discourage overfitting
 
 The organizers modified the [rules](#rules):
@@ -213,14 +215,14 @@ Main datasets for this competition are already available as [renku datasets](htt
 
 | `tag in climetlab (ML community)` | `tag in climetlab (S2S community)` | Description | renku dataset |
 | ------ | ------ | ----- | --- |
-| `training-output-reference`| `observations-like-reforecasts` | CPC daily observations formatted as 2000-2019 reforecasts with `forecast_time` and `lead_time` | missing |
-| `test-output-reference`| `observations-like-forecasts` | CPC daily observations formatted as 2020 forecasts with `forecast_time` and `lead_time` | missing |
-| `training-input` | `hindcast-input` | daily reforecasts initialized once per week 2000 to 2019 on dates of 2020 thursdays forecasts from models ECMWF, ECCC, NCEP| missing |
-| `test-input` | `forecast-input` | daily real-time forecasts initialized on thursdays 2020 from models ECMWF, ECCC, NCEP| missing |
-| `forecast-benchmark` | `forecast-benchmark` | ECMWF week 3+4 & 5+6 re-calibrated real-time 2020 forecasts | missing |
-| `tercile_edges` | `tercile_edges` | Observations-based tercile category_edges | missing |
+| `training-input` | `hindcast-input` | deterministic daily `lead_time` reforecasts/hindcasts initialized once per week 2000 to 2019 on dates of 2020 thursdays forecasts from models ECMWF, ECCC, NCEP| biweekly `lead_time`: `{model}_hindcast-input_2000-2019_biweekly_deterministic` |
+| `test-input` | `forecast-input` | deterministic daily `lead_time` real-time forecasts initialized on thursdays 2020 from models ECMWF, ECCC, NCEP| biweekly `lead_time`: `{model}_forecast-input_2020_biweekly_deterministic` |
+| `training-output-reference`| `hindcast-like-observations` | CPC daily observations formatted as 2000-2019 hindcasts with `forecast_time` and `lead_time` | biweekly `lead_time` deterministic: `hindcast-like-observations_2000-2019_biweekly_deterministic`; probabilistic in 3 categories: `hindcast-like-observations_2000-2019_biweekly_terciled` |
+| `test-output-reference`| `forecast-like-observations` | CPC daily observations formatted as 2020 forecasts with `forecast_time` and `lead_time` | biweekly `lead_time`: `forecast-like-observations_2020_biweekly_deterministic`; binary in 3 categories: `forecast-like-observations_2020_biweekly_terciled` |
+| `forecast-benchmark` | `forecast-benchmark` (not complete yet) | ECMWF week 3+4 & 5+6 re-calibrated probabilistic real-time 2020 forecasts in 3 categories | missing |
+| `tercile_edges` | `tercile_edges` | Observations-based tercile category edges calculated from 2000-2019 | `hindcast-like-observations_2000-2019_biweekly_tercile-edges` |
 
-Note that `tercile_edges` separating observations into the `category` below normal [0.-0.33), normal [0.33-0.67) or above normal [0.67-1.] depend on `longitude` (240), `latitude` (121), `lead_time` (46 days or 2 bi-weekly), `forecast_time.weekofyear` (53) and `category_edge` (2), but are not yet available via `climetlab` yet.
+Note that `tercile_edges` separating observations into the `category` below normal [0.-0.33), normal [0.33-0.67) or above normal [0.67-1.] depend on `longitude` (240), `latitude` (121), `lead_time` (46 days or 2 bi-weekly), `forecast_time.weekofyear` (53) and `category_edge` (2).
 <!--Not all available yet, also not yet cleaned.-->
 
 We encourage to use subseasonal forecasts from the [`S2S`](https://doi.org/10.1175/BAMS-D-16-0017.1) and [`SubX`](http://journals.ametsoc.org/doi/full/10.1175/BAMS-D-18-0270.1) projects:
@@ -236,7 +238,7 @@ However, any other publicly available data sources (like CMIP, NMME, etc.) of da
 Also purely empirical methods like persistence or climatology could be used. The only essential data requirement concerns forecast times and dates, see [timings](#timings).
 
 Ground truth sources are [NOAA CPC](https://www.cpc.ncep.noaa.gov/) temperature and total precipitation from [IRIDL](http://iridl.ldeo.columbia.edu/):
-- `pr`: [precipitation rate](http://iridl.ldeo.columbia.edu/SOURCES/.NOAA/.NCEP/.CPC/.UNIFIED_PRCP/.GAUGE_BASED/.GLOBAL/.v1p0/.extREALTIME/.rain) to accumulate
+- `pr`: [precipitation rate](http://iridl.ldeo.columbia.edu/SOURCES/.NOAA/.NCEP/.CPC/.UNIFIED_PRCP/.GAUGE_BASED/.GLOBAL/.v1p0/.extREALTIME/.rain) to accumulate to `tp`
 - `t2m`: [2m temperature](http://iridl.ldeo.columbia.edu/SOURCES/.NOAA/.NCEP/.CPC/.temperature/.daily/)
 
 ### Examples
