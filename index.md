@@ -34,8 +34,8 @@
 #### 2021-05-2x:
 
 The organizers slightly adapted the [rules](#rules):
-- The numerical RPSS scores of the training period (2000-2019) must be made available in the training notebook, see [example](to.do).
-- The safeguards for reproducibility in the [training and prediction template](to.do) have been adapted:
+- The numerical RPS scores of the training period (2000-2019) must be made available in the training notebook, see [example](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_train_and_predict.ipynb).
+- The safeguards for reproducibility in the [training and prediction template](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_forecast_template.ipynb) have been adapted:
   - Reproducing the training and 2020 prediction workflow must be within one week of runtime. ~~Code to reproduce runs within a day~~ 
 
 The organizers invite everyone to join two town hall meetings:
@@ -243,10 +243,9 @@ Ground truth sources are [NOAA CPC](https://www.cpc.ncep.noaa.gov/) temperature 
 
 ### Examples
 
-In progress...
-
-- [Train ML model](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_forecast.ipynb).
-- [Score RPSS ML model vs ECMWF](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/blob/master/notebooks).
+- [Train ML model template](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_forecast_template.ipynb).
+- [Train ML model](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_train_and_predict.ipynb).
+- [Score RPSS ML model vs ECMWF](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/blob/master/notebooks/RPSS_verification.ipynb).
 
 ## Join
 
@@ -262,7 +261,7 @@ Where to train?
 
 How to train?
 
-We are looking for your smart solutions here. Find a quick start template [here soon](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_forecast.ipynb).
+We are looking for your smart solutions here. Find a quick start template [here](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_forecast_template.ipynb).
 
 ## Discussion
 
