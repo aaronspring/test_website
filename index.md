@@ -148,15 +148,15 @@ def RPSS(rps_ML, rps_benchmark):
 ```
 
 The `RPSS` relevant for the prizes is first calculated on each grid cell over land globally on a 1.5 degree grid.
-This gridded RPSS is spatially averaged (weighted `(np.cos(np.deg2rad(ds.latitude)))`) over [90N-60S] land points and further averaged over both variables and both `lead_time`s.
+This gridded RPSS is spatially averaged (weighted `(np.cos(np.deg2rad(ds.latitude)))`) over [90N-60S] land points and further averaged over both variables and both `lead_time`s. Furthermore, we apply a dry mask on total precipitation `tp` evaluation as in [Vigaud et al. 2017](https://doi.org/10.1175/MWR-D-17-0092.1), i.e. we exclude grid cells where the observations-based lower tercile edge is below 1 mm/day.
 
-For diagnostics, we will further host leaderboards for the two variables in three regions:
+For diagnostics, we will further host leaderboards for the two variables in three regions in November 2021:
 
 - Northern extratropics [90N-30N]
 - Tropics (29N-29S)
 - Southern extratropics [30S-60S]
 
-Please find more details in the [verification notebook](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/) (coming soon...). <!-- verification_RPSS.ipynb -->
+Please find more details in the [verification notebook](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/verification_RPSS.ipynb).
 
 <!-- Note: We are currently discussing how to avoid overfitting in this [tweet and the comments below](https://twitter.com/fpappenberger/status/1389501396043669511?s=21). -->
 
@@ -181,7 +181,7 @@ Coordinates:
   * category                 (category) <U11 '[0., 0.33)' '[0.33, 0.66)' '[0.66, 1.]'
     valid_time               (lead_time, forecast_time) datetime64[ns] 2...
 ```
-A template file for submissions will soon be available [here](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/tree/master/submissions). <!-- TODO -->
+A template file for submissions will soon be available [here](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/tree/master/submissions/ML_prediction_2020.nc). <!-- check -->
 
 The submissions have to be commited in `git` with [`git lfs`](https://git-lfs.github.com/) in a [repository hosted by renkulab.io](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/).
 
