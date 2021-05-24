@@ -12,8 +12,9 @@
 - Website: [https://s2s-ai-challenge.github.io](https://s2s-ai-challenge.github.io)
 - Organized by: [WMO](https://public.wmo.int/en)/[WWRP](https://community.wmo.int/activity-areas/wwrp), [WCRP](https://www.wcrp-climate.org/), [S2S Project](http://s2sprediction.net/) in collaboration with [SDSC](https://datascience.ch/renku/) and [ECMWF](https://www.ecmwf.int/)
 
-https://community.wmo.int/themes/wmo/logo.png https://ho9an2-datap1.s3.eu-west-1.amazonaws.com/wmoext/s3fs-public/wwrp_logo_small_002.jpg https://www.wcrp-climate.org/images/community-resources/WCRP_logo_original-150.png https://www.wcrp-climate.org/images/logos_icones/logo_S2S.png https://www.ecmwf.int/sites/default/files/styles/news_item_main_image/public/s2s_logo_c_landscape.png?itok=7amVzLsJ https://datascience.ch/wp-content/uploads/2020/09/logo-SDSC-transparent-300x82.png https://www.ecmwf.int/sites/default/files/ECMWF_Master_Logo_RGB_nostrap.png
+![WMO logo](https://community.wmo.int/themes/wmo/logo.png) https://ho9an2-datap1.s3.eu-west-1.amazonaws.com/wmoext/s3fs-public/wwrp_logo_small_002.jpg https://www.wcrp-climate.org/images/community-resources/WCRP_logo_original-150.png https://www.wcrp-climate.org/images/logos_icones/logo_S2S.png https://www.ecmwf.int/sites/default/files/styles/news_item_main_image/public/s2s_logo_c_landscape.png?itok=7amVzLsJ https://datascience.ch/wp-content/uploads/2020/09/logo-SDSC-transparent-300x82.png https://www.ecmwf.int/sites/default/files/ECMWF_Master_Logo_RGB_nostrap.png
 
+<!-- ![ML-based predictions schematic](ML_model_schematic.jpeg?raw=true "ML-based predictions")-->
 
 ## Table of Contents
 0. [Announcements](#announcements)
