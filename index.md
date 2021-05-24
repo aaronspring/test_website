@@ -36,7 +36,7 @@
 The organizers slightly adapted the [rules](#rules):
 - The numerical RPS scores of the training period (2000-2019) must be made available in the training notebook, see [example](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_train_and_predict.ipynb).
 - The safeguards for reproducibility in the [training and prediction template](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_forecast_template.ipynb) have been adapted:
-  - Reproducing the training and 2020 prediction workflow must be within one week of runtime. ~~Code to reproduce runs within a day~~ 
+  - Code to reproduce training and predictions should run within a day on the described architecture. If the training takes longer than a day, please justify why this is needed. Please do not submit training piplelines, which take weeks to train. ~~Code to reproduce runs within a day~~ 
 
 The organizers invite everyone to join two town hall meetings:
 - Wednesday 2 June 2021 at 14:00 UTC [link](https://apcc.webex.com/apcc/j.php?MTID=m1e19150b271170bffa5d9ef307e96605) Meeting number: 184 987 2121 Password: 1234
