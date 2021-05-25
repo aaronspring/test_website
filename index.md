@@ -180,7 +180,7 @@ Coordinates:
   * longitude                (longitude) float64 0.0 1.5 3.0 ... 357.0 358.5
   * forecast_time            (forecast_time) datetime64[ns] 2020-01...
   * lead_time                (lead_time) timedelta64[ns] 14 days 28 days
-  * category                 (category) <U12 'below normal' 'normal' 'above normal'
+  * category                 (category) <U12 'below normal' 'near normal' 'above normal'
     valid_time               (lead_time, forecast_time) datetime64[ns] 2...
 ```
 A template file for submissions will soon be available [here](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/tree/master/submissions/ML_prediction_2020.nc). <!-- check -->
