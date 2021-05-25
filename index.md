@@ -329,6 +329,8 @@ The top three submissions based on the combined RPSS and expert peer-review scor
 - [SDSC](https://datascience.ch/renku/): Rok Roskar
 - WMO contractor/main contact: [Aaron Spring](mailto:aaron.spring@mpimet.mpg.de) [@aaronspring](https://github.com/aaronspring/) [@realaaronspring](https://twitter.com/realaaronspring/)
 
+<img src="https://community.wmo.int/themes/wmo/logo.png" alt="WMO logo" height="50"/> <img src="https://ho9an2-datap1.s3.eu-west-1.amazonaws.com/wmoext/s3fs-public/wwrp_logo_small_002.jpg" alt="WWRP logo" height="50"/> <img src="https://www.wcrp-climate.org/images/logos/WCRP_structured_data.png" alt="WCRP logo" height="50"/> <img src="https://www.wcrp-climate.org/images/logos_icones/logo_S2S.png" alt="S2S logo" height="50"/> <img src="https://datascience.ch/wp-content/uploads/2020/09/logo-SDSC-transparent-300x82.png" alt="SDSC logo" height="50"/> <img src="https://www.ecmwf.int/sites/default/files/ECMWF_Master_Logo_RGB_nostrap.png" alt="ECMWF logo" height="50"/> 
+
 <!---
 Todo:
 - make leaderboard dynamic with bokeh: https://p-mckenzie.github.io/2017/12/01/embedding-bokeh-with-github-pages/ https://github.com/bokeh/bokeh/tree/branch-2.4/examples/app/export_csv
