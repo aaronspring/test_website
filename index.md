@@ -213,17 +213,17 @@ Please find a list of the dates when forecasts are issued (`forecast_time` with 
 
 Main datasets for this competition are already available as [renku datasets](https://renku.readthedocs.io/en/latest/user/data.html) and in [climetlab](https://github.com/ecmwf-lab/climetlab-s2s-ai-challenge) for both variables temperature and total precipitation. In [climetlab](https://github.com/ecmwf-lab/climetlab-s2s-ai-challenge), we have one dataset lab for the Machine Learning community and S2S forecasting community, which both lead to the same datasets:
 
-| `tag in climetlab (ML community)` | `tag in climetlab (S2S community)` | Description | renku dataset |
+| `tag in climetlab (ML community)` | `tag in climetlab (S2S community)` | Description | renku dataset(s) |
 | ------ | ------ | ----- | --- |
-| `training-input` | `hindcast-input` | deterministic daily `lead_time` reforecasts/hindcasts initialized once per week 2000 to 2019 on dates of 2020 thursdays forecasts from models ECMWF, ECCC, NCEP| biweekly `lead_time`: `{model}_hindcast-input_2000-2019_biweekly_deterministic` |
-| `test-input` | `forecast-input` | deterministic daily `lead_time` real-time forecasts initialized on thursdays 2020 from models ECMWF, ECCC, NCEP| biweekly `lead_time`: `{model}_forecast-input_2020_biweekly_deterministic` |
-| `training-output-reference`| `hindcast-like-observations` | CPC daily observations formatted as 2000-2019 hindcasts with `forecast_time` and `lead_time` | biweekly `lead_time` deterministic: `hindcast-like-observations_2000-2019_biweekly_deterministic`; probabilistic in 3 categories: `hindcast-like-observations_2000-2019_biweekly_terciled` |
-| `test-output-reference`| `forecast-like-observations` | CPC daily observations formatted as 2020 forecasts with `forecast_time` and `lead_time` | biweekly `lead_time`: `forecast-like-observations_2020_biweekly_deterministic`; binary in 3 categories: `forecast-like-observations_2020_biweekly_terciled` |
-| `forecast-benchmark` | `forecast-benchmark` (not complete yet) | ECMWF week 3+4 & 5+6 re-calibrated probabilistic real-time 2020 forecasts in 3 categories | missing |
-| `tercile_edges` | `tercile_edges` | Observations-based tercile category edges calculated from 2000-2019 | `hindcast-like-observations_2000-2019_biweekly_tercile-edges` |
+| `training-input` | `hindcast-input` | deterministic daily `lead_time` reforecasts/hindcasts initialized once per week 2000 to 2019 on dates of 2020 thursdays forecasts from models ECMWF, ECCC, NCEP| biweekly `lead_time`: `{model}_hindcast-input_2000-2019_biweekly_deterministic.zarr` |
+| `test-input` | `forecast-input` | deterministic daily `lead_time` real-time forecasts initialized on thursdays 2020 from models ECMWF, ECCC, NCEP| biweekly `lead_time`: `{model}_forecast-input_2020_biweekly_deterministic.zarr` |
+| `training-output-reference`| `hindcast-like-observations` | CPC daily observations formatted as 2000-2019 hindcasts with `forecast_time` and `lead_time` | biweekly `lead_time` deterministic: `hindcast-like-observations_2000-2019_biweekly_deterministic.zarr`; probabilistic in 3 categories: `hindcast-like-observations_2000-2019_biweekly_terciled.zarr` |
+| `test-output-reference`| `forecast-like-observations` | CPC daily observations formatted as 2020 forecasts with `forecast_time` and `lead_time` | biweekly `lead_time`: `forecast-like-observations_2020_biweekly_deterministic.zarr`; binary in 3 categories: `forecast-like-observations_2020_biweekly_terciled.nc` |
+| `training-output-benchmark` | `hindcast-benchmark` | ECMWF week 3+4 & 5+6 re-calibrated probabilistic 2000-2019 hindcasts in 3 categories | missing |
+| `test-output-benchmark` | `forecast-benchmark` | ECMWF week 3+4 & 5+6 re-calibrated probabilistic real-time 2020 forecasts in 3 categories | `ecmwf_recalibrated_benchmark_2020_biweekly_terciled.nc` |
+| `tercile_edges` | `tercile_edges` | Observations-based tercile category edges calculated from 2000-2019 | `hindcast-like-observations_2000-2019_biweekly_tercile-edges.nc` |
 
-Note that `tercile_edges` separating observations into the `category` below normal [0.-0.33), normal [0.33-0.67) or above normal [0.67-1.] depend on `longitude` (240), `latitude` (121), `lead_time` (46 days or 2 bi-weekly), `forecast_time.weekofyear` (53) and `category_edge` (2).
-<!--Not all available yet, also not yet cleaned.-->
+Note that `tercile_edges` separating observations into the `category` `"below normal"` [0.-0.33), `"near normal"` [0.33-0.67) or `"above normal"` [0.67-1.] depend on `longitude` (240), `latitude` (121), `lead_time` (46 days or 2 bi-weekly), `forecast_time.weekofyear` (53) and `category_edge` (2).
 
 We encourage to use subseasonal forecasts from the [`S2S`](https://doi.org/10.1175/BAMS-D-16-0017.1) and [`SubX`](http://journals.ametsoc.org/doi/full/10.1175/BAMS-D-18-0270.1) projects:
 
