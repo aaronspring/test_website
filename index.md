@@ -45,7 +45,7 @@ The organizers invite everyone to join two town hall meetings:
 - Thursday 10 June 2021 at  7:00 UTC [link](https://apcc.webex.com/apcc/j.php?MTID=m05c8900fd832be40b3d36a4b2df441c9) Meeting number: 184 416 1520 Password: 1234 
 The meetings will include a 15-minutes presentation on the competition rules and technical aspects, followed by a 45-minutes discussion for Q&A.
 
-A first version of the `s2s-ai-challenge-template` [repository](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template) is released. Please fork again or rebase. <!-- check if works -->
+A first version of the `s2s-ai-challenge-template` [repository](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template) is released. Please fork again or rebase.
 
 #### 2021-05-10: Rules adapted to discourage overfitting
 
