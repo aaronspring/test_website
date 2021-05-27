@@ -234,7 +234,7 @@ We encourage to use subseasonal forecasts from the [`S2S`](https://doi.org/10.11
 - SubX Project
   - [IRIDL](http://iridl.ldeo.columbia.edu/SOURCES/.Models/.SubX) all SubX models via [opendap](https://en.wikipedia.org/wiki/OPeNDAP) 
 
-However, any other publicly available data sources (like CMIP, NMME, etc.) of dates prior to the `forecast_time` can be used for `training-input` and `forecast-input`.
+However, any other publicly available data sources (like [CMIP](https://www.wcrp-climate.org/wgcm-cmip), [NMME](http://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/), [DCPP](https://www.wcrp-climate.org/modelling-wgcm-mip-catalogue/cmip6-endorsed-mips-article/1065-modelling-cmip6-dcpp) etc.) of dates prior to the `forecast_time` can be used for `training-input` and `forecast-input`.
 Also purely empirical methods like persistence or climatology could be used. The only essential data requirement concerns forecast times and dates, see [timings](#timings).
 
 Ground truth sources are [NOAA CPC](https://www.cpc.ncep.noaa.gov/) temperature and total precipitation from [IRIDL](http://iridl.ldeo.columbia.edu/):
@@ -243,10 +243,10 @@ Ground truth sources are [NOAA CPC](https://www.cpc.ncep.noaa.gov/) temperature 
 
 ### Examples
 
-- [Train ML model template](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_forecast_template.ipynb).
-- [Train ML model](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_train_and_predict.ipynb).
+- [Train ML model template](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_forecast_template.ipynb)
+- [Train ML model](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_train_and_predict.ipynb)
 - [Mean bias reduction](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/mean_bias_reduction.ipynb)
-- [Score RPSS ML model vs ECMWF](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/blob/master/notebooks/RPSS_verification.ipynb).
+- [Score RPSS ML model vs ECMWF](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/blob/master/notebooks/RPSS_verification.ipynb)
 
 ## Join
 
