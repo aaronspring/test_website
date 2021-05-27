@@ -181,7 +181,7 @@ Coordinates:
   * category                 (category) <U12 'below normal' 'near normal' 'above normal'
     valid_time               (lead_time, forecast_time) datetime64[ns] 2...
 ```
-A template file for submissions is available [here](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/tree/master/submissions/ML_prediction_2020.nc). <!-- check -->
+A template file for submissions is available [here](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/tree/master/submissions/ML_prediction_2020.nc).
 
 The submissions have to be commited in `git` with [`git lfs`](https://git-lfs.github.com/) in a [repository hosted by renkulab.io](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/).
 
