@@ -36,9 +36,9 @@
 #### 2021-05-27:
 
 The organizers slightly adapted the [rules](#rules):
-- The numerical RPSS scores of the training period (2000-2019) must be made available in the training notebook, see [example](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_train_and_predict.ipynb).
+- The numerical RPSS scores of the training period must be made available in the training notebook, see [example](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_train_and_predict.ipynb).
 - The safeguards for reproducibility in the [training and prediction template](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_forecast_template.ipynb) have been adapted:
-  - Code to reproduce training and predictions should run within a day on the described architecture. If the training takes longer than a day, please justify why this is needed. Please do not submit training piplelines, which take weeks to train. ~~Code to reproduce runs within a day~~ 
+  - Code to reproduce training and predictions are prefered to run within a day on the described architecture. If the training takes longer than a day, please justify why this is needed. Please do not submit training piplelines, which several take weeks to train. ~~Code to reproduce runs within a day~~ 
 
 The organizers invite everyone to join two town hall meetings:
 - Wednesday 2 June 2021 at 14:00 UTC [link](https://apcc.webex.com/apcc/j.php?MTID=m1e19150b271170bffa5d9ef307e96605) Meeting number: 184 987 2121 Password: 1234
@@ -46,6 +46,9 @@ The organizers invite everyone to join two town hall meetings:
 The meetings will include a 15-minutes presentation on the competition rules and technical aspects, followed by a 45-minutes discussion for Q&A.
 
 A first version of the `s2s-ai-challenge-template` [repository](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template) is released. Please fork again or rebase.
+
+The deadline to apply for EWC compute access is shifted to 15th June 2021. Please use the [competition registration form](https://docs.google.com/forms/d/e/1FAIpQLSe49IleTxqEBFKzLdtkHvFQH0rPR16o6gfOFQ_L6cPzglAc2Q/viewform) to explain why you need compute resources. Please note that ECMWF just provides access to EWC, but not detailed support of how to setup your environments etc.
+
 
 #### 2021-05-10: Rules adapted to discourage overfitting
 
@@ -258,9 +261,7 @@ Where to train?
 
 - [renkulab.io](https://renkulab.io) provides free but limited compute resources. You may use upto 2 CPUs, 8 GB memory and 10 GB disk space.
 - As renku projects are `git` repositories under the hood, you can `renku clone` or `git clone` your project onto your own laptop or supercomputer account for the heavy lifting.
-- ECMWF may provide limited compute nodes on the European Weather Cloud `EWC` (where large parts of the data is stored) upon request. This opportunity is specifically targeted for participants from developing or least developed country or small island states and/or without institutional computing resources. Please indicate **why** you need compute access and cannot train your model elsewhere in the registration form. To be considered for such computational resources at EWC, you need to register by June 1st 2021 or July 1st 2021. *Please note that we cannot make promises about these resources given the unknown demand.*
-<!-- TODO -->
-How to train?
+- ECMWF may provide limited compute nodes on the European Weather Cloud `EWC` (where large parts of the data is stored) upon request. This opportunity is specifically targeted for participants from developing or least developed country or small island states and/or without institutional computing resources. Please indicate **why** you need compute access and cannot train your model elsewhere in the registration form. To be considered for such computational resources at EWC, you need to register by June 15th 2021. *Please note that we cannot make promises about these resources given the unknown demand.*
 
 We are looking for your smart solutions here. Find a quick start template [here](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_forecast_template.ipynb).
 
@@ -310,7 +311,7 @@ The top three submissions based on the combined RPSS and expert peer-review scor
 - Model training is not allowed to use the ground truth/observations data after forecast was issued, see [Data Timings](#timings).
 <!-- - [Data leakage](https://en.wikipedia.org/wiki/Leakage_(machine_learning)?wprov=sfti1) is not allowed, i.e. do not use `lead_time=0 days` as predictor. -->
 - Do not [overfit](https://en.wikipedia.org/wiki/Overfitting?wprov=sfti1), a credible model is one that continues to perform similarly on new unseen data.
-- Also the RPSS score (gridded not required) over the training period 2000-2019 must be provided in the submissions.
+- Also the RPSS score (gridded not required) over the training period (e.g. 2000-2019 or what is available for your inputs) must be provided in the submissions.
 - The codes used must be fully documented, with details of the safeguards enacted to prevent overfitting, see checked safeguards in [template](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_forecast_template.ipynb).
 - The RPSS leaderboard will be made public in early November 2021, once all submissions are public.
 - The submitted codes and gridded results to all submissions must be made public on November 5th 2021 to be accessible for open peer review, and for expert peer review of the top submissions, which will last until January 2022. Submissions, which are not made public on November 1st 2021, will be removed from the leaderboard. 
