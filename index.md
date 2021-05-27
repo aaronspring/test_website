@@ -33,7 +33,7 @@
 
 ## Announcements
 
-#### 2021-05-2x:
+#### 2021-05-27:
 
 The organizers slightly adapted the [rules](#rules):
 - The numerical RPSS scores of the training period (2000-2019) must be made available in the training notebook, see [example](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_train_and_predict.ipynb).
@@ -171,10 +171,10 @@ Each submission has to be a netcdf file with the folloing dimension sizes and co
 
 ```
 >>> # in xarray
->>> ML_forecasts.sizes
+>>> ML_prediction_2020.sizes
 Frozen(SortedKeysDict({'forecast_time': 53, 'latitude': 121, 'longitude': 240, 'lead_time': 2, 'category': 3}))
 
->>> ML_forecasts.coords
+>>> ML_prediction_2020.coords
 Coordinates:
   * latitude                 (latitude) float64 90.0 88.5 87.0 ... -88.5 -90.0
   * longitude                (longitude) float64 0.0 1.5 3.0 ... 357.0 358.5
