@@ -43,11 +43,14 @@ The organizers slightly adapted the [rules](#rules):
 The organizers invite everyone to join two town hall meetings:
 - Wednesday 2 June 2021 at 14:00 UTC [link](https://apcc.webex.com/apcc/j.php?MTID=m1e19150b271170bffa5d9ef307e96605) Meeting number: 184 987 2121 Password: 1234
 - Thursday 10 June 2021 at  7:00 UTC [link](https://apcc.webex.com/apcc/j.php?MTID=m05c8900fd832be40b3d36a4b2df441c9) Meeting number: 184 416 1520 Password: 1234 
+
 The meetings will include a 15-minutes presentation on the competition rules and technical aspects, followed by a 45-minutes discussion for Q&A.
 
 A first version of the `s2s-ai-challenge-template` [repository](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template) is released. Please fork again or rebase.
 
 The deadline to apply for EWC compute access is shifted to 15th June 2021. Please use the [competition registration form](https://docs.google.com/forms/d/e/1FAIpQLSe49IleTxqEBFKzLdtkHvFQH0rPR16o6gfOFQ_L6cPzglAc2Q/viewform) to explain why you need compute resources. Please note that ECMWF just provides access to EWC, but not detailed support of how to setup your environments etc.
+
+The RPSS formula has change to incorporate the RPSS with respect to climatology, see [evaluation](#evaluation).
 
 
 #### 2021-05-10: Rules adapted to discourage overfitting
@@ -133,23 +136,23 @@ xs.rps(observations, probabilistic_forecasts, category_edges=None, input_distrib
 See the [`xskillscore.rps` API](https://xskillscore.readthedocs.io/en/latest/api/xskillscore.rps.html) for details.
 
 ```python
-def RPSS(rps_ML, rps_benchmark):
-    """Ranked Probability Skill Score. Compares two RPS.
+def RPSS(rps_ML, climatology):
+    """Ranked Probability Skill Score with respect to climatology.
   
-    +---------+-----------------------------------------+
-    |  Score  | Description                             |
-    +---------+-----------------------------------------+
-    |    1    | maximum, perfect improvement            |
-    +---------+-----------------------------------------+
-    |  (0,1]  | positive means ML better than benchmark |
-    +---------+-----------------------------------------+
-    |    0    | equal performance                       |
-    +---------+-----------------------------------------+
-    | (0, -∞) | negative means ML worse than benchmark  |
-    +---------+-----------------------------------------+
+    +---------+-------------------------------------------+
+    |  Score  | Description                               |
+    +---------+-------------------------------------------+
+    |    1    | maximum, perfect improvement              |
+    +---------+-------------------------------------------+
+    |  (0,1]  | positive means ML better than climatology |
+    +---------+-------------------------------------------+
+    |    0    | equal performance                         |
+    +---------+-------------------------------------------+
+    | (0, -∞) | negative means ML worse than climatology  |
+    +---------+-------------------------------------------+
 
   """
-  return 1 - rps_ML / rps_benchmark  # positive means ML better than ECMWF benchmark
+  return 1 - rps_ML / climatology
 ```
 
 The `RPSS` relevant for the prizes is first calculated on each grid cell over land globally on a 1.5 degree grid.
