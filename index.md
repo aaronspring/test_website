@@ -9,10 +9,12 @@
 - How to join: [https://renkulab.io/projects/aaron.spring/s2s-ai-challenge-template/](https://renkulab.io/projects/aaron.spring/s2s-ai-challenge-template/)
 - Contributions accepted: 1st June 2021 - 31st October 2021
 - Data: via [climetlab](https://github.com/ecmwf-lab/climetlab-s2s-ai-challenge), see [Data](#data)
-- Organized by: [WMO](https://public.wmo.int/en)/[WWRP](https://community.wmo.int/activity-areas/wwrp), [WCRP](https://www.wcrp-climate.org/), [S2S Project](http://s2sprediction.net/) in collaboration with [SDSC](https://datascience.ch/renku/) and [ECMWF](https://www.ecmwf.int/)  <!-- add logos maybe -->
 - Website: [https://s2s-ai-challenge.github.io](https://s2s-ai-challenge.github.io)
+- Organized by: [WMO](https://public.wmo.int/en)/[WWRP](https://community.wmo.int/activity-areas/wwrp), [WCRP](https://www.wcrp-climate.org/), [S2S Project](http://s2sprediction.net/) in collaboration with [SDSC](https://datascience.ch/renku/) and [ECMWF](https://www.ecmwf.int/)
 
-<!-- once competition starts move leaderboards to the top and add announcements below, like a blog -->
+<img src="https://community.wmo.int/themes/wmo/logo.png" alt="WMO logo" height="50"/> <img src="https://ho9an2-datap1.s3.eu-west-1.amazonaws.com/wmoext/s3fs-public/wwrp_logo_small_002.jpg" alt="WWRP logo" height="50"/> <img src="https://www.wcrp-climate.org/images/logos/WCRP_structured_data.png" alt="WCRP logo" height="50"/> <img src="https://www.wcrp-climate.org/images/logos_icones/logo_S2S.png" alt="S2S logo" height="50"/> <img src="https://datascience.ch/wp-content/uploads/2020/09/logo-SDSC-transparent-300x82.png" alt="SDSC logo" height="50"/> <img src="https://www.ecmwf.int/sites/default/files/ECMWF_Master_Logo_RGB_nostrap.png" alt="ECMWF logo" height="50"/> 
+
+<!-- ![ML-based predictions schematic](ML_model_schematic.jpeg?raw=true "ML-based predictions")-->
 
 ## Table of Contents
 0. [Announcements](#announcements)
@@ -30,6 +32,23 @@
 
 
 ## Announcements
+
+#### 2021-05-27:
+
+The organizers slightly adapted the [rules](#rules):
+- The numerical RPSS scores of the training period must be made available in the training notebook, see [example](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_train_and_predict.ipynb).
+- The safeguards for reproducibility in the [training and prediction template](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_forecast_template.ipynb) have been adapted:
+  - Code to reproduce training and predictions are prefered to run within a day on the described architecture. If the training takes longer than a day, please justify why this is needed. Please do not submit training piplelines, which several take weeks to train. ~~Code to reproduce runs within a day~~ 
+
+The organizers invite everyone to join two town hall meetings:
+- Wednesday 2 June 2021 at 14:00 UTC [link](https://apcc.webex.com/apcc/j.php?MTID=m1e19150b271170bffa5d9ef307e96605) Meeting number: 184 987 2121 Password: 1234
+- Thursday 10 June 2021 at  7:00 UTC [link](https://apcc.webex.com/apcc/j.php?MTID=m05c8900fd832be40b3d36a4b2df441c9) Meeting number: 184 416 1520 Password: 1234 
+The meetings will include a 15-minutes presentation on the competition rules and technical aspects, followed by a 45-minutes discussion for Q&A.
+
+A first version of the `s2s-ai-challenge-template` [repository](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template) is released. Please fork again or rebase.
+
+The deadline to apply for EWC compute access is shifted to 15th June 2021. Please use the [competition registration form](https://docs.google.com/forms/d/e/1FAIpQLSe49IleTxqEBFKzLdtkHvFQH0rPR16o6gfOFQ_L6cPzglAc2Q/viewform) to explain why you need compute resources. Please note that ECMWF just provides access to EWC, but not detailed support of how to setup your environments etc.
+
 
 #### 2021-05-10: Rules adapted to discourage overfitting
 
@@ -59,7 +78,9 @@ This is the landing page of the competition presenting static information about 
 
 - 4th May 2021: Announcement of the competition
 - 1st June 2021: Start of the competition (First date for submissions) <!-- registration: https://docs.google.com/forms/d/e/1FAIpQLSe49IleTxqEBFKzLdtkHvFQH0rPR16o6gfOFQ_L6cPzglAc2Q/viewform form available -->
-- June/July: Two Town hall meeting for Q&A for different time zones
+- Town hall meetings for Q&A:
+  - Wednesday 2 June 2021 at 14:00 UTC [link](https://apcc.webex.com/apcc/j.php?MTID=m1e19150b271170bffa5d9ef307e96605) Meeting number: 184 987 2121 Password: 1234
+  - Thursday 10 June 2021 at  7:00 UTC [link](https://apcc.webex.com/apcc/j.php?MTID=m05c8900fd832be40b3d36a4b2df441c9) Meeting number: 184 416 1520 Password: 1234 
 - 1st July 2021: Freeze the rules of the competition
 - 31st October 2021: End of the competition (Final date for submissions)
 - 1st November 2021: Participants make their code public
@@ -95,7 +116,7 @@ For the exact `valid_time`s to predict, see [timings](#timings). For the data to
 
 The objective of the competition is to improve week 3-4 (weeks 3 plus 4) and 5-6 (weeks 5 plus 6) subseasonal global probabilistic [2m temperature](https://confluence.ecmwf.int/plugins/servlet/mobile?contentId=27394104#content/view/27394104) and [total precipitation](https://confluence.ecmwf.int/plugins/servlet/mobile?contentId=27399606#content/view/27399606) forecasts issued in the year 2020 by using Machine Learning/Artificial Intelligence.
 
-The evaluation will be continuously performed by a `scorer` bot on renkulab.io, following the [verification notebook](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/). <!-- TODO verification_RPSS.ipynb -->
+The evaluation will be continuously performed by a `scorer` bot on renkulab.io, following the [verification notebook](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/RPSS_verification.ipynb).
 Submissions are evaluated on the Ranked Probability Score (`RPS`) between the ML-based forecasts and ground truth CPC [temperature](http://iridl.ldeo.columbia.edu/SOURCES/.NOAA/.NCEP/.CPC/.temperature/.daily/) and accumulated [precipitation](http://iridl.ldeo.columbia.edu/SOURCES/.NOAA/.NCEP/.CPC/.UNIFIED_PRCP/.GAUGE_BASED/.GLOBAL/.v1p0/.extREALTIME/.rain) observations based on pre-computed observations-based terciles. This `RPS` is compared to the re-calibrated real-time 2020 ECMWF forecasts into the Ranked Probability Skill Score (`RPSS`).
 
 `RPS` is calculated with the open-source package [xskillscore](https://xskillscore.readthedocs.io/en/latest) over all 2020 `forecast_time`s.
@@ -132,17 +153,15 @@ def RPSS(rps_ML, rps_benchmark):
 ```
 
 The `RPSS` relevant for the prizes is first calculated on each grid cell over land globally on a 1.5 degree grid.
-This gridded RPSS is spatially averaged (weighted `(np.cos(np.deg2rad(ds.latitude)))`) over [90N-60S] land points and further averaged over both variables and both `lead_time`s.
+This gridded RPSS is spatially averaged (weighted `(np.cos(np.deg2rad(ds.latitude)))`) over [90N-60S] land points and further averaged over both variables and both `lead_time`s. Furthermore, we apply a dry mask on total precipitation `tp` evaluation as in [Vigaud et al. 2017](https://doi.org/10.1175/MWR-D-17-0092.1), i.e. we exclude grid cells where the observations-based lower tercile edge is below 1 mm/day.
 
-For diagnostics, we will further host leaderboards for the two variables in three regions:
+For diagnostics, we will further host leaderboards for the two variables in three regions in November 2021:
 
 - Northern extratropics [90N-30N]
 - Tropics (29N-29S)
 - Southern extratropics [30S-60S]
 
-Please find more details in the [verification notebook](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/) (coming soon...). <!-- verification_RPSS.ipynb -->
-
-<!-- Note: We are currently discussing how to avoid overfitting in this [tweet and the comments below](https://twitter.com/fpappenberger/status/1389501396043669511?s=21). -->
+Please find more details in the [verification notebook](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/RPSS_verification.ipynb).
 
 
 ## Submissions
@@ -153,24 +172,24 @@ Each submission has to be a netcdf file with the folloing dimension sizes and co
 
 ```
 >>> # in xarray
->>> ML_forecasts.sizes
+>>> ML_prediction_2020.sizes
 Frozen(SortedKeysDict({'forecast_time': 53, 'latitude': 121, 'longitude': 240, 'lead_time': 2, 'category': 3}))
 
->>> ML_forecasts.coords
+>>> ML_prediction_2020.coords
 Coordinates:
   * latitude                 (latitude) float64 90.0 88.5 87.0 ... -88.5 -90.0
   * longitude                (longitude) float64 0.0 1.5 3.0 ... 357.0 358.5
   * forecast_time            (forecast_time) datetime64[ns] 2020-01...
   * lead_time                (lead_time) timedelta64[ns] 14 days 28 days
-  * category                 (category) <U11 '[0., 0.33)' '[0.33, 0.66)' '[0.66, 1.]'
+  * category                 (category) <U12 'below normal' 'near normal' 'above normal'
     valid_time               (lead_time, forecast_time) datetime64[ns] 2...
 ```
-A template file for submissions will soon be available [here](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/tree/master/submissions). <!-- TODO -->
+A template file for submissions is available [here](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/tree/master/submissions/ML_prediction_2020.nc).
 
 The submissions have to be commited in `git` with [`git lfs`](https://git-lfs.github.com/) in a [repository hosted by renkulab.io](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/).
 
 After the competition, the code for training together with the gridded results must be made public, so the organizers and peer review can check adherence to the [rules](#rules).
-Please indicate the resources used (number of CPUs/GPUs, memory, platform; see [examples](#examples)) in your scripts/notebooks to allow reproducibility and document them fully to enable easy interpretation of the codes. Submissions, which cannot be independently reproduced by the organizers after the competition ends, cannot win prizes, please see [rules](#rules).
+Please indicate the resources used (number of CPUs/GPUs, memory, platform; see [safeguards in examples](#examples)) in your scripts/notebooks to allow reproducibility and document them fully to enable easy interpretation of the codes. Submissions, which cannot be independently reproduced by the organizers after the competition ends, cannot win prizes, please see [rules](#rules).
 
 
 ## Data
@@ -197,17 +216,17 @@ Please find a list of the dates when forecasts are issued (`forecast_time` with 
 
 Main datasets for this competition are already available as [renku datasets](https://renku.readthedocs.io/en/latest/user/data.html) and in [climetlab](https://github.com/ecmwf-lab/climetlab-s2s-ai-challenge) for both variables temperature and total precipitation. In [climetlab](https://github.com/ecmwf-lab/climetlab-s2s-ai-challenge), we have one dataset lab for the Machine Learning community and S2S forecasting community, which both lead to the same datasets:
 
-| `tag in climetlab (ML community)` | `tag in climetlab (S2S community)` | Description | renku dataset |
+| `tag in climetlab (ML community)` | `tag in climetlab (S2S community)` | Description | renku dataset(s) |
 | ------ | ------ | ----- | --- |
-| `training-output-reference`| `observations-like-reforecasts` | CPC daily observations formatted as 2000-2019 reforecasts with `forecast_time` and `lead_time` | missing |
-| `test-output-reference`| `observations-like-forecasts` | CPC daily observations formatted as 2020 forecasts with `forecast_time` and `lead_time` | missing |
-| `training-input` | `hindcast-input` | daily real-time initialized on thursdays 2020 forecasts from models ECMWF, ECCC, NCEP| missing |
-| `test-input` | `forecast-input` | daily reforecasts initialized once per week until 2019 from models ECMWF, ECCC, NCEP| missing |
-| `forecast-benchmark` | `forecast-benchmark` | ECMWF week 3+4 & 5+6 re-calibrated real-time 2020 forecasts | missing |
-| `tercile_edges` | `tercile_edges` | Observations-based tercile category_edges | missing |
+| `training-input` | `hindcast-input` | deterministic daily `lead_time` reforecasts/hindcasts initialized once per week 2000 to 2019 on dates of 2020 thursdays forecasts from models ECMWF, ECCC, NCEP| biweekly `lead_time`: `{model}_hindcast-input_2000-2019_biweekly_deterministic.zarr` |
+| `test-input` | `forecast-input` | deterministic daily `lead_time` real-time forecasts initialized on thursdays 2020 from models ECMWF, ECCC, NCEP| biweekly `lead_time`: `{model}_forecast-input_2020_biweekly_deterministic.zarr` |
+| `training-output-reference`| `hindcast-like-observations` | CPC daily observations formatted as 2000-2019 hindcasts with `forecast_time` and `lead_time` | biweekly `lead_time` deterministic: `hindcast-like-observations_2000-2019_biweekly_deterministic.zarr`; probabilistic in 3 categories: `hindcast-like-observations_2000-2019_biweekly_terciled.zarr` |
+| `test-output-reference`| `forecast-like-observations` | CPC daily observations formatted as 2020 forecasts with `forecast_time` and `lead_time` | biweekly `lead_time`: `forecast-like-observations_2020_biweekly_deterministic.zarr`; binary in 3 categories: `forecast-like-observations_2020_biweekly_terciled.nc` |
+| `training-output-benchmark` | `hindcast-benchmark` | ECMWF week 3+4 & 5+6 re-calibrated probabilistic 2000-2019 hindcasts in 3 categories | missing |
+| `test-output-benchmark` | `forecast-benchmark` | ECMWF week 3+4 & 5+6 re-calibrated probabilistic real-time 2020 forecasts in 3 categories | `ecmwf_recalibrated_benchmark_2020_biweekly_terciled.nc` |
+| `tercile_edges` | `tercile_edges` | Observations-based tercile category edges calculated from 2000-2019 | `hindcast-like-observations_2000-2019_biweekly_tercile-edges.nc` |
 
-Note that `tercile_edges` separating observations into the `category` below normal [0.-0.33), normal [0.33-0.67) or above normal [0.67-1.] depend on `longitude` (240), `latitude` (121), `lead_time` (46 days or 2 bi-weekly), `forecast_time.weekofyear` (53) and `category_edge` (2), but are not yet available via `climetlab` yet.
-<!--Not all available yet, also not yet cleaned.-->
+Note that `tercile_edges` separating observations into the `category` `"below normal"` [0.-0.33), `"near normal"` [0.33-0.67) or `"above normal"` [0.67-1.] depend on `longitude` (240), `latitude` (121), `lead_time` (46 days or 2 bi-weekly), `forecast_time.weekofyear` (53) and `category_edge` (2).
 
 We encourage to use subseasonal forecasts from the [`S2S`](https://doi.org/10.1175/BAMS-D-16-0017.1) and [`SubX`](http://journals.ametsoc.org/doi/full/10.1175/BAMS-D-18-0270.1) projects:
 
@@ -218,19 +237,19 @@ We encourage to use subseasonal forecasts from the [`S2S`](https://doi.org/10.11
 - SubX Project
   - [IRIDL](http://iridl.ldeo.columbia.edu/SOURCES/.Models/.SubX) all SubX models via [opendap](https://en.wikipedia.org/wiki/OPeNDAP) 
 
-However, any other publicly available data sources (like CMIP, NMME, etc.) of dates prior to the `forecast_time` can be used for `training-input` and `forecast-input`.
+However, any other publicly available data sources (like [CMIP](https://www.wcrp-climate.org/wgcm-cmip), [NMME](http://iridl.ldeo.columbia.edu/SOURCES/.Models/.NMME/), [DCPP](https://www.wcrp-climate.org/modelling-wgcm-mip-catalogue/cmip6-endorsed-mips-article/1065-modelling-cmip6-dcpp) etc.) of dates prior to the `forecast_time` can be used for `training-input` and `forecast-input`.
 Also purely empirical methods like persistence or climatology could be used. The only essential data requirement concerns forecast times and dates, see [timings](#timings).
 
 Ground truth sources are [NOAA CPC](https://www.cpc.ncep.noaa.gov/) temperature and total precipitation from [IRIDL](http://iridl.ldeo.columbia.edu/):
-- `pr`: [precipitation rate](http://iridl.ldeo.columbia.edu/SOURCES/.NOAA/.NCEP/.CPC/.UNIFIED_PRCP/.GAUGE_BASED/.GLOBAL/.v1p0/.extREALTIME/.rain) to accumulate
+- `pr`: [precipitation rate](http://iridl.ldeo.columbia.edu/SOURCES/.NOAA/.NCEP/.CPC/.UNIFIED_PRCP/.GAUGE_BASED/.GLOBAL/.v1p0/.extREALTIME/.rain) to accumulate to `tp`
 - `t2m`: [2m temperature](http://iridl.ldeo.columbia.edu/SOURCES/.NOAA/.NCEP/.CPC/.temperature/.daily/)
 
 ### Examples
 
-In progress...
-
-- [Train ML model](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_forecast.ipynb).
-- [Score RPSS ML model vs ECMWF](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/blob/master/notebooks).
+- [Train ML model template](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_forecast_template.ipynb)
+- [Train ML model](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_train_and_predict.ipynb)
+- [Mean bias reduction](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/mean_bias_reduction.ipynb)
+- [Score RPSS ML model vs ECMWF](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/blob/master/notebooks/RPSS_verification.ipynb)
 
 ## Join
 
@@ -242,11 +261,9 @@ Where to train?
 
 - [renkulab.io](https://renkulab.io) provides free but limited compute resources. You may use upto 2 CPUs, 8 GB memory and 10 GB disk space.
 - As renku projects are `git` repositories under the hood, you can `renku clone` or `git clone` your project onto your own laptop or supercomputer account for the heavy lifting.
-- ECMWF may provide limited compute nodes on the European Weather Cloud `EWC` (where large parts of the data is stored) upon request. This opportunity is specifically targeted for participants from developing or least developed country or small island states and/or without institutional computing resources. Please indicate **why** you need compute access and cannot train your model elsewhere in the registration form. To be considered for such computational resources at EWC, you need to register by July 1st 2021. *Please note that we cannot make promises about these resources given the unknown demand.*
+- ECMWF may provide limited compute nodes on the European Weather Cloud `EWC` (where large parts of the data is stored) upon request. This opportunity is specifically targeted for participants from developing or least developed country or small island states and/or without institutional computing resources. Please indicate **why** you need compute access and cannot train your model elsewhere in the registration form. To be considered for such computational resources at EWC, you need to register by June 15th 2021. *Please note that we cannot make promises about these resources given the unknown demand.*
 
-How to train?
-
-We are looking for your smart solutions here. Find a quick start template [here soon](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_forecast.ipynb).
+We are looking for your smart solutions here. Find a quick start template [here](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_forecast_template.ipynb).
 
 ## Discussion
 
@@ -294,7 +311,8 @@ The top three submissions based on the combined RPSS and expert peer-review scor
 - Model training is not allowed to use the ground truth/observations data after forecast was issued, see [Data Timings](#timings).
 <!-- - [Data leakage](https://en.wikipedia.org/wiki/Leakage_(machine_learning)?wprov=sfti1) is not allowed, i.e. do not use `lead_time=0 days` as predictor. -->
 - Do not [overfit](https://en.wikipedia.org/wiki/Overfitting?wprov=sfti1), a credible model is one that continues to perform similarly on new unseen data.
-- The codes used must be fully documented, with details of the safeguards enacted to prevent overfitting, see checked safeguards in [template](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_forecast.ipynb).
+- Also the RPSS score (gridded not required) over the training period (e.g. 2000-2019 or what is available for your inputs) must be provided in the submissions.
+- The codes used must be fully documented, with details of the safeguards enacted to prevent overfitting, see checked safeguards in [template](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_forecast_template.ipynb).
 - The RPSS leaderboard will be made public in early November 2021, once all submissions are public.
 - The submitted codes and gridded results to all submissions must be made public on November 5th 2021 to be accessible for open peer review, and for expert peer review of the top submissions, which will last until January 2022. Submissions, which are not made public on November 1st 2021, will be removed from the leaderboard. 
 - The organizers reserve the right to disqualify submissions if overfitting is suspected.
@@ -310,6 +328,8 @@ The top three submissions based on the combined RPSS and expert peer-review scor
 - [ECMWF](https://www.ecmwf.int/): Florian Pinault, Baudouin Raoult
 - [SDSC](https://datascience.ch/renku/): Rok Roskar
 - WMO contractor/main contact: [Aaron Spring](mailto:aaron.spring@mpimet.mpg.de) [@aaronspring](https://github.com/aaronspring/) [@realaaronspring](https://twitter.com/realaaronspring/)
+
+<img src="https://community.wmo.int/themes/wmo/logo.png" alt="WMO logo" height="50"/> <img src="https://ho9an2-datap1.s3.eu-west-1.amazonaws.com/wmoext/s3fs-public/wwrp_logo_small_002.jpg" alt="WWRP logo" height="50"/> <img src="https://www.wcrp-climate.org/images/logos/WCRP_structured_data.png" alt="WCRP logo" height="50"/> <img src="https://www.wcrp-climate.org/images/logos_icones/logo_S2S.png" alt="S2S logo" height="50"/> <img src="https://datascience.ch/wp-content/uploads/2020/09/logo-SDSC-transparent-300x82.png" alt="SDSC logo" height="50"/> <img src="https://www.ecmwf.int/sites/default/files/ECMWF_Master_Logo_RGB_nostrap.png" alt="ECMWF logo" height="50"/> 
 
 <!---
 Todo:
