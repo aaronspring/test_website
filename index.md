@@ -33,7 +33,14 @@
 
 ## Announcements
 
-#### 2021-05-27:
+#### 2021-05-31: Template repository and scorer bot ready
+
+- We will start accepting submissions from tomorrow June 1st to October 31st 2021.
+- The [template](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template) on [renkulab.io](https://renkulab.io/projects/aaron.spring/s2s-ai-challenge-template/environments) is ready to use. You can also work on such a `git` repository locally. Please play around, raise questions or report bugs in the [competition issue tracker](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/issues/new?).
+- Follow [these steps](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/README.md) to join the competition.
+
+
+#### 2021-05-27: Town hall dates and EWC compute deadline changes
 
 The organizers slightly adapted the [rules](#rules):
 - The numerical RPSS scores of the training period must be made available in the training notebook, see [example](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_train_and_predict.ipynb).
@@ -69,6 +76,7 @@ The organizers are aware that overfitting is an issue if the ground truth is acc
 
 
 ## Description
+
 The World Meteorological Organization (WMO) is launching an open prize challenge to improve current forecasts of precipitation and temperature from today’s best computational fluid dynamical models 3 to 6 weeks  into the future using Artificial Intelligence and/or Machine Learning techniques. The challenge is part of the the Subseasonal-to-Seasonal Prediction Project ([S2S Project](http://s2sprediction.net/)), coordinated by the World Weather Research Programme ([WWRP](https://community.wmo.int/activity-areas/wwrp))/World Climate Research Programme ([WCRP](https://www.wcrp-climate.org/)), in collaboration with Swiss Data Science Center ([SDSC](https://datascience.ch/renku/)) and European Centre for Medium-Range Weather Forecasts ([ECMWF](https://www.ecmwf.int/)).
 
 Improved sub-seasonal to seasonal (S2S) forecast skill would benefit multiple user sectors immensely, including water, energy, health, agriculture and disaster risk reduction. The creation of an extensive database of S2S model forecasts has provided a new opportunity to apply the latest developments in machine learning to improve S2S prediction of temperature and total precipitation forecasts up to 6 weeks ahead, with focus on biweekly averaged conditions around the globe. 
