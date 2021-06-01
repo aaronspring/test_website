@@ -333,7 +333,7 @@ The top three submissions based on the combined RPSS and expert peer-review scor
 ## Organizers
 
 - [WMO](https://public.wmo.int/en)/[WWRP](https://community.wmo.int/activity-areas/wwrp): Estelle De Coning, Wenchao Cao
-- [WCRP](https://www.wcrp-climate.org/): Michel Rixen, Nico Caltabiano
+- [WCRP](https://www.wcrp-climate.org/): Nico Caltabiano, Michel Rixen
 - [S2S Project](http://s2sprediction.net/): Frederic Vitart, Andy Robertson
 - [ECMWF](https://www.ecmwf.int/): Florian Pinault, Baudouin Raoult
 - [SDSC](https://datascience.ch/renku/): Rok Roskar
