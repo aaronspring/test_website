@@ -233,6 +233,7 @@ Main datasets for this competition are already available as [renku datasets](htt
 | `test-input` | `forecast-input` | deterministic daily `lead_time` real-time forecasts initialized on thursdays 2020 from models ECMWF, ECCC, NCEP| biweekly `lead_time`: `{model}_forecast-input_2020_biweekly_deterministic.zarr` |
 | `training-output-reference`| `hindcast-like-observations` | CPC daily observations formatted as 2000-2019 hindcasts with `forecast_time` and `lead_time` | biweekly `lead_time` deterministic: `hindcast-like-observations_2000-2019_biweekly_deterministic.zarr`; probabilistic in 3 categories: `hindcast-like-observations_2000-2019_biweekly_terciled.zarr` |
 | `test-output-reference`| `forecast-like-observations` | CPC daily observations formatted as 2020 forecasts with `forecast_time` and `lead_time` | biweekly `lead_time`: `forecast-like-observations_2020_biweekly_deterministic.zarr`; binary in 3 categories: `forecast-like-observations_2020_biweekly_terciled.nc` |
+| `training-output-benchmark` | `hindcast-benchmark` | ECMWF week 3+4 & 5+6 re-calibrated probabilistic 2000-2019 hindcasts in 3 categories | - |
 | `test-output-benchmark` | `forecast-benchmark` | ECMWF week 3+4 & 5+6 re-calibrated probabilistic real-time 2020 forecasts in 3 categories | `ecmwf_recalibrated_benchmark_2020_biweekly_terciled.nc` |
 | - | - | Observations-based tercile category edges calculated from 2000-2019 | `hindcast-like-observations_2000-2019_biweekly_tercile-edges.nc` |
 
