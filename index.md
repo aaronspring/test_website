@@ -102,7 +102,7 @@ This is the landing page of the competition presenting static information about 
 
 ## Prize
 
-Prizes will be awarded to for the top three submissions evaluated by RPSS and peer-review scores and must beat the re-calibrated ECMWF benchmark:
+Prizes will be awarded to for the top three submissions evaluated by RPSS and peer-review scores and must beat the re-calibrated ECMWF benchmark, which is corrected by the mean bias:
 
 - Winning team: 15000 CHF
 - 2nd team: 10000 CHF
