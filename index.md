@@ -132,11 +132,6 @@ The evaluation will be continuously performed by a `scorer` bot on renkulab.io, 
 Submissions are evaluated on the Ranked Probability Score (`RPS`) between the ML-based forecasts and ground truth CPC [temperature](http://iridl.ldeo.columbia.edu/SOURCES/.NOAA/.NCEP/.CPC/.temperature/.daily/) and accumulated [precipitation](http://iridl.ldeo.columbia.edu/SOURCES/.NOAA/.NCEP/.CPC/.UNIFIED_PRCP/.GAUGE_BASED/.GLOBAL/.v1p0/.extREALTIME/.rain) observations based on pre-computed observations-based terciles. This `RPS` is compared to the climatogoly forecast into the Ranked Probability Skill Score (`RPSS`). The ML-based forecasts should beat the re-calibrated real-time 2020 ECMWF forecasts.
 
 `RPS` is calculated with the open-source package [xskillscore](https://xskillscore.readthedocs.io/en/latest) over all 2020 `forecast_time`s.
-For deterministic forecasts:
-```python
-xs.rps(observations, deterministic_forecasts, category_edges=precomputed_tercile_edges, dim='forecast_time')
-```
-
 For probabilistic forecasts:
 ```python
 xs.rps(observations, probabilistic_forecasts, category_edges=None, input_distributions='p', dim='forecast_time')
@@ -165,7 +160,7 @@ def RPSS(rps_ML, climatology):
 ```
 
 The `RPSS` relevant for the prizes is first calculated on each grid cell over land globally on a 1.5 degree grid.
-This gridded RPSS is spatially averaged (weighted `(np.cos(np.deg2rad(ds.latitude)))`) over [90N-60S] land points and further averaged over both variables and both `lead_time`s. Furthermore, we apply a dry mask on total precipitation `tp` evaluation as in [Vigaud et al. 2017](https://doi.org/10.1175/MWR-D-17-0092.1), i.e. we exclude grid cells where the observations-based lower tercile edge is below 1 mm/day.
+This gridded RPSS is spatially averaged (weighted `(np.cos(np.deg2rad(ds.latitude)))`) over [90N-60S] land points and further averaged over both variables and both `lead_time`s. Furthermore, we apply a dry mask on total precipitation `tp` evaluation as in [Vigaud et al. 2017](https://doi.org/10.1175/MWR-D-17-0092.1), i.e. we exclude grid cells where the observations-based lower tercile edge is below 1 mm/day. Please find the ground truth compared against [here](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/data/forecast-like-observations_2020_biweekly_terciled.nc).
 
 For diagnostics, we will further host leaderboards for the two variables in three regions in November 2021:
 
