@@ -50,7 +50,7 @@ The organizers slightly adapted the [rules](#rules):
 The organizers invite everyone to join two town hall meetings:
 - Wednesday 2 June 2021 at 14:00 UTC [link](https://apcc.webex.com/apcc/j.php?MTID=m1e19150b271170bffa5d9ef307e96605) Meeting number: 184 987 2121 Password: 1234
 - Thursday 10 June 2021 at  7:00 UTC [link](https://apcc.webex.com/apcc/j.php?MTID=m05c8900fd832be40b3d36a4b2df441c9) Meeting number: 184 416 1520 Password: 1234 
-- [slides](https://wmoomm-my.sharepoint.com/personal/wcao_wmo_int/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fwcao%5Fwmo%5Fint%2FDocuments%2FDocuments%2FSharedFiles%2FS2S%20AI%20Competition%2FTownHall%5Fslides%2Epdf&parent=%2Fpersonal%2Fwcao%5Fwmo%5Fint%2FDocuments%2FDocuments%2FSharedFiles%2FS2S%20AI%20Competition&originalPath=aHR0cHM6Ly93bW9vbW0tbXkuc2hhcmVwb2ludC5jb20vOmI6L2cvcGVyc29uYWwvd2Nhb193bW9faW50L0ViUHZHWllCWmZwTmpKcjFwUmNITEpnQmFvd2luSEJKbjQ0cmtYZno4TDRDakE%5FcnRpbWU9QnV4dFRWZ24yVWc)
+- [slides](https://wmoomm-my.sharepoint.com/personal/wcao_wmo_int/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fwcao%5Fwmo%5Fint%2FDocuments%2FDocuments%2FSharedFiles%2FS2S%20AI%20Competition%2FTownHall%5Fslides%2Epdf&parent=%2Fpersonal%2Fwcao%5Fwmo%5Fint%2FDocuments%2FDocuments%2FSharedFiles%2FS2S%20AI%20Competition&originalPath=aHR0cHM6Ly93bW9vbW0tbXkuc2hhcmVwb2ludC5jb20vOmI6L2cvcGVyc29uYWwvd2Nhb193bW9faW50L0ViUHZHWllCWmZwTmpKcjFwUmNITEpnQmFvd2luSEJKbjQ0cmtYZno4TDRDakE%5FcnRpbWU9QnV4dFRWZ24yVWc), [recording](https://elioscloud.wmo.int/share/s/zsc-ufPvQNqgVca8vF5e9Q)
 
 The meetings will include a 15-minutes presentation on the competition rules and technical aspects, followed by a 45-minutes discussion for Q&A.
 
