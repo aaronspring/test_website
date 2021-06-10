@@ -33,6 +33,15 @@
 
 ## Announcements
 
+#### 2021-06-1x:
+
+- Small change to the [rules](#rules) after feedback from the town halls: One team can only get one prize. ~~One Person can only join one team.~~ NEW: Teams with with overlapping members must use considerably different methods to be considered from prizes both. One person can only join three teams at maximum.
+- [`climetlab_s2s_ai_challenge.extra.forecast_like_observations`](add) converts obserations with `time` dimension to the same dimensions as initialized forecasts with dimension `forecast_time` and `lead_time`. This helper function can be used for `training/hindcast-input` with `model='ncep'` and any other initialized forecasts (e.g. from [SubX](add) or [S2S](add))
+- EWC compute: contacted with proposal, use responsibly and mention to us if not used anymore
+- Rok from SDSC offers to deliver a `renku` workshop, please indicate your interest [here](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/issues/7)
+- anything else?
+
+
 #### 2021-05-31: Template repository and scorer bot ready
 
 - We will start accepting submissions from tomorrow June 1st to October 31st 2021.
@@ -313,7 +322,7 @@ The top three submissions based on the combined RPSS and expert peer-review scor
 
 ## Rules
 
-- One team can only get one prize. One Person can only join one team.
+- One team can only get one prize. Teams with with overlapping members must use considerably different methods to be considered from prizes both. One person can only join three teams at maximum.
 - Prizes are only issued if the method beats the re-calibrated ECMWF benchmark.
 - To be eligible for the third prize reserved for submissions from developing or least developed country or small island states, all team members must be resident in such countries. 
 - Model training is not allowed to use the ground truth/observations data after forecast was issued, see [Data Timings](#timings).
