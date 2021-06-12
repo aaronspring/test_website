@@ -14,7 +14,6 @@
 
 <img src="https://community.wmo.int/themes/wmo/logo.png" alt="WMO logo" height="35"/> <img src="https://ho9an2-datap1.s3.eu-west-1.amazonaws.com/wmoext/s3fs-public/wwrp_logo_small_002.jpg" alt="WWRP logo" height="35"/> <img src="https://www.wcrp-climate.org/images/logos/WCRP_structured_data.png" alt="WCRP logo" height="35"/> <img src="https://www.wcrp-climate.org/images/logos_icones/logo_S2S.png" alt="S2S logo" height="35"/> <img src="https://datascience.ch/wp-content/uploads/2020/09/logo-SDSC-transparent-300x82.png" alt="SDSC logo" height="35"/> <img src="https://www.ecmwf.int/sites/default/files/ECMWF_Master_Logo_RGB_nostrap.png" alt="ECMWF logo" height="35"/> 
 
-<!-- ![ML-based predictions schematic](ML_model_schematic.jpeg?raw=true "ML-based predictions")-->
 
 ## Table of Contents
 0. [Announcements](#announcements)
@@ -40,7 +39,9 @@
 - Town hall [recordings for June 2nd](https://elioscloud.wmo.int/share/s/zsc-ufPvQNqgVca8vF5e9Q) and [June 10th](https://elioscloud.wmo.int/share/s/fHyFoURbQjCebsbQSSVlww) and [slides](https://elioscloud.wmo.int/share/s/82Ug2wVRT5CN2AFGFtTAqQ) are available
 - Applicants for EWC compute resources will be contacted June 16th with a concrete proposal of computational resources and asked to provide a reason why they could not participate without these resources if they have not answered the question before. ECMWF can provide 20 machines, please use the resources responsibly and notify us if you do not need them anymore.
 - Rok from SDSC offers to deliver a `renku` workshop, please indicate your interest [here](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/issues/7)
-- anything else?
+- [`s2saichallengescorer`](https://renkulab.io/gitlab/tasko.olevski/s2s-ai-competition-scoring-image/-/blob/master/scoring/scoring_script.py) clips all `RPSS` grid cells to interval [-10, 1]. Where `NaN` provided but number expected, we penalize by `-10`. [!2](https://renkulab.io/gitlab/tasko.olevski/s2s-ai-competition-scoring-image/-/merge_requests/2) [!9](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/merge_requests/9)
+- Please remember to `git add current_notebook.ipynb && git commit -m 'm' current_notebook.ipynb` before `git tag` to ensure that the uptodate notebook version is also tagged.
+- For changes to [`s2s-ai-challenge-template`](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template), see [CHANGELOG.md](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/CHANGELOG.md)
 
 
 #### 2021-05-31: Template repository and scorer bot ready
