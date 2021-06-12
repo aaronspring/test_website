@@ -36,6 +36,35 @@
 
 - Small change to the [rules](#rules) after feedback from the town halls: One team can only get one prize. ~~One Person can only join one team.~~ NEW: Teams with with overlapping members must use considerably different methods to be considered for prizes both. One person can only join three teams at maximum.
 - [`climetlab_s2s_ai_challenge.extra.forecast_like_observations`](add) converts obserations with `time` dimension to the same dimensions as initialized forecasts with dimension `forecast_time` and `lead_time`. This helper function can be used for `training/hindcast-input` with `model='ncep'` and any other initialized forecasts (e.g. from [SubX](add) or [S2S](add))
+    ```python
+    from climetlab_s2s_ai_challenge.extra import forecast_like_observations
+    import climetlab as cml
+    import climetlab_s2s_ai_challenge
+    print(climetlab_s2s_ai_challenge.__version__, cml.__version__)  # 0.6.7 0.7.4
+
+    forecast = cml.load_dataset('s2s-ai-challenge-training-input',
+         date=20100107, origin='ncep', parameter='tp',
+        format='netcdf').to_xarray()
+
+    obs_ds = cml.load_dataset('s2s-ai-challenge-observations', parameter='pr').to_xarray()
+    obs_ds['t2m'] = cml.load_dataset('s2s-ai-challenge-observations', parameter='t2m').to_xarray()['t2m']
+
+    obs_lead_time_forecast_time = forecast_like_observations(forecast, obs_ds)
+    obs_lead_time_forecast_time
+    <xarray.Dataset>
+    Dimensions:        (forecast_time: 12, latitude: 121, lead_time: 44, longitude: 240)
+    Coordinates:
+        valid_time     (forecast_time, lead_time) datetime64[ns] 1999-01-08 ... 2...
+      * latitude       (latitude) float64 90.0 88.5 87.0 85.5 ... -87.0 -88.5 -90.0
+      * longitude      (longitude) float64 0.0 1.5 3.0 4.5 ... 355.5 357.0 358.5
+      * forecast_time  (forecast_time) datetime64[ns] 1999-01-07 ... 2010-01-07
+      * lead_time      (lead_time) timedelta64[ns] 1 days 2 days ... 43 days 44 days
+    Data variables:
+        t2m            (forecast_time, lead_time, latitude, longitude) float32 ...
+        tp             (forecast_time, lead_time, latitude, longitude) float32 na...
+    Attributes:
+        script:   climetlab_s2s_ai_challenge.extra.forecast_like_observations
+    ```
 - Town hall [recordings for June 2nd](https://elioscloud.wmo.int/share/s/zsc-ufPvQNqgVca8vF5e9Q) and [June 10th](https://elioscloud.wmo.int/share/s/fHyFoURbQjCebsbQSSVlww) and [slides](https://elioscloud.wmo.int/share/s/82Ug2wVRT5CN2AFGFtTAqQ) are available
 - Applicants for EWC compute resources will be contacted June 16th with a concrete proposal of computational resources and asked to provide a reason why they could not participate without these resources if they have not answered the question before. ECMWF can provide 20 machines, please use the resources responsibly and notify us if you do not need them anymore.
 - Rok from SDSC offers to deliver a `renku` workshop, please indicate your interest [here](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/issues/7)
