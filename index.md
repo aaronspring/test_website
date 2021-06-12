@@ -35,9 +35,10 @@
 
 #### 2021-06-1x:
 
-- Small change to the [rules](#rules) after feedback from the town halls: One team can only get one prize. ~~One Person can only join one team.~~ NEW: Teams with with overlapping members must use considerably different methods to be considered from prizes both. One person can only join three teams at maximum.
+- Small change to the [rules](#rules) after feedback from the town halls: One team can only get one prize. ~~One Person can only join one team.~~ NEW: Teams with with overlapping members must use considerably different methods to be considered for prizes both. One person can only join three teams at maximum.
 - [`climetlab_s2s_ai_challenge.extra.forecast_like_observations`](add) converts obserations with `time` dimension to the same dimensions as initialized forecasts with dimension `forecast_time` and `lead_time`. This helper function can be used for `training/hindcast-input` with `model='ncep'` and any other initialized forecasts (e.g. from [SubX](add) or [S2S](add))
-- EWC compute: contacted with proposal, use responsibly and mention to us if not used anymore
+- Town hall [recordings for June 2nd](https://elioscloud.wmo.int/share/s/zsc-ufPvQNqgVca8vF5e9Q) and [June 10th](https://elioscloud.wmo.int/share/s/fHyFoURbQjCebsbQSSVlww) and [slides](https://elioscloud.wmo.int/share/s/82Ug2wVRT5CN2AFGFtTAqQ) are available
+- Applicants for EWC compute resources will be contacted June 16th with a concrete proposal of computational resources and asked to provide a reason why they could not participate without these resources if they have not answered the question before. ECMWF can provide 20 machines, please use the resources responsibly and notify us if you do not need them anymore.
 - Rok from SDSC offers to deliver a `renku` workshop, please indicate your interest [here](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/issues/7)
 - anything else?
 
@@ -57,9 +58,9 @@ The organizers slightly adapted the [rules](#rules):
   - Code to reproduce training and predictions are prefered to run within a day on the described architecture. If the training takes longer than a day, please justify why this is needed. Please do not submit training piplelines, which several take weeks to train. ~~Code to reproduce runs within a day~~ 
 
 The organizers invite everyone to join two town hall meetings:
-- Wednesday 2 June 2021 at 14:00 UTC [link](https://apcc.webex.com/apcc/j.php?MTID=m1e19150b271170bffa5d9ef307e96605) Meeting number: 184 987 2121 Password: 1234
-- Thursday 10 June 2021 at  7:00 UTC [link](https://apcc.webex.com/apcc/j.php?MTID=m05c8900fd832be40b3d36a4b2df441c9) Meeting number: 184 416 1520 Password: 1234 
-- [slides](https://elioscloud.wmo.int/share/s/82Ug2wVRT5CN2AFGFtTAqQ), [recording](https://elioscloud.wmo.int/share/s/zsc-ufPvQNqgVca8vF5e9Q)
+- Wednesday 2 June 2021 at 14:00 UTC [recording](https://elioscloud.wmo.int/share/s/zsc-ufPvQNqgVca8vF5e9Q)
+- Thursday 10 June 2021 at  7:00 UTC [recording](https://elioscloud.wmo.int/share/s/fHyFoURbQjCebsbQSSVlww)  
+- [slides](https://elioscloud.wmo.int/share/s/82Ug2wVRT5CN2AFGFtTAqQ)
 
 
 The meetings will include a 15-minutes presentation on the competition rules and technical aspects, followed by a 45-minutes discussion for Q&A.
@@ -322,7 +323,7 @@ The top three submissions based on the combined RPSS and expert peer-review scor
 
 ## Rules
 
-- One team can only get one prize. Teams with with overlapping members must use considerably different methods to be considered from prizes both. One person can only join three teams at maximum.
+- One team can only get one prize. Teams with with overlapping members must use considerably different methods to be considered for prizes both. One person can only join three teams at maximum.
 - Prizes are only issued if the method beats the re-calibrated ECMWF benchmark.
 - To be eligible for the third prize reserved for submissions from developing or least developed country or small island states, all team members must be resident in such countries. 
 - Model training is not allowed to use the ground truth/observations data after forecast was issued, see [Data Timings](#timings).
@@ -334,7 +335,7 @@ The top three submissions based on the combined RPSS and expert peer-review scor
 - The submitted codes and gridded results to all submissions must be made public on November 5th 2021 to be accessible for open peer review, and for expert peer review of the top submissions, which will last until January 2022. Submissions, which are not made public on November 1st 2021, will be removed from the leaderboard. 
 - The organizers reserve the right to disqualify submissions if overfitting is suspected.
 - Prizes will be issued in early February 2022.
-- These rules may be changed by the organizers until 1st July 2021. <!-- Under which circumstances are organizers allowed to change rules later on? -->
+- These rules may be changed by the organizers until 1st July 2021.
 
 
 ## Organizers
