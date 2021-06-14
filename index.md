@@ -35,7 +35,7 @@
 #### 2021-06-1x:
 
 - Small change to the [rules](#rules) after feedback from the town halls: One team can only get one prize. ~~One Person can only join one team.~~ NEW: Teams with with overlapping members must use considerably different methods to be considered for prizes both. One person can only join three teams at maximum.
-- [`climetlab_s2s_ai_challenge.extra.forecast_like_observations`](add) converts obserations with `time` dimension to the same dimensions as initialized forecasts with dimension `forecast_time` and `lead_time`. This helper function can be used for `training/hindcast-input` with `model='ncep'` and any other initialized forecasts (e.g. from [SubX](add) or [S2S](add))
+- [`climetlab_s2s_ai_challenge.extra.forecast_like_observations`](add) converts obserations with `time` dimension to the same dimensions as initialized forecasts with dimension `forecast_time` and `lead_time`. This helper function can be used for `training/hindcast-input` with `model='ncep'` and any other initialized forecasts (e.g. from [SubX](http://iridl.ldeo.columbia.edu/SOURCES/.Models/.SubX/) or [S2S](https://iridl.ldeo.columbia.edu/SOURCES/.ECMWF/.S2S/), see [`IRIDL.ipynb` example](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/data_access/IRIDL.ipynb))
     ```python
     from climetlab_s2s_ai_challenge.extra import forecast_like_observations
     import climetlab as cml
