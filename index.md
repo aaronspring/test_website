@@ -72,6 +72,7 @@
 - Applicants for EWC compute resources will be contacted June 16th with a concrete proposal of computational resources and asked to provide a reason why they could not participate without these resources if they have not answered the question before. ECMWF can provide 20 machines, please use the resources responsibly and notify us if you do not need them anymore.
 - Rok from SDSC offers to deliver a `renku` workshop, please indicate your interest [here](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/issues/7)
 - [`s2saichallengescorer`](https://renkulab.io/gitlab/tasko.olevski/s2s-ai-competition-scoring-image/-/blob/master/scoring/scoring_script.py) clips all `RPSS` grid cells to interval [-10, 1]. Where `NaN` provided but number expected, we penalize by `-10`. [!2](https://renkulab.io/gitlab/tasko.olevski/s2s-ai-competition-scoring-image/-/merge_requests/2) [!9](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/merge_requests/9)
+- Updated template file for submissions in [`s2s-ai-challenge-template`](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/tree/master/submissions/ML_prediction_2020.nc) and [submissions](#submissions), with coordinate descriptions in the html repr.
 - Please remember to `git add current_notebook.ipynb && git commit -m 'm' current_notebook.ipynb` before `git tag` to ensure that the uptodate notebook version is also tagged.
 - For changes to [`s2s-ai-challenge-template`](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template), see [CHANGELOG.md](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/CHANGELOG.md)
 - Participants are encouraged to submit their 2020 forecasts ([instructions](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/README.md)) well before the end of the competition to ensure that their submissions are successfully scored by the [`s2saichallengescorer`](https://renkulab.io/gitlab/tasko.olevski/s2s-ai-competition-scoring-image/-/blob/master/scoring/scoring_script.py). Check whether your submission committed in the last 24h was successfully checked by [`s2saichallengescorer`](https://renkulab.io/gitlab/tasko.olevski/s2s-ai-competition-scoring-image/-/blob/master/scoring/scoring_script.py) [here](https://renkulab.io/gitlab/tasko.olevski/s2s-ai-competition-scoring-image/-/blob/master/README.md), where no numerical scores are shown, only `completed` or `failed`.
@@ -218,9 +219,9 @@ Please find more details in the [verification notebook](https://renkulab.io/gitl
 
 ## Submissions
 
-We expect submissions to cover all bi-weekly week 3-4 and week 5-6 forecasts issued in 2020, see [timings](#timings). We expect one submission `netcdf` file for all 53 weekly forecasts issued in 2020. Submission must be gridded on a global 1.5 degree grid.
+We expect submissions to cover all bi-weekly week 3-4 and week 5-6 forecasts issued in 2020, see [timings](#timings). We expect one submission `netcdf` file for all 53 forecasts issued on thursdays in 2020. Submissions must be gridded on a global 1.5 degree grid.
 
-Each submission has to be a netcdf file with the folloing dimension sizes and coordinates:
+Each submission has to be a netcdf file with the following dimension sizes and coordinates:
 
 ```
 >>> # in xarray
@@ -239,9 +240,19 @@ Coordinates:
 
 {% include_relative submission_template_repr.html %}
 
-A template file for submissions is available [here](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/tree/master/submissions/ML_prediction_2020.nc).
+This template submissions file is available [here](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/tree/master/submissions/ML_prediction_2020.nc).
 
-The submissions have to be commited in `git` with [`git lfs`](https://git-lfs.github.com/) in a [repository hosted by renkulab.io](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/).
+Click on 📄 to see the metadata for the coordinates and variables.
+
+Time coordinates:
+
+| coordinate `name` | CF convention `standard_name` | description | comment | 
+| --- | --- | --- |
+| `forecast_time` | forecast_reference_time | The forecast reference time in NWP is the "data time", the time of the analysis from which the forecast was made. It is not the time for which the forecast is valid. | |
+| `lead_time` | forecast_period | Forecast period is the time interval between the forecast reference time and the validity time. | week 1 starts with day 0, therefore week 3-4: day 14-27, week 5-6 day 28-41 | 
+| `valid_time` | time | time for which the forecast is valid | not a dimension, calculate `forecast_time` + `lead_time` |
+
+Submissions have to be commited in `git` with [`git lfs`](https://git-lfs.github.com/) in a [repository hosted by renkulab.io](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/).
 
 After the competition, the code for training together with the gridded results must be made public, so the organizers and peer review can check adherence to the [rules](#rules).
 Please indicate the resources used (number of CPUs/GPUs, memory, platform; see [safeguards in examples](#examples)) in your scripts/notebooks to allow reproducibility and document them fully to enable easy interpretation of the codes. Submissions, which cannot be independently reproduced by the organizers after the competition ends, cannot win prizes, please see [rules](#rules).
