@@ -37,20 +37,21 @@
 - Small change to the [rules](#rules) after feedback from the town halls:
     - One team can only get one prize. ~~One Person can only join one team.~~ NEW: Teams with with overlapping members must use considerably different methods to be considered for prizes both. One person can only join three teams at maximum.
     - Prizes are only issued if the method beats the re-calibrated ECMWF benchmark AND CLIMATOLOGY.
-- [`climetlab_s2s_ai_challenge.extra.forecast_like_observations`](add) converts obserations with `time` dimension to the same dimensions as initialized forecasts with dimension `forecast_time` and `lead_time`. This helper function can be used for `training/hindcast-input` with `model='ncep'` and any other initialized forecasts (e.g. from [SubX](http://iridl.ldeo.columbia.edu/SOURCES/.Models/.SubX/) or [S2S](https://iridl.ldeo.columbia.edu/SOURCES/.ECMWF/.S2S/), see [`IRIDL.ipynb` example](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/data_access/IRIDL.ipynb))
+- Answers to many questions asked in the town hall meetings can be found in the [FAQ](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/wikis/Frequently-Asked-Questions-(FAQ))
+- [`climetlab_s2s_ai_challenge.extra.forecast_like_observations`](https://github.com/ecmwf-lab/climetlab-s2s-ai-challenge/blob/main/climetlab_s2s_ai_challenge/extra.py#L40) converts obserations with `time` dimension to the same dimensions as initialized forecasts with dimension `forecast_time` and `lead_time`. This helper function can be used for `training/hindcast-input` with `model='ncep'` and any other initialized forecasts (e.g. from [SubX](http://iridl.ldeo.columbia.edu/SOURCES/.Models/.SubX/) or [S2S](https://iridl.ldeo.columbia.edu/SOURCES/.ECMWF/.S2S/), see [`IRIDL.ipynb` example](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/data_access/IRIDL.ipynb))
     ```python
     from climetlab_s2s_ai_challenge.extra import forecast_like_observations
     import climetlab as cml
     import climetlab_s2s_ai_challenge
-    print(climetlab_s2s_ai_challenge.__version__, cml.__version__)  # 0.6.7 0.7.4
+    print(climetlab_s2s_ai_challenge.__version__, cml.__version__)  # must be >= 0.6.7 0.7.4
 
     forecast = cml.load_dataset('s2s-ai-challenge-training-input',
          date=20100107, origin='ncep', parameter='tp',
         format='netcdf').to_xarray()
 
-    obs_ds = cml.load_dataset('s2s-ai-challenge-observations', parameter='pr').to_xarray()
-    obs_ds['t2m'] = cml.load_dataset('s2s-ai-challenge-observations', parameter='t2m').to_xarray()['t2m']
-
+    obs_lead_time_forecast_time = cml.load_dataset('s2s-ai-challenge-observations', parameter=['pr', 't2m']).to_xarray(match=forecast)
+    # equivalent
+    obs_ds = cml.load_dataset('s2s-ai-challenge-observations', parameter=['pr', 't2m']).to_xarray()
     obs_lead_time_forecast_time = forecast_like_observations(forecast, obs_ds)
     obs_lead_time_forecast_time
     <xarray.Dataset>
