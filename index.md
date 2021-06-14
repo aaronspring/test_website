@@ -46,7 +46,7 @@
     print(climetlab_s2s_ai_challenge.__version__, cml.__version__)  # must be >= 0.6.7 0.7.4
 
     forecast = cml.load_dataset('s2s-ai-challenge-training-input',
-         date=20100107, origin='ncep', parameter='tp',
+        date=20100107, origin='ncep', parameter=['tp', 't2m'],
         format='netcdf').to_xarray()
 
     obs_lead_time_forecast_time = cml.load_dataset('s2s-ai-challenge-observations', parameter=['pr', 't2m']).to_xarray(like=forecast)
