@@ -34,7 +34,9 @@
 
 #### 2021-06-1x:
 
-- Small change to the [rules](#rules) after feedback from the town halls: One team can only get one prize. ~~One Person can only join one team.~~ NEW: Teams with with overlapping members must use considerably different methods to be considered for prizes both. One person can only join three teams at maximum.
+- Small change to the [rules](#rules) after feedback from the town halls:
+    - One team can only get one prize. ~~One Person can only join one team.~~ NEW: Teams with with overlapping members must use considerably different methods to be considered for prizes both. One person can only join three teams at maximum.
+    - Prizes are only issued if the method beats the re-calibrated ECMWF benchmark AND CLIMATOLOGY.
 - [`climetlab_s2s_ai_challenge.extra.forecast_like_observations`](add) converts obserations with `time` dimension to the same dimensions as initialized forecasts with dimension `forecast_time` and `lead_time`. This helper function can be used for `training/hindcast-input` with `model='ncep'` and any other initialized forecasts (e.g. from [SubX](http://iridl.ldeo.columbia.edu/SOURCES/.Models/.SubX/) or [S2S](https://iridl.ldeo.columbia.edu/SOURCES/.ECMWF/.S2S/), see [`IRIDL.ipynb` example](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/data_access/IRIDL.ipynb))
     ```python
     from climetlab_s2s_ai_challenge.extra import forecast_like_observations
@@ -145,7 +147,7 @@ This is the landing page of the competition presenting static information about 
 
 ## Prize
 
-Prizes will be awarded to for the top three submissions evaluated by RPSS and peer-review scores and must beat the re-calibrated ECMWF benchmark, which is corrected by the mean bias:
+Prizes will be awarded to for the top three submissions evaluated by RPSS and peer-review scores and must beat the calibrated ECMWF benchmark and climatology. The calibration has been performed by using the tercile boundaries from the model climatology rather than from observations:
 
 - Winning team: 15000 CHF
 - 2nd team: 10000 CHF
@@ -355,7 +357,7 @@ The top three submissions based on the combined RPSS and expert peer-review scor
 ## Rules
 
 - One team can only get one prize. Teams with with overlapping members must use considerably different methods to be considered for prizes both. One person can only join three teams at maximum.
-- Prizes are only issued if the method beats the re-calibrated ECMWF benchmark.
+- Prizes are only issued if the method beats the re-calibrated ECMWF benchmark and climatology.
 - To be eligible for the third prize reserved for submissions from developing or least developed country or small island states, all team members must be resident in such countries. 
 - Model training is not allowed to use the ground truth/observations data after forecast was issued, see [Data Timings](#timings).
 <!-- - [Data leakage](https://en.wikipedia.org/wiki/Leakage_(machine_learning)?wprov=sfti1) is not allowed, i.e. do not use `lead_time=0 days` as predictor. -->
