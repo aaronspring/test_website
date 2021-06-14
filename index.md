@@ -49,7 +49,7 @@
          date=20100107, origin='ncep', parameter='tp',
         format='netcdf').to_xarray()
 
-    obs_lead_time_forecast_time = cml.load_dataset('s2s-ai-challenge-observations', parameter=['pr', 't2m']).to_xarray(match=forecast)
+    obs_lead_time_forecast_time = cml.load_dataset('s2s-ai-challenge-observations', parameter=['pr', 't2m']).to_xarray(like=forecast)
     # equivalent
     obs_ds = cml.load_dataset('s2s-ai-challenge-observations', parameter=['pr', 't2m']).to_xarray()
     obs_lead_time_forecast_time = forecast_like_observations(forecast, obs_ds)
