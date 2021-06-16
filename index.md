@@ -352,7 +352,7 @@ Answered questions from the issue tracker are regularly transferred to the [FAQ]
 
 ### RPSS
 
-Submissions have to beat the ECMWF re-calibrated benchmark and following the [rules](#rules) to qualify for prizes. <!-- description of ECMWF benchmark missing -->
+Submissions have to beat the ECMWF re-calibrated benchmark and climatology while following the [rules](#rules) to qualify for prizes.
 
 The leaderboard will be made public after the submission period ends and submission codes have been made public, i.e. early November 2021.
 
