@@ -43,7 +43,7 @@
     from climetlab_s2s_ai_challenge.extra import forecast_like_observations
     import climetlab as cml
     import climetlab_s2s_ai_challenge
-    print(climetlab_s2s_ai_challenge.__version__, cml.__version__)  # must be >= 0.6.7 0.7.4
+    print(climetlab_s2s_ai_challenge.__version__, cml.__version__)  # must be >= 0.7.1, 0.8.0
 
     forecast = cml.load_dataset('s2s-ai-challenge-training-input',
         date=20100107, origin='ncep', parameter='tp',
@@ -74,8 +74,9 @@
 - [`s2saichallengescorer`](https://renkulab.io/gitlab/tasko.olevski/s2s-ai-competition-scoring-image/-/blob/master/scoring/scoring_script.py) clips all `RPSS` grid cells to interval [-10, 1]. Where `NaN` provided but number expected, we penalize by `-10`. [!2](https://renkulab.io/gitlab/tasko.olevski/s2s-ai-competition-scoring-image/-/merge_requests/2) [!9](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/merge_requests/9)
 - Updated template file for submissions in [`s2s-ai-challenge-template`](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/tree/master/submissions/ML_prediction_2020.nc) and [submissions](#submissions), with coordinate descriptions in the `html` repr.
 - Refine description how biweekly aggregates are computed, see [`aggregate_biweekly`](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/scripts.py) and the attributes in the [submissions](#submissions) [template file](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/tree/master/submissions/ML_prediction_2020.nc). Recomputed [biweekly observations](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/data/forecast-like-observations_2020_biweekly_terciled.nc) [s2s-ai-challenge#22](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/issues/22)
+- Added [`IRIDL.ipynb`](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/data_access/IRIDL.ipynb) with server-side preprocessing for `S2S` and `SubX` models as well as setting your IRIDL cookie to access restricted `S2S` output.
 - Please remember to `git add current_notebook.ipynb && git commit -m 'm' current_notebook.ipynb` before `git tag` to ensure that the uptodate notebook version is also tagged. Please also consider [linting](https://realpython.com/python-code-quality/#linters) your code.
-- For changes to [`s2s-ai-challenge-template`](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template), see [CHANGELOG.md](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/CHANGELOG.md)
+- For changes to [`s2s-ai-challenge-template`](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template), see [CHANGELOG.md](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/CHANGELOG.md) and best use release [`v0.3`](ADD).
 - Participants are encouraged to submit their 2020 forecasts ([instructions](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/README.md)) well before the end of the competition to ensure that their submissions are successfully scored by the [`s2saichallengescorer`](https://renkulab.io/gitlab/tasko.olevski/s2s-ai-competition-scoring-image/-/blob/master/scoring/scoring_script.py). Check whether your submission committed in the last 24h was successfully checked by [`s2saichallengescorer`](https://renkulab.io/gitlab/tasko.olevski/s2s-ai-competition-scoring-image/-/blob/master/scoring/scoring_script.py) [here](https://renkulab.io/gitlab/tasko.olevski/s2s-ai-competition-scoring-image/-/blob/master/README.md), where no numerical scores are shown, only `completed` or `failed`. Note that we provide the scoring script as `skill_by_year` and ground truth data for responsible use only. 
 
 
