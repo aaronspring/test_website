@@ -32,7 +32,7 @@
 
 ## Announcements
 
-#### 2021-06-1x:
+#### 2021-06-19:
 
 - Small change to the [rules](#rules) after feedback from the town halls:
     - One team can only get one prize. ~~One Person can only join one team.~~ NEW: Teams with with overlapping members must use considerably different methods to be considered for prizes both. One person can only join three teams at maximum.
@@ -69,12 +69,12 @@
         script:   climetlab_s2s_ai_challenge.extra.forecast_like_observations
     ```
 - Town hall [recordings for June 2nd](https://elioscloud.wmo.int/share/s/zsc-ufPvQNqgVca8vF5e9Q) and [June 10th](https://elioscloud.wmo.int/share/s/fHyFoURbQjCebsbQSSVlww) and [slides](https://elioscloud.wmo.int/share/s/82Ug2wVRT5CN2AFGFtTAqQ) are available
-- Applicants for EWC compute resources will be contacted June 16th with a concrete proposal of computational resources and asked to provide a reason why they could not participate without these resources if they have not answered the question before. ECMWF can provide 20 machines, please use the resources responsibly and notify us if you do not need them anymore.
+- Applicants for EWC compute resources have be contacted June 16th with a concrete proposal of computational resources and asked to provide a reason why they could not participate without these resources if they have not answered the question before. ECMWF can provide 20 machines, please use the resources responsibly and notify us if you do not need them anymore. You can still ask Aaron if some EWC compute instance if currently unused.
 - Rok from SDSC offers to deliver a `renku` workshop, please indicate your interest [here](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/issues/7)
 - [`s2saichallengescorer`](https://renkulab.io/gitlab/tasko.olevski/s2s-ai-competition-scoring-image/-/blob/master/scoring/scoring_script.py) clips all `RPSS` grid cells to interval [-10, 1]. Where `NaN` provided but number expected, we penalize by `-10`. [!2](https://renkulab.io/gitlab/tasko.olevski/s2s-ai-competition-scoring-image/-/merge_requests/2) [!9](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/merge_requests/9)
 - Updated template file for submissions in [`s2s-ai-challenge-template`](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/tree/master/submissions/ML_prediction_2020.nc) and [submissions](#submissions), with coordinate descriptions in the `html` repr.
 - Refine description how biweekly aggregates are computed, see [`aggregate_biweekly`](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/scripts.py) and the attributes in the [submissions](#submissions) [template file](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/tree/master/submissions/ML_prediction_2020.nc). Recomputed [biweekly observations](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/data/forecast-like-observations_2020_biweekly_terciled.nc) [s2s-ai-challenge#22](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/issues/22)
-- Please remember to `git add current_notebook.ipynb && git commit -m 'm' current_notebook.ipynb` before `git tag` to ensure that the uptodate notebook version is also tagged.
+- Please remember to `git add current_notebook.ipynb && git commit -m 'm' current_notebook.ipynb` before `git tag` to ensure that the uptodate notebook version is also tagged. Please also consider [linting](https://realpython.com/python-code-quality/#linters) your code.
 - For changes to [`s2s-ai-challenge-template`](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template), see [CHANGELOG.md](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/CHANGELOG.md)
 - Participants are encouraged to submit their 2020 forecasts ([instructions](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/README.md)) well before the end of the competition to ensure that their submissions are successfully scored by the [`s2saichallengescorer`](https://renkulab.io/gitlab/tasko.olevski/s2s-ai-competition-scoring-image/-/blob/master/scoring/scoring_script.py). Check whether your submission committed in the last 24h was successfully checked by [`s2saichallengescorer`](https://renkulab.io/gitlab/tasko.olevski/s2s-ai-competition-scoring-image/-/blob/master/scoring/scoring_script.py) [here](https://renkulab.io/gitlab/tasko.olevski/s2s-ai-competition-scoring-image/-/blob/master/README.md), where no numerical scores are shown, only `completed` or `failed`. Note that we provide the scoring script as `skill_by_year` and ground truth data for responsible use only. 
 
