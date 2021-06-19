@@ -225,34 +225,12 @@ We expect submissions to cover all bi-weekly week 3-4 and week 5-6 forecasts iss
 
 Each submission has to be a netcdf file with the following dimension sizes and coordinates:
 
-```
->>> # in xarray
->>> ML_prediction_2020.sizes
-Frozen(SortedKeysDict({'forecast_time': 53, 'latitude': 121, 'longitude': 240, 'lead_time': 2, 'category': 3}))
-
->>> ML_prediction_2020.coords
-Coordinates:
-  * latitude                 (latitude) float64 90.0 88.5 87.0 ... -88.5 -90.0
-  * longitude                (longitude) float64 0.0 1.5 3.0 ... 357.0 358.5
-  * forecast_time            (forecast_time) datetime64[ns] 2020-01...
-  * lead_time                (lead_time) timedelta64[ns] 14 days 28 days
-  * category                 (category) <U12 'below normal' 'near normal' 'above normal'
-    valid_time               (lead_time, forecast_time) datetime64[ns] 2...
-```
-
 {% include_relative submission_template_repr.html %}
 
 This template submissions file is available [here](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/tree/master/submissions/ML_prediction_2020.nc).
 
 Click on 📄 to see the metadata for the coordinates and variables.
 
-Time coordinates:
-
-| coordinate `name` | CF convention `standard_name` | description | comment | 
-| --- | --- | --- |
-| `forecast_time` | forecast_reference_time | The forecast reference time in NWP is the "data time", the time of the analysis from which the forecast was made. It is not the time for which the forecast is valid. | |
-| `lead_time` | forecast_period | Forecast period is the time interval between the forecast reference time and the validity time. | The pd.Timedelta corresponds to the first day of a biweekly aggregate. week34 of t2m is the mean of day 14 until 27. week56 of t2m is the mean of day 28 until 41. week34 of tp is day 28 - day 14. week56 of is day 42 - day 28. | 
-| `valid_time` | time | time for which the forecast is valid | not a dimension, calculate `forecast_time` + `lead_time` |
 
 We deal with two fundamentally different variables here:
 [Total precipitation](https://confluence.ecmwf.int/display/S2S/S2S+Total+Precipitation) is precipitation flux `pr` accumulated over `lead_time` until `valid_time` and therefore describes a point observation.
