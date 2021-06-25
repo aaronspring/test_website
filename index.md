@@ -32,6 +32,13 @@
 
 ## Announcements
 
+#### 2021-06-26:
+
+- More details about the review process added under [leaderboard](#leaderboard).
+- Small change to the [rules](#rules):
+    - "The decision about the review grade is final and there will be no correspondence about the review."  
+- The organizers freeze the rules.
+
 #### 2021-06-19:
 
 - Small change to the [rules](#rules) after feedback from the town halls:
