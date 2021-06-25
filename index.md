@@ -32,12 +32,13 @@
 
 ## Announcements
 
-#### 2021-06-26:
+#### 2021-06-29:
 
-- More details about the review process added under [leaderboard](#leaderboard).
+- More details about the review process added, see [leaderboard](#leaderboard).
 - Small change to the [rules](#rules):
     - "The decision about the review grade is final and there will be no correspondence about the review."  
 - The organizers freeze the rules.
+
 
 #### 2021-06-19:
 
@@ -344,22 +345,46 @@ The leaderboard will be made public after the submission period ends and submiss
 
 We will also publish RPSS subleaderboards, that are purely diagnostic and show RPSS for two variables (`t2m`, `tp`), two `lead_time`s (weeks 3-4 & 5-6) and three subregions ([90N-30N], (30N-30S), [30S-60S]).
 
-### Peer-review
+### Peer review
 
-From November 2021 to January 2022, there will be open peer review and expert peer-reviews for the top ranked submissions. Peer review will evaluate:
+From November 2021 to January 2022, there will be two peer review processes:
 
+- open peer review for all submissions
+- expert peer-reviews for the top ranked submissions
+
+Peer review will evaluate:
+
+- whether the method is well explained
 - whether the code is written in a clean and understandable way
 - whether the code gives reproducible results by an independent person
 - the originality of the method
 - whether the safeguards against overfitting and reproducibility have been followed and overfitting has been avoided
-- tbd
 
-(Still under discussion) Based on these criteria, there will be a peer-review grade from poor (-1) towards brilliant (+1).
+
+#### Open peer review
+
+One goal of this challenge is to foster a conversation about how AI/ML can improve S2S forecasts.
+Therefore, we will open the floor for discussions and evaluating all methods submitted in an open peer review process.
+The organizers will create a table of all submissions and everyone is invited to comment on submissions,
+like in the [EGU's public interactive discussions](https://www.egu.eu/publications/statement/online-open-access-publishing/).
+This open peer review will be hosted on renku's gitlab.
+
+
+#### Expert peer review
+
+The organizers decided that the top four submissions will be evaluated by expert peer review.
+This will include 2-3 reviews by experts from the fields of S2S & AI/ML.
+Additionally, the organizers will host a public showcase session in January 2022, in which these top four submission can present their method in 10 minutes followed by 15 minutes Q&A. The reviewers will give their review grades after an internal discussion moderated by Andrew Robertson and Frederic Vitart acting as editors.
+
+Based on the criteria above, the expert peer reviewers will give a peer review grade. Comments from the open peer review can be taken into account by the expert peer review grades.
+
 
 ### Final
 
+The review grades will be ranked. The RPSS leaderboard will also be ranked. The final leaderboard will be determined from the average of both rankings.
+When two submissions have the same mean ranking, the RPSS ranking counts more.
 The top three submissions based on the combined RPSS and expert peer-review score will receive prizes.
-(Still under discussion whether the scores are averaged or ranked and the two ranks averaged.)
+
 
 ## Rules
 
@@ -373,9 +398,9 @@ The top three submissions based on the combined RPSS and expert peer-review scor
 - The codes used must be fully documented, with details of the safeguards enacted to prevent overfitting, see checked safeguards in [template](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/ML_forecast_template.ipynb).
 - The RPSS leaderboard will be made public in early November 2021, once all submissions are public.
 - The submitted codes and gridded results to all submissions must be made public on November 5th 2021 to be accessible for open peer review, and for expert peer review of the top submissions, which will last until January 2022. Submissions, which are not made public on November 1st 2021, will be removed from the leaderboard. 
+- The decision about the review grade is final and there will be no correspondence about the review. 
 - The organizers reserve the right to disqualify submissions if overfitting is suspected.
 - Prizes will be issued in early February 2022.
-- These rules may be changed by the organizers until 1st July 2021.
 
 
 ## Organizers
