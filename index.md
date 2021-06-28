@@ -382,7 +382,7 @@ Based on the criteria above, the expert peer reviewers will give a peer review g
 ### Final
 
 The review grades will be ranked. The RPSS leaderboard will also be ranked. The final leaderboard will be determined from the average of both rankings.
-When two submissions have the same mean ranking, the RPSS ranking counts more.
+When two submissions have the same mean ranking, the review ranking counts more.
 The top three submissions based on the combined RPSS and expert peer-review score will receive prizes.
 
 
