@@ -32,6 +32,16 @@
 
 ## Announcements
 
+#### 2021-07-27:
+
+- After community feedback, we changed the ground truth observations files: Observations are now conservatively regridded, missing data at `longitude=0` and after leap days has been added. Please update these files into your training pipeline if you used them before:
+    - [hindcast-like-observations_2000-2019_biweekly_tercile-edges.nc](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/data/hindcast-like-observations_2000-2019_biweekly_tercile-edges.nc)
+    - [hindcast-like-observations_2000-2019_biweekly_deterministic.zarr](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/tree/master/data/hindcast-like-observations_2000-2019_biweekly_deterministic.zarr)
+    - [hindcast-like-observations_2000-2019_biweekly_terciled.zarr](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/tree/master/data/hindcast-like-observations_2000-2019_biweekly_terciled.zarr)
+- Therefore, we release `s2s-ai-challenge-template` [v0.4](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/tags). For an overview of the changes, please see [CHANGELOG](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/CHANGELOG.md). The [`s2saichallengescorer`](https://renkulab.io/gitlab/tasko.olevski/s2s-ai-competition-scoring-image/-/blob/master/scoring/scoring_script.py) now uses these updated observations.
+- Running the data heavy example notebooks at [renkulab.io](https://renkulab.io/projects/aaron.spring/s2s-ai-challenge-template/environments) currently does not work due to storage limitations.
+
+
 #### 2021-06-29:
 
 - More details about the review process added, see [leaderboard](#leaderboard).
