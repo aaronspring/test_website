@@ -39,7 +39,6 @@
     - [hindcast-like-observations_2000-2019_biweekly_deterministic.zarr](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/tree/master/data/hindcast-like-observations_2000-2019_biweekly_deterministic.zarr)
     - [hindcast-like-observations_2000-2019_biweekly_terciled.zarr](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/tree/master/data/hindcast-like-observations_2000-2019_biweekly_terciled.zarr)
 - Therefore, we release `s2s-ai-challenge-template` [v0.4](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/tags). For an overview of the changes, please see [CHANGELOG](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/CHANGELOG.md). The [`s2saichallengescorer`](https://renkulab.io/gitlab/tasko.olevski/s2s-ai-competition-scoring-image/-/blob/master/scoring/scoring_script.py) now uses these updated observations.
-- Running the data heavy example notebooks at [renkulab.io](https://renkulab.io/projects/aaron.spring/s2s-ai-challenge-template/environments) currently does not work due to storage limitations.
 
 
 #### 2021-06-29:
