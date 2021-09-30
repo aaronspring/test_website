@@ -32,6 +32,13 @@
 
 ## Announcements
 
+#### 2021-09-30: Last month for submissions
+
+- The submission deadline for this competition is approaching in one month. The exact timestamp for `git commit`s to be considered is Sunday 31st October 2021 23:59h GMT. As this date is halloween and one a weekend, there is a 48h grace period until Tuesday 2nd November 2021 23:59h GMT to fix submissions with technical assistence via [gitter](https://gitter.im/pangeo-data/s2s-ai-challenge). Please make your repositories public between Wednesday 3rd and Friday 5th November 2021.
+- We recognize that it is very challenging to beat climatology on a global scale for these subseasonal forecast, i.e. getting positive scores for both variables and both lead times averaged. We encourage everyone to submit their results, even with negative scores.
+- If you want to confirm that the online [`s2saichallengescorer`](https://renkulab.io/gitlab/tasko.olevski/s2s-ai-competition-scoring-image/-/blob/master/scoring/scoring_script.py) yields the same numerical score as the score calculated by [`skill_by_year`](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/notebooks/scripts.py#L200), please ask Aaron in a private chat via [gitter](https://gitter.im/pangeo-data/s2s-ai-challenge) to confirm your score. Please ensure that you followed all [these steps before](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/README.md#9-git-commit-training-pipeline-and-netcdf-submission).
+
+
 #### 2021-07-27:
 
 - After community feedback, we changed the ground truth observations files: Observations are now conservatively regridded, missing data at `longitude=0` and after leap days has been added. Please update these files into your training pipeline if you used them before:
