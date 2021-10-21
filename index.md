@@ -32,6 +32,13 @@
 
 ## Announcements
 
+#### 2021-10-21: Small modifications to `s2saichallengescorer`
+
+- explain, Weigel et al. 2007: https://doi.org/10.1175/MWR3280.1 https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/issues/50
+- benchmark RPSS now: 
+
+
+
 #### 2021-09-30: Last month for submissions
 
 - The submission deadline for this competition is approaching in one month. The exact timestamp for `git tag`s to be considered is Sunday 31st October 2021 23:59h GMT. As this date is halloween and one a weekend, there is a 48h grace period until Tuesday 2nd November 2021 23:59h GMT to fix submissions with technical assistence via [gitter](https://gitter.im/pangeo-data/s2s-ai-challenge). Please make your repositories public between Wednesday 3rd and Friday 5th November 2021.
