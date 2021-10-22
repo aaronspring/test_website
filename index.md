@@ -32,10 +32,10 @@
 
 ## Announcements
 
-#### 2021-10-21: Small modifications to `s2saichallengescorer`
+#### 2021-10-22: Small modifications to `s2saichallengescorer`
 
-- After last minute community feedback, we decided to modify the way we average the RPS for RPSS. Following [Weigel et al. 2007](https://doi.org/10.1175/MWR3280.1), [#50](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/issues/50) and [!23](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/merge_requests/23) implements `RPSS=1-<RPS_ML>/<RPS_clim>`, whereas before we had `RPSS=<1-RPS_ML/RPS_clim>`, where angle brackets `<>` denote the average of the scores over a given number of forecast–observation pairs. Furthermore, we now penalize `NaNs` where numerical values where expected by `RPS=2`.
-- The [`s2saichallengescorer`](https://renkulab.io/gitlab/tasko.olevski/s2s-ai-competition-scoring-image/-/tree/master) was restarted and automatically fetched the new scores of previous submissions, so your old submissions have been now re-evaluated.
+- After last minute community feedback, we decided to modify the way we average the RPS for RPSS. Following [Weigel et al. 2007](https://doi.org/10.1175/MWR3280.1) [#50](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/issues/50), [!23](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/merge_requests/23) implements `RPSS=1-<RPS_ML>/<RPS_clim>`, whereas before we had `RPSS=<1-RPS_ML/RPS_clim>`, where angle brackets `<>` denote the average of the scores over a given number of forecast–observation pairs. Furthermore, we now penalize `NaNs` where numerical values where expected by `RPS=2`.
+- We restart the [`s2saichallengescorer`](https://renkulab.io/gitlab/tasko.olevski/s2s-ai-competition-scoring-image/-/tree/master), which automatically fetches the new scores of previous submissions, so your old submissions are re-evaluated.
 - Implementing this yields an RPSS benchmark from the ECMWF model of -0.00158017.
 
 
