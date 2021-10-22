@@ -32,6 +32,13 @@
 
 ## Announcements
 
+#### 2021-10-22: Small modifications to `s2saichallengescorer`
+
+- After last minute community feedback, we decided to modify the way we average the RPS for RPSS. Following [Weigel et al. 2007](https://doi.org/10.1175/MWR3280.1) [#50](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/issues/50), [!23](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/merge_requests/23) implements `RPSS=1-<RPS_ML>/<RPS_clim>`, whereas before we had `RPSS=<1-RPS_ML/RPS_clim>`, where angle brackets `<>` denote the average of the scores over a given number of forecast–observation pairs. Furthermore, we now penalize `NaNs` where numerical values where expected by `RPS=2`.
+- We restart the [`s2saichallengescorer`](https://renkulab.io/gitlab/tasko.olevski/s2s-ai-competition-scoring-image/-/tree/master), which automatically fetches the new scores of previous submissions, so your old submissions are re-evaluated.
+- Implementing this yields an RPSS benchmark from the ECMWF model of -0.00158017.
+
+
 #### 2021-09-30: Last month for submissions
 
 - The submission deadline for this competition is approaching in one month. The exact timestamp for `git tag`s to be considered is Sunday 31st October 2021 23:59h GMT. As this date is halloween and one a weekend, there is a 48h grace period until Tuesday 2nd November 2021 23:59h GMT to fix submissions with technical assistence via [gitter](https://gitter.im/pangeo-data/s2s-ai-challenge). Please make your repositories public between Wednesday 3rd and Friday 5th November 2021.
@@ -212,7 +219,7 @@ xs.rps(observations, probabilistic_forecasts, category_edges=None, input_distrib
 See the [`xskillscore.rps` API](https://xskillscore.readthedocs.io/en/latest/api/xskillscore.rps.html) for details.
 
 ```python
-def RPSS(rps_ML, climatology):
+def RPSS(RPS_ML, RPS_clim):
     """Ranked Probability Skill Score with respect to climatology.
   
     +---------+-------------------------------------------+
@@ -228,11 +235,11 @@ def RPSS(rps_ML, climatology):
     +---------+-------------------------------------------+
 
   """
-  return 1 - rps_ML / climatology
+  return 1 - RPS_ML / RPS_clim
 ```
 
-The `RPSS` relevant for the prizes is first calculated on each grid cell over land globally on a 1.5 degree grid. In grid cells where numerical values are expected but `NaN`s are provided, the `RPSS` is [penalized](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/issues/7) with -10. The `RPSS` values are [clipped](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/issues/7) to the interval [-10, 1].
-This gridded RPSS is then averaged over all `forecast_time`s, spatially averaged (weighted `(np.cos(np.deg2rad(ds.latitude)))`) over [90N-60S] land points and further averaged over both variables and both `lead_time`s. Please note that the observational probabilities are applied with a dry mask on total precipitation `tp` evaluation as in [Vigaud et al. 2017](https://doi.org/10.1175/MWR-D-17-0092.1), i.e. we exclude grid cells where the observations-based lower tercile edge is below 1 mm/day. Please find the ground truth compared against [here](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/data/forecast-like-observations_2020_biweekly_terciled.nc).
+The `RPS_ML` and `RPS_clim` are first calculated on each grid cell over land globally on a 1.5 degree grid. In grid cells where numerical values are expected but `NaN`s are provided, the `RPS` is [penalized](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/issues/7) with 2. The gridded `RPSS=1-RPS_ML/RPS_clim` is calculated from the ML-based RPS averaged over all `forecast_time`s and the climatological RPS averaged over all `forecast_time`s. The `RPSS` values are [clipped](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/issues/7) to the interval [-10, 1].
+This gridded `RPSS` is then spatially averaged (weighted `(np.cos(np.deg2rad(ds.latitude)))`) over [90N-60S] land points and further averaged over both variables and both `lead_time`s. Please note that the observational probabilities are applied with a dry mask on total precipitation `tp` evaluation as in [Vigaud et al. 2017](https://doi.org/10.1175/MWR-D-17-0092.1), i.e. we exclude grid cells where the observations-based lower tercile edge is below 1 mm/day. Please find the ground truth compared against [here](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-template/-/blob/master/data/forecast-like-observations_2020_biweekly_terciled.nc).
 
 For diagnostics, we will further host leaderboards for the two variables in three regions in November 2021:
 
