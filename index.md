@@ -35,7 +35,7 @@
 #### 2021-11-04: Announcement of the score RPSS and beginning of open review
 
 - Please see the [leaderboard](#leaderboard) for the score RPSS.
-- The open review is officially started. For questions, please go to the corresponding submissions repository via the [leaderboard](#leaderboard) and open an issue. Please conform to the [open review guidelines](to.do).
+- The open review is officially started. For questions, please go to the corresponding submissions repository via the [leaderboard](#leaderboard) and open an issue. Please conform to the [open review guidelines](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge/-/blob/master/OPEN_REVIEW_GUIDELINES.md).
 
 
 #### 2021-10-22: Small modifications to `s2saichallengescorer`
