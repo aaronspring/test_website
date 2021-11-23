@@ -32,6 +32,14 @@
 
 ## Announcements
 
+#### 2021-11-23: date for conference session: 26 Jan 2022
+
+- The conference-style session with 10min presentation and 10min Q&A will be held on 26 Jan 2022 in the S2S webinar 3pm UTC.
+- Written expert review comments will be posted two weeks before.
+- The expert peer review will be pass/fail.
+- Submitting teams have time until 5 December 2021 to improve the documentation of their method and code.
+
+
 #### 2021-11-04: Announcement of the score RPSS and beginning of open review
 
 - Please see the [leaderboard](#leaderboard) for the score RPSS.
