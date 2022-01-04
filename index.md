@@ -32,9 +32,18 @@
 
 ## Announcements
 
+#### 2021-11-23: link for conference session: 26 Jan 2022
+
+- The conference-style session with 10min presentation and 10min Q&A will be held on 26 Jan 2022 in the [S2S](http://s2sprediction.net/) webinar:
+    - https://apcc.webex.com/apcc/j.php?MTID=m1160016896e0d6cbe212c9b87c7e453d
+    - Wednesday, Jan 26, 2022 | 2 hours | UTC 14:00
+    - Meeting number: 2512 199 7882
+    - Password: s2sprediction
+- Note that the time changed by one hour with respect to the `2021-11-23` announcement.
+
 #### 2021-11-23: date for conference session: 26 Jan 2022
 
-- The conference-style session with 10min presentation and 10min Q&A will be held on 26 Jan 2022 in the S2S webinar 3pm UTC.
+- The conference-style session with 10min presentation and 10min Q&A will be held on 26 Jan 2022 in the S2S webinar ~~3~~ 2pm UTC.
 - Written expert review comments will be posted two weeks before.
 - The expert peer review will be pass/fail.
 - Submitting teams have time until 5 December 2021 to improve the documentation of their method and code.
