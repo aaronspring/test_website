@@ -32,7 +32,12 @@
 
 ## Announcements
 
-#### 2021-11-23: link for conference session: 26 Jan 2022
+#### 2021-01-13: date for prize announcement: 4 Feb 2022
+
+- The announcement of prize will take place 4th of February 2022 14-15 UTC. There will be a keynote lecture. Login creditentials will follow.
+
+
+#### 2021-01-04: link for conference session: 26 Jan 2022
 
 - The conference-style session with 10min presentation and 10min Q&A will be held on 26 Jan 2022 in the [S2S](http://s2sprediction.net/) webinar:
     - https://apcc.webex.com/apcc/j.php?MTID=m1160016896e0d6cbe212c9b87c7e453d
