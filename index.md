@@ -32,9 +32,19 @@
 
 ## Announcements
 
-#### 2021-01-13: date for prize announcement: 4 Feb 2022
+#### 2021-01-26: prize announcement: 4 Feb 2022
 
-- The announcement of prize will take place 4th of February 2022 14-15 UTC. There will be a keynote lecture. Login creditentials will follow.
+- The announcement of prize will take place Friday February 4th 2022 14-15 UTC:
+    - https://apcc.webex.com/apcc/j.php?MTID=madce44783ab3883420f726be3b19e6e8
+    - Meeting number: 2516 959 3744
+    - Password: s2sprediction
+- Opening remarks:
+    - Jürg Luterbacher, Director of Science and Innovation Department, WMO
+    - Florian Pappenberger, Director of Forecast Department, ECMWF
+    - Roskar Rok, Head of Engineering, Swiss Data Science Center
+- Two keynote lectures:
+    - Peter Dueben, AI and Machine Learning Coordinator ECMWF: "Machine Learning for S2S -- a tale of many options"
+    - Veronique Bouchet, Exascale and AI Task Team Chair, WMO: "TBC"
 
 
 #### 2021-01-04: link for conference session: 26 Jan 2022
