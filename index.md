@@ -49,12 +49,8 @@
 
 #### 2021-01-04: link for conference session: 26 Jan 2022
 
-- The conference-style session with 10min presentation and 10min Q&A will be held on 26 Jan 2022 in the [S2S](http://s2sprediction.net/) webinar:
-    - https://apcc.webex.com/apcc/j.php?MTID=m1160016896e0d6cbe212c9b87c7e453d
-    - Wednesday, Jan 26, 2022 | 2 hours | UTC 14:00
-    - Meeting number: 2512 199 7882
-    - Password: s2sprediction
-- Note that the time changed by one hour with respect to the `2021-11-23` announcement.
+- The conference-style session with 10 min presentation and 8 min Q&A will be held on 26 Jan 2022 in the [S2S](http://s2sprediction.net/) webinar. Re-review the [recording](https://wmoomm-my.sharepoint.com/personal/wcao_wmo_int/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fwcao%5Fwmo%5Fint%2FDocuments%2FDocuments%2FSharedFiles%2FS2S%20AI%20Competition%2FS2S%20AI%20Challenge%20Webinar%5FJan%202022%2F%28S2S%20Monthly%20Webinar%5FJan%2E2022%29%20S2S%20AI%20Challenge%2D20220126%201401%2D1%2Emp4&parent=%2Fpersonal%2Fwcao%5Fwmo%5Fint%2FDocuments%2FDocuments%2FSharedFiles%2FS2S%20AI%20Competition%2FS2S%20AI%20Challenge%20Webinar%5FJan%202022).
+
 
 #### 2021-11-23: date for conference session: 26 Jan 2022
 
