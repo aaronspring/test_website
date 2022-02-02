@@ -49,7 +49,7 @@
 
 #### 2021-01-04: link for conference session: 26 Jan 2022
 
-- The conference-style session with 10 min presentation and 8 min Q&A will be held on 26 Jan 2022 in the [S2S](http://s2sprediction.net/) webinar. Re-review the [recording](https://wmoomm-my.sharepoint.com/personal/wcao_wmo_int/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fwcao%5Fwmo%5Fint%2FDocuments%2FDocuments%2FSharedFiles%2FS2S%20AI%20Competition%2FS2S%20AI%20Challenge%20Webinar%5FJan%202022%2F%28S2S%20Monthly%20Webinar%5FJan%2E2022%29%20S2S%20AI%20Challenge%2D20220126%201401%2D1%2Emp4&parent=%2Fpersonal%2Fwcao%5Fwmo%5Fint%2FDocuments%2FDocuments%2FSharedFiles%2FS2S%20AI%20Competition%2FS2S%20AI%20Challenge%20Webinar%5FJan%202022).
+- The conference-style session with 10 min presentation and 8 min Q&A will be held on 26 Jan 2022 in the [S2S](http://s2sprediction.net/) webinar. Re-review the [recording](https://wmoomm-my.sharepoint.com/:v:/g/personal/wcao_wmo_int/EZgKOGxQahJKuTkydsu6xwcB7QMkhE9xriLsnG_plh6sIw?e=cRdnMM).
 
 
 #### 2021-11-23: date for conference session: 26 Jan 2022
