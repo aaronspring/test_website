@@ -32,7 +32,20 @@
 
 ## Announcements
 
-#### 2021-01-26: prize announcement on 4 Feb 2022
+#### 2022-02-04: prize announcement
+
+The expert peer review gave a pass on all five submissions. Based on the [leaderboard](#leaderboard) the prizes go to:
+
+🥇(CHF 15,000): David Landry, Jordan Gierschendorf, Arlan Dirkson, Bertrand Denis (Centre de recherche informatique de Montréal and ECCC)
+
+🥈 (CHF 10,000): Llorenç Lledó, Sergi Bech, Lluís Palma, Andrea Manrique, Carlos Gomez (Barcelona Supercomputing Center)
+
+🥉 (CHF 5,000): Shanglin Zhou and Adam Bienkowski (University of Connecticut)
+
+The organizers thank Frederic Pinault (ECMWF), Jesper Dramsch (ECMWF), Stephan Rasp (climate.ai) and Kenneth Nowak (USBR) for their expert reviews. 
+
+
+#### 2022-01-26: prize announcement on 4 Feb 2022
 
 - The announcement of prize will take place Friday February 4th 2022 14-15 UTC:
     - https://apcc.webex.com/apcc/j.php?MTID=madce44783ab3883420f726be3b19e6e8
@@ -47,7 +60,7 @@
     - Veronique Bouchet, Exascale and AI Task Team Chair, WMO: "Assessing the barriers to the use of AI and data exploitation in environmental modelling"
 
 
-#### 2021-01-04: link for conference session: 26 Jan 2022
+#### 2024-01-04: link for conference session: 26 Jan 2022
 
 - The conference-style session with 10 min presentation and 8 min Q&A will be held on 26 Jan 2022 in the [S2S](http://s2sprediction.net/) webinar. Re-review the [recording](https://wmoomm-my.sharepoint.com/:v:/g/personal/wcao_wmo_int/EZgKOGxQahJKuTkydsu6xwcB7QMkhE9xriLsnG_plh6sIw?e=cRdnMM).
 
