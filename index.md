@@ -47,17 +47,14 @@ The organizers thank Frederic Pinault (ECMWF), Jesper Dramsch (ECMWF), Stephan R
 
 #### 2022-01-26: prize announcement on 4 Feb 2022
 
-- The announcement of prize will take place Friday February 4th 2022 14-15 UTC:
-    - https://apcc.webex.com/apcc/j.php?MTID=madce44783ab3883420f726be3b19e6e8
-    - Meeting number: 2516 959 3744
-    - Password: s2sprediction
+- The announcement of prize will take place Friday February 4th 2022 14-15 UTC.
 - Opening remarks:
     - Jürg Luterbacher, Director of Science and Innovation Department, WMO
     - Florian Pappenberger, Director of Forecast Department, ECMWF
     - Roskar Rok, Head of Engineering, Swiss Data Science Center
 - Two keynote lectures:
-    - Peter Dueben, AI and Machine Learning Coordinator ECMWF: "Machine Learning for S2S -- a tale of many options"
-    - Veronique Bouchet, Exascale and AI Task Team Chair, WMO: "Assessing the barriers to the use of AI and data exploitation in environmental modelling"
+    - Peter Dueben, AI and Machine Learning Coordinator ECMWF: "Machine Learning for S2S -- a tale of many options" [slides](https://wmoomm-my.sharepoint.com/personal/wcao_wmo_int/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fwcao%5Fwmo%5Fint%2FDocuments%2FDocuments%2FSharedFiles%2FKeynote%5Ftalk%5FPeter%20Dueben%2Epdf&parent=%2Fpersonal%2Fwcao%5Fwmo%5Fint%2FDocuments%2FDocuments%2FSharedFiles)
+    - Veronique Bouchet, Exascale and AI Task Team Chair, WMO: "Assessing the barriers to the use of AI and data exploitation in environmental modelling" [slides](https://wmoomm-my.sharepoint.com/personal/wcao_wmo_int/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fwcao%5Fwmo%5Fint%2FDocuments%2FDocuments%2FSharedFiles%2FKeynote%5Ftalk%5FVeronique%20Bouchet%2Epdf&parent=%2Fpersonal%2Fwcao%5Fwmo%5Fint%2FDocuments%2FDocuments%2FSharedFiles)
 
 
 #### 2024-01-04: link for conference session: 26 Jan 2022
