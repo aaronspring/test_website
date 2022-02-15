@@ -62,6 +62,7 @@ The organizers thank Frederic Pinault (ECMWF), Jesper Dramsch (ECMWF), Stephan R
 - Two keynote lectures:
     - Peter Dueben, AI and Machine Learning Coordinator ECMWF: "Machine Learning for S2S -- a tale of many options" [slides](https://wmoomm-my.sharepoint.com/personal/wcao_wmo_int/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fwcao%5Fwmo%5Fint%2FDocuments%2FDocuments%2FSharedFiles%2FKeynote%5Ftalk%5FPeter%20Dueben%2Epdf&parent=%2Fpersonal%2Fwcao%5Fwmo%5Fint%2FDocuments%2FDocuments%2FSharedFiles)
     - Veronique Bouchet, Exascale and AI Task Team Chair, WMO: "Assessing the barriers to the use of AI and data exploitation in environmental modelling" [slides](https://wmoomm-my.sharepoint.com/personal/wcao_wmo_int/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fwcao%5Fwmo%5Fint%2FDocuments%2FDocuments%2FSharedFiles%2FKeynote%5Ftalk%5FVeronique%20Bouchet%2Epdf&parent=%2Fpersonal%2Fwcao%5Fwmo%5Fint%2FDocuments%2FDocuments%2FSharedFiles)
+- [recording](https://wmoomm-my.sharepoint.com/personal/wcao_wmo_int/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fwcao%5Fwmo%5Fint%2FDocuments%2FDocuments%2FSharedFiles%2FAnnouncement%20of%20WMO%20Sub%2Dseasonal%20to%20Seasonal%20Predictions%20Artificial%20Intelligence%20Challenge%2D20220204%201402%2D1%2Emp4&parent=%2Fpersonal%2Fwcao%5Fwmo%5Fint%2FDocuments%2FDocuments%2FSharedFiles)
 
 
 #### 2024-01-04: link for conference session: 26 Jan 2022
