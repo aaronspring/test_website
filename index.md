@@ -34,9 +34,9 @@
 
 #### 2022-02-14: website and renku platform will be kept up
 
-The `s2s-ai-competition` is officially over. However, the organizers encourages everyone to post new contributions on renku in the future.
+The `s2s-ai-competition` is officially over. However, the organizers encourages everyone to post new contributions on renku in the future. This website and the renku projects will be kept available until December 2023 (the end of the [S2S project](http://s2sprediction.net/)).
 Especially if your contribution beats the current first prize, please contact [Andy Robertson](https://iri.columbia.edu/contact/staff-directory/andrew-robertson/) and [Frederic Vitart](https://www.ecmwf.int/en/about/who-we-are/staff-profiles/frederic-vitart).
-The `s2s-ai-challenge-scorer` contributing to the [leaderboard](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-leaderboard) stops working, but you can still score your contributions [manually](https://renkulab.io/gitlab/tasko.olevski/s2s-ai-competition-scoring-image/-/tree/master).
+The `s2s-ai-challenge-scorer` contributing to the [leaderboard](https://renkulab.io/gitlab/aaron.spring/s2s-ai-challenge-leaderboard) stops working, but you can still easily score your contributions [manually](https://renkulab.io/gitlab/tasko.olevski/s2s-ai-competition-scoring-image/-/tree/master).
 
 
 #### 2022-02-04: prize announcement
